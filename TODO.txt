@@ -1,0 +1,42 @@
+Bounding boxes alexnet
+
+cropping
+
+advanced net (eigenschaten + bild) statt NN
+
+Farben: GS oder RGB
+
+unnötige Farben (grün) filtern
+
+Unterstützte Artenbestimmung ersetzen!
+(evtl Datenaufbereitung)
+Das Endprodkt erreicht eine möglichst gute Leistung aus Bilddaten und zusätzlichen Eingenschaften, aus der Arbeit geht hervor, warum die Massnahmen ergriffen wurden und welche 
+was kann es schliesslich?
+welche verbesserungen?
+
+web:
+es wurden während der Arbeit angemessene Massnahmen ergriffen, um die Datenlage
+erweitern auf "Datenbeschaffung", evtl "Datenbeschaffung und Datenaufbereitung"
+
+PV schicken
+
+
+
+
+======================
+09_05_2018
+
+Titel Forschen => Entwicklung
+
+Formalitäten "ich" => Aktiv vom Thema her. (Passiv vermeiden, "man" vermeiden, "ich" nur für persönliche Sachen erwähnen)
+
+Einleitung: 
+Programm => Anwendung
+"ausgehend von BIlddaten"
+Bilderkennung => Die gunrdla. dieser Anwnd soll sein, ein Deep learning net ; "basier auf der Technik des "DL", DL beschreiben, KI => ML => NN => DN
+
+Pilzerkennung in EInleutung => Erkennung "häufiger" Pilzarten
+
+Ergebnis Pilzarten aus der Region
+
+Projektname: Regionaler gestalten

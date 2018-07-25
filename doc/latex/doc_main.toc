@@ -1,0 +1,4 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Einf\IeC {\"u}hrung}{6}
+\contentsline {section}{\numberline {2}Theoretische Grundlagen}{7}
+\contentsline {section}{Literatur}{8}

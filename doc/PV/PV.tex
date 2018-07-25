@@ -1,0 +1,126 @@
+\include{PV_preamble}
+
+\begin{document}
+\noindent
+\huge Projektvereinbarung \textbf{shroomNET}\\
+\normalsize
+\section{Absicht mit Teilaspekten}
+Im Rahmen dieser Arbeit soll eine Anwendung entwickelt werden, welche mithilfe von Bilddaten eines Pilzes dessen Art zu bestimmen versucht. Die Bilderkennung soll auf den technischen Grundlagen des sogenannten Deep Learnings basieren, wobei es sich um eine spezielle Form des maschinellen Lernens, also einer künstlichen Intelligenz geht. Das Ziel ist, die Umsetzbarkeit einer solchen Anwendung zu prüfen, daher beschränkt sich Erkennung vorläufig auf die 20 häufigsten Arten aus der Region der Nordwestschweiz. Mit dieser Vereinfachung soll ein möglichst optimales Verfahren für die grafische Pilzerkennung entwickelt werden.\\
+Bei der Umsetzung sollen verschiedene Methoden und Vorgehensweisen beim Aufbaus eines Neuronalen Netzes genauer untersucht werden, um eine möglichst akkurate Bestimmung der Pilzart zu ermöglichen. Es werden verschiedene Netzwerkarchitekturen, aber auch andere Parameter wie Netzwerkgröße und verschiedene Trainingsdaten auf Stärken und Schwächen untersucht, um dann eine möglichst optimale Kombination für die visuelle Erkennung von Pilzarten zu finden.\\
+	
+\noindent Das Projekt soll neben der Untersuchung Einblick in die Materie der selbstlernenden Künstlichen Intelligenzen geben, Grundwissen über die Funktionsweise von Neuronalen Netzen vermitteln, sowie die Fähigkeiten und Anwendungsmöglichkeiten derer aufzeigen. 
+	
+\section{Bewertungskriterien}
+
+\noindent
+In der Arbeit soll auf folgende Teilaspekte besonders geachtet werden:
+\begin{itemize}
+	\item \textbf{Theorie Neuronale Netze und Deep Learning}\\
+	Eine gut verständliche theoretische Einführung zum Thema Neuronale Netze soll unerfahrenen Lesern eine Grundlage geben, um der Materie folgen zu können. Im Hauptteil der Theorie werden Deep Neural Networks/Deep Learning vorgestellt und beschrieben. Dabei soll auf die Verständlichkeit sowie Einfachheit geachtet werden, damit wenige technische Vorkenntnisse für das Verständnis genügen.
+	\item \textbf{Datenbeschaffung und Datenaufbereitung}\\
+	Aus der Arbeit geht hervor, wie die Trainingsdaten beschaffen und bearbeitet worden sind, um sich als Eingangsdaten für ein Neuronales Netz zu eignen. Die ergriffenen Maßnahmen werden auf Auswirkungen auf den Trainingsprozess sowie Genauigkeit der Pilzbestimmung, Vor- und Nachteile untersucht.
+	\item \textbf{Optimierung des Neuronalen Netzes}\\
+	Der Arbeit ist zu entnehmen, welche Maßnahmen ergriffen werden mussten, um eine möglichst zuverlässige Pilzbestimmung durch ein Neuronales Netz ermöglichen zu können. Dabei wird nachvollziehbar auf die Verfahren eingegangen, welche zu einer wesentlichen Verbesserung des Ergebnisses beigetragen haben, auch wird gegebenenfalls auf die Stärken und Schwächen des Verfahrens eingegangen.
+	\end{itemize}
+	
+\section{Wissensstand}
+\subsection{Neuronale Netze}
+Ein grobes Wissen über die grobe Funktionsweise und Aufbau Neuronaler Netze ist vorhanden, jedoch konnten kaum Erfahrungen mit der direkten Anwendung und Programmierung von Neuronalen Netzen gesammelt werden. Faktoren, welche für den Erfolg oder Misserfolg eines Netzes dieser Art ausschlaggebend sind, könnten mit dem aktuellen Wissensstand nicht beurteilt werden.\\
+Herr Prof. Thomas Hofmann der ETH Zürich wurde in diesem Zusammenhang zu Rate gezogen. Er kann mich mit seinem breiten Fachwissen in vielen Bereichen zum Thema Neuronale Netze beraten.\\
+Für grundsätzliche Fragen findet man im Internet viele Ressourcen und Informationen, welche das Grundwissen zu Neuronalen Netzen stärken sollen.
+	
+\subsection{Programmierung}
+Für die Entwicklung der Anwendung soll die MatLab-Programmierumgebung verwendet werden. In der Programmierung selber ist eine solide Grundlage vorhanden, jedoch konnte mit MatLab noch keine Erfahrung gesammelt werden. Dementsprechend muss in diesem Bereich noch einiges Wissen und Können angeeignet werden.\\
+Für MatLab sprechen primär die vielen Libraries für Neuronale Netze, aber auch die Einfachheit der Programmiersprache sowie die enorm umfangreiche Online-Hilfe zu diversen Fragen. Für spezifischere Fragen können Online-Foren zu Rate gezogen werden, in welchen es zu jedem Problem Lösungsvorschläge gibt.\\
+Sollte dies nicht genügen, kann Herr Ruh persönlich assistieren, welcher sehr erfahren mit MatLab ist, jedoch sollte in den meisten Fällen die Online-Hilfe genügen.
+	
+\subsection{Fachwissen Pilze}
+Die Arbeit setzt auch etwas Grundwissen im Themenbereich der Pilzkunde voraus. In diesem Bereich muss dieses Wissen sowie Details der aus der entsprechenden Fachliteratur entnommen werden.\\
+Für allgemeines Pilzwissen hat der Pilzkontrolleur Benno Zimmermann seine Unterstützung angeboten. Er wird für die Auswahl der Pilzarten sowie für allgemeine Fragen zur Verfügung stehen. Für spezifische Fakten zu bestimmten Arten liefert ``Welcher Pilz ist das?'' von Markus Flück die relevanten Informationen.
+
+	
+\section{Methode}
+\subsection{Vorbereitung}
+\subsubsection{Beschaffung Trainingsdaten}
+Einer der ersten Schritte wird sein, Trainingsdaten zu sammeln. Dazu muss in den ersten Wochen eine Internetseite zu Verfügung gestellt werden sowie die Formulare gecodet werden. Hat man dies, kann man den Link unter den Pilzsammlern verteilen. Da die Anzahl der Bilder auch mit vielen Uploads an der unteren Grenze des Brauchbaren sein wird, müssen die Bilder vervielfältigt und minimal abgeändert werden, um mehr Trainingsdaten für das Netz zu generieren.
+\subsubsection{Programmierumgebung MatLab}
+	Um sich mit der Programmierumgebung und der Programmierung Neuronaler Netze vertraut zu machen, sollen kleine, leicht umzusetzende Beispiele programmiert werden. Vorausgesehen ist ein klassisches Problem der neuronalen Bilderkennung, nämlich der Erkennung von handschriftlichen Ziffern. Für dieses Problem spezifische Datensets gibt es öffentlich zugänglich im Internet.
+	
+\subsection{Neuronales Netz entwickeln}
+Danach gilt es, ein auf die Pilzerkennung optimiertes Neuronales Netz zu entwickeln. Dabei sollen verschiedene Herangehensweisen und Faktoren untersucht werden, z.B.:
+	\begin{itemize}
+\item Inputart, Inputauflösung, ...
+\item Layeraufbau, Layertypen, Layergrösse, Netzwerktiefe, ...
+\item Art/Qualität/Quantität der Trainingsdaten, ...
+\item Trainingsparameter
+\item Anpassung von einem vortrainierten Netz (z.B. Alexnet) oder neues Netz erstellen
+\item Inwiefern kann das Resultat durch zusätzliche Informationen präziser gemacht werden?
+\item Optimum zwischen Komplexität und Trainingszeit
+\item Verhinderung von Overfitting und Underfitting
+\end{itemize}
+
+\noindent Die Leistung der verschiedenen Netze wird mittels eines Test-Sets an Pilzbildern evaluiert, um einen einheitlichen Vergleich zwischen den Netzen zu haben.
+
+\section{Ressourcen}
+Für das Sammeln der Bilder ist die Mithilfe von vielen Pilzfotografen gefragt, mit denen voraussichtlich über die im Internet ausgeschriebenen Pilzkontrollstellen Kontakt aufgenommen werden soll. Auch kann über Fotodatenbanken im Netz mit der entsprechenden Person in Verbindung gesetzt werden. Bis zu einem gewissen Grad kann auch auf die Mithilfe von Herrn Benno Zimmermann gezählt werden, welcher Kontakte aus seinem Umfeld empfehlen kann.\\
+
+\noindent Für die professionelle Hilfe zum Themengebiet Neuronale Netze wurde schon an der ETH angefragt (Prof. Thomas Hoffmann), jedoch blieb diese unbeantwortet; weitere Anfragen sind geplant.\\
+
+\noindent Finanziell muss man lediglich für die Lizenz der MatLab Entwicklerumgebung aufkommen, welche sich auf etwa 120.- CHF beläuft.
+
+
+\section{Ergebnis}
+Ziel der Arbeit ist es, ein optimales Verfahren für die grafische Pilzerkennung zu entwickeln. Als Endprodukt ist ein Algorithmus vorgesehen, welcher die 20 häufigsten Pilzarten aus der Region anhand von Bildern möglichst genau bestimmen kann. Gegebenenfalls kann der Algorithmus neben den reinen Bilddaten auch noch weitere Eingabewerte für Pilzeigenschaften verarbeiten und somit eine präzisere Bestimmung machen. Kern der Arbeit ist der Entwicklungsvorgang und die wissenschaftliche Vorgehensweise.
+
+\section{Zeitplan}
+Wichtige Meilensteine für die Arbeit sind:\\
+
+\begin{center}
+\begin{tabular}{ l l }
+\hline
+Mai & Vorbereitungen, Kontakte, PV\\
+\hline
+Mai-Juni & Erarbeitung des Grundwissens für Neuronale Netze\\
+& Beginn Dokumentation (in \LaTeX)\\
+\hline
+Juni-September & Entwicklung des Neuronalen Netzes\\
+\hline
+September & Dokumentation, Evaluierung der Ergebnisse\\
+\hline
+Oktober & Abgabe der Arbeit\\
+\hline
+\end{tabular}
+\end{center} 
+\vspace{1cm}
+
+\section{Unterschriften}
+\begin{center}
+\begin{tabular}{ l l l l l}
+Jan Obermeier\\
+\hline
+\scriptsize Schüler& \qquad &\scriptsize  Ort, Datum \hspace{3cm} &\scriptsize  Unterschrift& \hspace*{4cm}\\
+\\
+\\
+Nicolas Ruh\\
+\hline
+\scriptsize Aufsichtsperson& \qquad &\scriptsize  Ort, Datum \hspace{3cm} &\scriptsize  Unterschrift& \hspace*{4cm}\\
+\end{tabular}
+\end{center} 
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+\end{document}
