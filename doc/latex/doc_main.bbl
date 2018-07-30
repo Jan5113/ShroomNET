@@ -1,13 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
 
-\bibitem{evosim}
-Jan~Obermeier Nils~Schlatter.
-\newblock Evosim, 2018.
+\bibitem[Byford, 2017]{theverge}
+Byford, S. (2017).
+\newblock Google’s alphago ai defeats world go number one ke jie.
+\newblock
+  https://www.theverge.com/2017/5/23/15679110/go-alphago-ke-jie-match-google-deepmind-ai-2017.
+\newblock Abgerufen am 30.07.2018.
 
-\bibitem{deepshroom}
-Jonas~Harjunpää Teemu~Koivisto, Tuomo~Nieminen.
+\bibitem[Nils~Schlatter, 2018]{evosim}
+Nils~Schlatter, J.~O. (2018).
+\newblock Evosim.
+
+\bibitem[Teemu~Koivisto, 2017]{deepshroom}
+Teemu~Koivisto, Tuomo~Nieminen, J.~H. (2017).
 \newblock Deep shrooms.
-\newblock {https://tuomonieminen.github.io/deep-shrooms/}, 2017.
+\newblock https://tuomonieminen.github.io/deep-shrooms/.
 \newblock Abgerufen am 25.07.2018.
 
 \end{thebibliography}

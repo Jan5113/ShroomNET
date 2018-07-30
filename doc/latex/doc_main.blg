@@ -1,14 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: doc_main.aux
-A level-1 auxiliary file: doc_title.aux
-A level-1 auxiliary file: doc_abstract.aux
-A level-1 auxiliary file: doc_preface.aux
-A level-1 auxiliary file: doc_introduction.aux
-A level-1 auxiliary file: doc_theory.aux
-A level-1 auxiliary file: doc_bibliography.aux
-The style file: unsrt.bst
+The style file: apalike.bst
 Database file #1: bibliography.bib
 Warning--entry type for "evosim" isn't style-file defined
---line 2 of file bibliography.bib
+--line 1 of file bibliography.bib
 Warning--entry type for "deepshroom" isn't style-file defined
 --line 10 of file bibliography.bib
-(There were 2 warnings)
+Warning--entry type for "theverge" isn't style-file defined
+--line 19 of file bibliography.bib
+(There were 3 warnings)
