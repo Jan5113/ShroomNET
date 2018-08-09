@@ -1,24 +1,43 @@
 \section{Einführung}
 
-Wer behaupten will, er habe noch nie von \textit{künstliche neuronalen Netzen} gehört zu haben, muss gewissermassen unter einem Stein leben. \textit{Künstliche neuronale Netze} (kurz \textit{KNN}) haben in den letzten Jahren ein Comeback erlebt und haben es auch schon einige Male in die Schlagzeilen geschafft:
-\vspace{0.5cm}
+Wer als Programmierer oder Informatik-Interessierter behaupten will, er habe noch nie von \textit{Deep Learning} gehört zu haben, muss unter einem Stein gelebt haben. Durch \textit{Deep Learning} haben die \textit{künstlichen neuronalen Netze} in den letzten Jahren ein Comeback erlebt und haben es auch schon einige Male in die Schlagzeilen geschafft:
 
 \begin{center}
-	{\LARGE \textit{''Googles AlphaGo KI \footnote{Künstliche Intelligenz: Modellierung/Nachahmung von ''intelligentem'' Verhalten durch Computer, z.B. Schachcomputer, Übersetzungs-Tools oder Text-/Spracherkennung} besiegt}\\}
+	{\LARGE \textit{''Googles AlphaGo KI \footnote{Künstliche Intelligenz: Modellierung/Nachahmung von ''intelligentem'' Verhalten durch Rechner, z.B. Schachcomputer, Übersetzungs-Tools oder Text-/Spracherkennung} schlägt}\\}
 	\vspace{0.5cm}
-	{\LARGE \textit{Go-Weltmeister Ke Jie''}}\cite{theverge}
+	{\LARGE \textit{Go-Weltmeister Lee Sedol 4-1''}}\cite{theguardian}
 \end{center}
 
-\vspace{0.5cm}
-
+\vspace{0.3cm}
 
 \begin{minipage}{13.5cm}
-Das chinesische Brettspiel \textit{Go} basiert auf ganz simplen Regeln: Schwarze bzw. weisse Spielsteine werden abwechslungsweise auf ein 19x19 Felder grosses Spielfeld gesetzt. Das Ziel des Spiels ist es, den Gegner einzukreisen und zu erobern \cite{howtogo}. Einfache Regeln, jedoch fast unzählige Wege: Insgesamt gibt es rund $10^{170}$ verschiedene Möglichkeiten, die Steine anzuordnen. Ein kurzer Magnitudenvergleich: Schach hat ''nur'' etwa $10^{47}$ verschiedene Anordnungsmöglichkeiten \cite{shannon}, das beobachtbare Universum hat ''nur'' $10^{80}$ Atome \cite{atoms}.
+Das chinesische Brettspiel \textit{Go} basiert auf ganz simplen Regeln: Schwarze bzw. weisse Spielsteine werden abwechslungsweise auf ein 19x19 Felder grosses Spielfeld gesetzt. Das Ziel des Spiels ist es, den Gegner einzukreisen und zu erobern \cite{howtogo}. Trotz den simplen Regeln gibt es fast unzählige Möglichkeiten: Insgesamt lassen sich die Steine in rund $10^{170}$ verschiedenen Arten anordnen. Ein kurzer Magnitudenvergleich: Schach hat etwa $10^{47}$ verschiedene Anordnungsmöglichkeiten \cite{shannon}, das beobachtbare Universum hat $10^{80}$ Atome \cite{atoms}.
 
-Diese schiere Anzahl an Möglichkeiten machten \textit{Go} bei KI-Programmierern sehr hoch angesehen, denn im Gegensatz zu Schach  können nicht alle relevanten Züge in absehbarer Zeit vorausberechnet werden. Trainierte Go-Spieler können das auch nicht, dafür verlassen sie sich auf ihre Erfahrung und auf ihr Intuition, etwas, was Computern nur schwierig beizubringen ist. Und doch passierte es im Mai 2017: Der Go-Weltmeister Ke Jie wurde geschlagen --- von der \textit{KI AlphaGo} \cite{alphago}.
+Diese schiere Anzahl an Möglichkeiten machten \textit{Go} bei KI-Programmierern sehr hoch angesehen, denn im Gegensatz zu Schach können nicht alle relevanten Züge in absehbarer Zeit vorausberechnet werden\footnotemark. Trainierte Go-Spieler können das auch nicht, dafür verlassen sie sich auf ihre Erfahrung und auf ihre Intuition, etwas, was Computern nur schwierig beizubringen ist. Und doch passierte es im März 2016: Der Go-Weltmeister Lee Sedol wurde geschlagen --- von der \textit{KI AlphaGo} \cite{alphago}.
 \end{minipage}
+
+\footnotetext{vgl. \textit{Deep Blue}: Erster Schachcomputer (entwickelt von IBM), welcher 1997 den damaligen Weltmeister G. Kasparov geschlagen hat. \textit{Deep Blue} verwendete eine \textit{Brute-Force-Methode} (Ausprobieren aller Möglichkeiten), weswegen ein Entwickler sogar die ''Intelligenz'' hinter der KI \textit{Deep Blue} bestritt\cite{deepblue}.}
 
 \vspace{0.5cm}
 
-\textit{AlphaGo} unterscheidet sich grundlegend von konventionellen Spiele-KIs, weswegen es auch in \textit{Go} gegen Ke Jie antreten konnte. Der Algorithmus hinter \textit{AlphaGo} basiert auf \textit{künstlichen Neuronalen Netzen} und \textit{Deep Learning}. Diese Algorithmen sind in der Lage, aus Beispielen Muster zu erkennen, zu lernen und sich selber dadurch zu verbessern. Durch die Analyse von zahlreichen von Menschen gespielten Partien lernte \textit{AlphaGo} die Grundlagen und Grundstrategien des Spiels. Daraufhin liess man den Algorithmus gegen sich selber spielen, wodurch \textit{AlphaGo} sich über das Niveau des menschlichen Weltmeisters hinaus begab. 
+\textit{AlphaGo} unterscheidet sich grundlegend von konventionellen Spiele-KIs, weswegen es auch in \textit{Go} gegen Lee Sedol antreten konnte. \textit{AlphaGo} basiert auf dem Algorithmus namens \textit{Deep Learning} (kurz \textit{DL}). Diese Algorithmen sind in der Lage, aus Beispielen Muster zu erkennen, zu lernen und sich selber dadurch zu verbessern. Durch die Analyse von zahlreichen von Menschen gespielten Partien lernte \textit{AlphaGo} die Grundlagen und Grundstrategien des Spiels. Daraufhin liess man den Algorithmus einige Tausend Male gegen sich selber spielen, wodurch sich \textit{AlphaGo} sukzessive verbesserte und fortgeschrittenere Strategien entwickelte, sodass der Algorithmus schliesslich in der Lage war, gegen die besten Go-Spieler der Welt anzutreten.\\
+
+\textit{Deep Learning} (\textit{DL}) gehört dem Überbegriff ''\textit{künstliche neuronale Netze}'' (kurz \textit{KNN}s) an. \textit{KNN}s sind im Grunde genommen der Versuch der Informatik, den Aufbau und die Funktionsweise eines biologischen Gehirns zu modellieren und nachzuahmen, wobei \textit{DL} eine Weiterentwicklung dieses Grundprinzipes ist. Wie ein biologisches Gehirn muss auch ein \textit{KNN} lernen, man muss es \textit{trainieren}. Mit dieser Lernfähigkeit werden die Anwendungsmöglichkeiten enorm vielseitig und komplex: In Spiele-KIs, Spam-Filtern und der Bildbearbeitung, aber auch in der Gesichtserkennung und der Krebsdiagnose finden sie heutzutage Verwendung. 
+
+\subsection{Zielsetzung}
+
+Diese Arbeit behandelt die Entwicklung eines auf \textit{KNN}s basierenden Algorithmus, welcher auf die Bestimmung von Pilzarten optimiert ist. Das Ziel der Arbeit ist es, durch Abwägung verschiedener Techniken und Vorgehensweisen einen möglichst zuverlässigen Bestimmungsalgorithmus für Pilzarten zu entwickeln. Als Grundlage für die Bestimmung dienen Fotografien von den zu bestimmenden Pilzen, sekundär können ggf. weitere Eingenschaften des Pilzes angegeben werden, welche in die Bestimmung einfliessen.
+
+Da es sich im Rahmen dieser Arbeit hauptsächlich um die Evaluierung der Umsetzbarkeit geht, wird die Anzahl der bestimmbaren Pilzarten auf die 20 häufigsten Sorten der Nordwestschweiz beschränkt. Des Weiteren werden aus den selben Gründen auf Anwendbarkeit und Benutzerfreundlichkeit des Algorithmus verzichtet.
+
+\subsubsection{Datenbeschaffung \& Datenaufbereitung}
+Ein wichtiger Teil für \textit{KNN}s ist die Beschaffung von vielen Trainingsdaten. Aus dem Kapitel \textit{Datenbeschaffung \& Datenaufbereitung} geht hervor, wie die Trainingsdaten beschaffen worden sind und bearbeitet worden sind, um sich als Eingangsdaten für ein \textit{KNN} zu eignen. Die ergriffenen Massnahmen werden auf Auswirkungen auf den Trainingsprozess sowie der Genauigkeit der Pilzbestimmung untersucht.
+
+\subsubsection{Entwicklung \& Optimierung}
+Bei der Umsetzung sollen verschiedene Methoden sowie Vorgehensweisen für den Aufbau eines \textit{KNN}s genauer untersucht werden, um eine möglichst akkurate Bestimmung der Pilzart zu ermöglichen. Es werden verschiedene Netzwerkarchitekturen, aber auch andere Parameter wie Netzwerkgrösse und verschiedene Trainingsdaten auf Stärken und Schwächen untersucht, um eine möglichst optimale Kombination für die Erkennung von Pilzarten evaluieren zu können. Im Kapitel \textit{Vorgehen} wird nachvollziehbar auf die Verfahren und Massnahmen eingegangen, welche zu einer wesentlichen Verbesserung des Ergebnisses beigetragen haben.
+
+\subsubsection{Theorie}
+Für das erleichterte Verständnis der Dokumentation soll das Kapitel \textit{Grundlagen KNNs \& DNNs} zudem einen Einblick in die Historie der verwendeten Algorithmen geben sowie die grundlegende Funktionsweise derer verständlich beschreiben. 
+
+% Man kann Anwendungsbereiche von \textit{KNN}s folgendermassen kategorisieren: Approximation von Funktionen, Klassifikation und Datenverarbeitung.
 

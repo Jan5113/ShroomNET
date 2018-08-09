@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.1)  30 JUL 2018 20:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.29)  9 AUG 2018 15:18
 entering extended mode
 **./doc_main.tex
 (doc_main.tex
@@ -583,14 +583,14 @@ LaTeX Font Info:    ... okay on input line 3.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
-* v-part:(T,H,B)=(99.58464pt, 660.10394pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 688.5567pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=426.79135pt
-* \textheight=660.10394pt
+* \textheight=688.5567pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-9.68535pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -750,37 +750,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  [5
 
-] (doc_introduction.tex) [6
+] (doc_introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
-] (doc_theory.tex)
-[7
+ []
+
+[6
+
+]
+Overfull \hbox (6.95502pt too wide) in paragraph at lines 31--32
+\OT1/cmr/m/n/12 Sor-ten der Nord-west-schweiz be-schr[]ankt. Des Wei-te-ren wer
+-den aus den sel-ben Gr[]unden
+ []
+
+[7]) [8] (doc_theory.tex) [9
 
 
-] (doc_bibliography.tex (doc_main.bbl)) [8
+] (doc_bibliography.tex (doc_main.bbl)) [10
 
 
-] (doc_main.aux) ) 
+]
+(doc_main.aux) ) 
 Here is how much of TeX's memory you used:
- 4341 strings out of 493305
- 62268 string characters out of 3130673
- 145859 words of memory out of 3000000
- 7776 multiletter control sequences out of 15000+200000
- 10021 words of font info for 36 fonts, out of 3000000 for 9000
+ 4348 strings out of 493305
+ 62575 string characters out of 3130672
+ 147245 words of memory out of 3000000
+ 7781 multiletter control sequences out of 15000+200000
+ 10681 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,45p,1439b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jan/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jan/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Jan/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ja
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
-/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmti12.pfb>
-Output written on doc_main.pdf (8 pages, 152501 bytes).
+ 41i,10n,45p,1508b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jan/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jan/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ja
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on doc_main.pdf (10 pages, 189181 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

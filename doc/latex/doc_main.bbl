@@ -1,4 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{alphago}
+AlphaGo.
+\newblock https://deepmind.com/research/alphago/, 2017.
+\newblock Abgerufen am 30.07.2018.
+
+\bibitem{openai}
+Openai five.
+\newblock https://blog.openai.com/openai-five/, 2018.
+\newblock Abgerufen am 09.08.2018.
+
+\bibitem{deepfake}
+anonym.
+\newblock Deepfake.
+\newblock https://www.deepfakes.club/, 2017.
+\newblock Abgerufen am 09.08.2018.
 
 \bibitem{evosim}
 Jan~Obermeier Nils~Schlatter.
@@ -10,12 +26,13 @@ Jonas~Harjunpää Teemu~Koivisto, Tuomo~Nieminen.
 \newblock https://tuomonieminen.github.io/deep-shrooms/, 2017.
 \newblock Abgerufen am 25.07.2018.
 
-\bibitem{theverge}
-Sam Byford.
-\newblock Google’s alphago ai defeats world go number one ke jie.
-\newblock https://www.theverge.com/2017/5/23/15679110/go-alphago-ke-jie-match-
-  google-deepmind-ai-2017, 2017.
-\newblock Abgerufen am 30.07.2018.
+\bibitem{theguardian}
+Steven Borowiec.
+\newblock Alphago seals 4-1 victory over go grandmaster lee sedol.
+\newblock
+  https://www.theguardian.com/technology/2016/mar/15/googles-alphago-seals-
+  4-1-victory-over-grandmaster-lee-sedol, 2016.
+\newblock Abgerufen am 09.08.2018.
 
 \bibitem{howtogo}
 British~Go Association.
@@ -26,18 +43,19 @@ British~Go Association.
 \bibitem{shannon}
 Wikipedia.
 \newblock Shannon number.
-\newblock https://en.wikipedia.org/wiki/Shannon\_number, 2018.
+\newblock https://en.wikipedia.org/wiki/Shannon\_number.
 \newblock Abgerufen am 30.07.2018.
 
 \bibitem{atoms}
 Wikipedia.
 \newblock Oberservable universe.
-\newblock https://en.wikipedia.org/wiki/Observable\_universe, 2018.
+\newblock https://en.wikipedia.org/wiki/Observable\_universe.
 \newblock Abgerufen am 30.07.2018.
 
-\bibitem{alphago}
-AlphaGo.
-\newblock https://deepmind.com/research/alphago/, 2017.
-\newblock Abgerufen am 30.07.2018.
+\bibitem{deepblue}
+Wikipedia.
+\newblock Deep blue.
+\newblock https://en.wikipedia.org/wiki/Deep\_Blue\_(chess\_computer).
+\newblock Abgerufen am 09.08.2018.
 
 \end{thebibliography}

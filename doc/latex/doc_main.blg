@@ -5,14 +5,20 @@ Warning--entry type for "evosim" isn't style-file defined
 --line 1 of file bibliography.bib
 Warning--entry type for "deepshroom" isn't style-file defined
 --line 10 of file bibliography.bib
-Warning--entry type for "theverge" isn't style-file defined
---line 19 of file bibliography.bib
-Warning--entry type for "alphago" isn't style-file defined
+Warning--entry type for "deepblue" isn't style-file defined
+--line 20 of file bibliography.bib
+Warning--entry type for "theguardian" isn't style-file defined
 --line 28 of file bibliography.bib
+Warning--entry type for "alphago" isn't style-file defined
+--line 38 of file bibliography.bib
 Warning--entry type for "atoms" isn't style-file defined
---line 35 of file bibliography.bib
+--line 45 of file bibliography.bib
 Warning--entry type for "shannon" isn't style-file defined
---line 44 of file bibliography.bib
-Warning--entry type for "howtogo" isn't style-file defined
 --line 53 of file bibliography.bib
-(There were 7 warnings)
+Warning--entry type for "howtogo" isn't style-file defined
+--line 61 of file bibliography.bib
+Warning--entry type for "deepfake" isn't style-file defined
+--line 69 of file bibliography.bib
+Warning--entry type for "openai" isn't style-file defined
+--line 77 of file bibliography.bib
+(There were 10 warnings)
