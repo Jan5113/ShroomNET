@@ -1,1 +1,43 @@
-\section{Theoretische Grundlagen}
+\section{Grundlagen \textit{KNNs} \& \textit{DNN}s}
+
+In diesem Kapitel werden die theoretischen Grundlagen für die in dieser Arbeit verwendeten Algorithmen behandelt. In einer Einleitung werden die Begrifflichkeiten erläutert sowie die Motivation für die Entwicklung von \textit{KNN}s und \textit{DNN}s geschildert. Der Hauptteil behandelt den technischen Aspekt, worin das Funktionsprinzip von \textit{KNN}s und \textit{DNN}s, verschiedene Architekturen als auch Umsetzungstechniken erklärt werden.
+
+\subsection{\textit{KI}, \textit{KNN}, \textit{DL}, usw.}
+In den Medien wie auch im Internet hört und liest man die Ausdrücke und Abkürzungen immer wieder: \textit{KI}s, \textit{Deep Learning} und \textit{neuronale Netze}, \textit{AI}s und \textit{DNN}s. Man könnte meinen, sie seien ähnlich, aber sie bedeuten nicht alle dasselbe. Folgender Überblick soll helfen, die verwirrenden Bezeichnungen und Fachausdrücke korrekt zu interpretieren. Der Inhalt greift dabei etwas vor, um späteres Nachschlagen zu ermöglichen.
+
+\begin{itemize}[leftmargin=1.5cm]
+	\item[\textbf{\textit{KI}}:] Künstliche Intelligenz \textit{(engl. artificial intelligince, AI)}:\\
+	 Überbegriff in der Informatik für automatisierte Prozesse, welche ''intelligentes'' Verhalten modellieren/nachahmen. Mangels einer klaren Definition von ''Intelligenz'' ist der Begriff sehr weit anwendbar, d.h. einen Roboter auf zwei Beinen gehen zu lassen gehört genau so zur \textit{KI} wie die Erkennung von Gesichtern.
+	 
+	\item[\textbf{\textit{ML}}:] Maschinelles Lernen \textit{(engl. machine learning)}:\\
+	Teilbereich der \textit{künstlichen Intelligenzen}, welcher sich mit künstlichen Lernprozessen befasst. Konventionellen Programmen gibt man einen Satz an Regeln mit, um z.B. Muster erkennen zu können. Beim \textit{maschinellen Lernen} ist es hingegen das Ziel, den Algorithmus durch Training die Regeln und Gesetzmässigkeiten selber bestimmen zu lassen. Für den Trainingsprozess werden meistens bezeichnete Trainingsdaten verwendet. 
+	
+	\item[\textbf{\textit{KNN}}:] Künstliches neuronales Netz \textit{(engl. artificial neural network, ANN)}:\\
+	Programmtechnik aus dem Gebiet des \textit{maschinellen Lernens}, welche inspiriert biologischen neuronalen Netzen (Gehirnen) Neuronen und deren Interaktionen zu modellieren versucht. Die \textit{Neuronen} sind in Schichten angeordnet (sog. \textit{Layers}) und untereinander verbunden. \textit{KNN}s sind in der Lage aus Trainingsdaten zu lernen. Im Kontext der Informatik wird zwischen \textit{künstlichen neuronalen Netzen} und \textit{neuronalen Netzen} (\textit{NN}s) nicht differenziert.
+	
+	\item[\textbf{\textit{SNN}}:] Shallow Neural Network:\\
+	Eher selten gebrauchter Begriff, \textit{KNN} impliziert z.T. ein \textit{SNN}. ''Shallow'' weist dabei auf die geringe Anzahl der \textit{Layers} hin (i.d.R. 1-2 \textit{Hidden Layers}). Wegen den wenigen \textit{Layers} können \textit{SNN}s keine komplexeren Probleme lösen und werden daher eher selten eingesetzt.
+		
+	\item[\textbf{\textit{DL/DNN}}:] Deep Learning/Deep Neural Network:
+	Im Gegensatz zu \textit{SNN}s bezeichnet man mit \textit{Deep Learning} Netzarchitekturen, welche 3 oder mehr \textit{Hidden Layers} besitzen. Mit speziellen \textit{Layers} können dem \textit{KNN} andere Eigenschaften oder Charakteristiken gegeben werden, so z.B. verbesserte Verallgemeinerung oder ein ''Kurzzeitgedächtnis''. \textit{Deep Neural Network} weist spezifisch auf die Umsetzung eines \textit{DL}-Algorithmus mit \textit{NN}s hin, jedoch werden die beiden Begriffe meist synonym verwendet.
+	
+	\item[\textbf{\textit{CNN}}:] Convolutional Neural Network:\\
+	 Spezielle Art eines \textit{Deep Neural Networks}, welche sich v.a. in der Bilderkennung bewährt. Mit verschiedenen \textit{Layers} werden die relevanten Informationen gefiltert und auf immer kleinere \textit{Layers} konzentriert. Diese Massnahme beschleunigt den Trainingsprozess massgeblich verglichen zu einem hypothetischen, konventionellen \textit{NN} der gleichen Tiefe.
+	
+\end{itemize}
+
+\subsection{Motivation }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
