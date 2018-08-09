@@ -1,20 +1,43 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 
-\bibitem[Byford, 2017]{theverge}
-Byford, S. (2017).
+\bibitem{evosim}
+Jan~Obermeier Nils~Schlatter.
+\newblock Evosim, 2018.
+
+\bibitem{deepshroom}
+Jonas~Harjunpää Teemu~Koivisto, Tuomo~Nieminen.
+\newblock Deep shrooms.
+\newblock https://tuomonieminen.github.io/deep-shrooms/, 2017.
+\newblock Abgerufen am 25.07.2018.
+
+\bibitem{theverge}
+Sam Byford.
 \newblock Google’s alphago ai defeats world go number one ke jie.
-\newblock
-  https://www.theverge.com/2017/5/23/15679110/go-alphago-ke-jie-match-google-deepmind-ai-2017.
+\newblock https://www.theverge.com/2017/5/23/15679110/go-alphago-ke-jie-match-
+  google-deepmind-ai-2017, 2017.
 \newblock Abgerufen am 30.07.2018.
 
-\bibitem[Nils~Schlatter, 2018]{evosim}
-Nils~Schlatter, J.~O. (2018).
-\newblock Evosim.
+\bibitem{howtogo}
+British~Go Association.
+\newblock Play go.
+\newblock https://www.britgo.org/files/pubs/playgo.pdf, 2014.
+\newblock Abgerufen am 30.07.2018.
 
-\bibitem[Teemu~Koivisto, 2017]{deepshroom}
-Teemu~Koivisto, Tuomo~Nieminen, J.~H. (2017).
-\newblock Deep shrooms.
-\newblock https://tuomonieminen.github.io/deep-shrooms/.
-\newblock Abgerufen am 25.07.2018.
+\bibitem{shannon}
+Wikipedia.
+\newblock Shannon number.
+\newblock https://en.wikipedia.org/wiki/Shannon\_number, 2018.
+\newblock Abgerufen am 30.07.2018.
+
+\bibitem{atoms}
+Wikipedia.
+\newblock Oberservable universe.
+\newblock https://en.wikipedia.org/wiki/Observable\_universe, 2018.
+\newblock Abgerufen am 30.07.2018.
+
+\bibitem{alphago}
+AlphaGo.
+\newblock https://deepmind.com/research/alphago/, 2017.
+\newblock Abgerufen am 30.07.2018.
 
 \end{thebibliography}
