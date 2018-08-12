@@ -6,5 +6,19 @@
 \contentsline {subsubsection}{\numberline {1.1.3}Theorie}{8}
 \contentsline {section}{\numberline {2}Grundlagen \textit {KNNs} \& \textit {DNN}s}{9}
 \contentsline {subsection}{\numberline {2.1}\textit {KI}, \textit {KNN}, \textit {DL}, usw.}{9}
-\contentsline {subsection}{\numberline {2.2}Motivation }{10}
-\contentsline {section}{Literatur}{11}
+\contentsline {subsection}{\numberline {2.2}Einleitung}{11}
+\contentsline {subsection}{\numberline {2.3}Maschinelles Lernen}{12}
+\contentsline {paragraph}{Training}{12}
+\contentsline {subsubsection}{\numberline {2.3.1}Verzerrung-Varianz-Dilemma \cite {bias}}{12}
+\contentsline {paragraph}{\IeC {\"U}beranpassung}{13}
+\contentsline {paragraph}{Unteranpassung}{14}
+\contentsline {paragraph}{Validierung}{15}
+\contentsline {subsection}{\numberline {2.4}KNNs}{16}
+\contentsline {subsubsection}{\numberline {2.4.1}Die Natur als Vorbild}{16}
+\contentsline {subsubsection}{\numberline {2.4.2}Neuronen \& Verbindungen}{17}
+\contentsline {subsubsection}{\numberline {2.4.3}Layers}{20}
+\contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{21}
+\contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{22}
+\contentsline {subsection}{\numberline {2.5}DNNs}{23}
+\contentsline {subsubsection}{\numberline {2.5.1}Einleitung (Titel l\IeC {\"o}schen)}{23}
+\contentsline {section}{Literatur}{24}

@@ -8,17 +8,39 @@ Warning--entry type for "deepshroom" isn't style-file defined
 Warning--entry type for "deepblue" isn't style-file defined
 --line 20 of file bibliography.bib
 Warning--entry type for "theguardian" isn't style-file defined
---line 28 of file bibliography.bib
+--line 29 of file bibliography.bib
 Warning--entry type for "alphago" isn't style-file defined
---line 38 of file bibliography.bib
+--line 39 of file bibliography.bib
 Warning--entry type for "atoms" isn't style-file defined
---line 45 of file bibliography.bib
+--line 46 of file bibliography.bib
 Warning--entry type for "shannon" isn't style-file defined
---line 53 of file bibliography.bib
+--line 54 of file bibliography.bib
 Warning--entry type for "howtogo" isn't style-file defined
---line 61 of file bibliography.bib
+--line 62 of file bibliography.bib
 Warning--entry type for "deepfake" isn't style-file defined
---line 69 of file bibliography.bib
+--line 70 of file bibliography.bib
 Warning--entry type for "openai" isn't style-file defined
---line 77 of file bibliography.bib
-(There were 10 warnings)
+--line 78 of file bibliography.bib
+Warning--entry type for "ai" isn't style-file defined
+--line 85 of file bibliography.bib
+Warning--entry type for "ml" isn't style-file defined
+--line 92 of file bibliography.bib
+Warning--entry type for "ann" isn't style-file defined
+--line 99 of file bibliography.bib
+Warning--entry type for "dl" isn't style-file defined
+--line 106 of file bibliography.bib
+Warning--entry type for "cnn" isn't style-file defined
+--line 113 of file bibliography.bib
+Warning--entry type for "alanturing" isn't style-file defined
+--line 127 of file bibliography.bib
+Warning--entry type for "bias" isn't style-file defined
+--line 134 of file bibliography.bib
+Warning--entry type for "welch_prob" isn't style-file defined
+--line 141 of file bibliography.bib
+Warning--entry type for "mnist" isn't style-file defined
+--line 156 of file bibliography.bib
+Warning--entry type for "nielsen" isn't style-file defined
+--line 163 of file bibliography.bib
+Warning--empty publisher in hasimon
+Warning--empty publisher in klett
+(There were 22 warnings)

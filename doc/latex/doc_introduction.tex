@@ -1,17 +1,14 @@
 \section{Einführung}
 
-Wer als Programmierer oder Informatik-Interessierter behaupten will, er habe noch nie von \textit{Deep Learning} gehört zu haben, muss unter einem Stein gelebt haben. Durch \textit{Deep Learning} haben die \textit{künstlichen neuronalen Netze} in den letzten Jahren ein Comeback erlebt und haben es auch schon einige Male in die Schlagzeilen geschafft:
+Wer behaupten will, er habe noch nie von \textit{Deep Learning} gehört, muss gewissermassen unter einem Stein gelebt haben. Durch \textit{Deep Learning} haben die \textit{künstlichen Intelligenzen}\footnotemark  in den letzten Jahren ein Comeback erlebt und haben es auch schon einige Male in die Schlagzeilen geschafft:
 
-\begin{center}
-	{\LARGE \textit{''Googles AlphaGo KI \footnote{Künstliche Intelligenz: Modellierung/Nachahmung von ''intelligentem'' Verhalten durch Rechner, z.B. Schachcomputer, Übersetzungs-Tools oder Text-/Spracherkennung} schlägt}\\}
-	\vspace{0.5cm}
-	{\LARGE \textit{Go-Weltmeister Lee Sedol 4-1''}}\cite{theguardian}
-\end{center}
+\epigraph{\setstretch{2}{\Large ''Googles AlphaGo KI \footnotemark[\value{footnote}] schlägt\\ Go-Weltmeister Lee Sedol 4-1''\cite{theguardian}}}{ The Guardian, 2016}
 
-\vspace{0.3cm}
+\footnotetext{Künstliche Intelligenz: Modellierung/Nachahmung von ''intelligentem'' Verhalten durch Rechner, z.B. Schachcomputer, Übersetzungs-Tools oder Text-/Spracherkennung}
+
 
 \begin{minipage}{13.5cm}
-Das chinesische Brettspiel \textit{Go} basiert auf ganz simplen Regeln: Schwarze bzw. weisse Spielsteine werden abwechslungsweise auf ein 19x19 Felder grosses Spielfeld gesetzt. Das Ziel des Spiels ist es, den Gegner einzukreisen und zu erobern \cite{howtogo}. Trotz den simplen Regeln gibt es fast unzählige Möglichkeiten: Insgesamt lassen sich die Steine in rund $10^{170}$ verschiedenen Arten anordnen. Ein kurzer Magnitudenvergleich: Schach hat etwa $10^{47}$ verschiedene Anordnungsmöglichkeiten \cite{shannon}, das beobachtbare Universum hat $10^{80}$ Atome \cite{atoms}.
+Das chinesische Brettspiel \textit{Go} basiert auf ganz simplen Regeln: Schwarze bzw. weisse Spielsteine werden abwechslungsweise auf ein 19x19 Felder grosses Spielfeld gesetzt. Das Ziel des Spiels ist es, den Gegner einzukreisen und zu erobern \cite{howtogo}. Trotz den simplen Regeln gibt es fast unzählige Möglichkeiten: Insgesamt lassen sich die Steine in rund $10^{170}$ verschiedenen Arten anordnen. Ein kurzer Magnitudenvergleich: Schach hat etwa $10^{43}$ verschiedene Anordnungsmöglichkeiten \cite{shannon}, das beobachtbare Universum enthält schätzungsweise $10^{80}$ Atome \cite{atoms}.
 
 Diese schiere Anzahl an Möglichkeiten machten \textit{Go} bei KI-Programmierern sehr hoch angesehen, denn im Gegensatz zu Schach können nicht alle relevanten Züge in absehbarer Zeit vorausberechnet werden\footnotemark. Trainierte Go-Spieler können das auch nicht, dafür verlassen sie sich auf ihre Erfahrung und auf ihre Intuition, etwas, was Computern nur schwierig beizubringen ist. Und doch passierte es im März 2016: Der Go-Weltmeister Lee Sedol wurde geschlagen --- von der \textit{KI AlphaGo} \cite{alphago}.
 \end{minipage}
@@ -37,7 +34,7 @@ Ein wichtiger Teil für \textit{KNN}s ist die Beschaffung von vielen Trainingsda
 Bei der Umsetzung sollen verschiedene Methoden sowie Vorgehensweisen für den Aufbau eines \textit{KNN}s genauer untersucht werden, um eine möglichst akkurate Bestimmung der Pilzart zu ermöglichen. Es werden verschiedene Netzwerkarchitekturen, aber auch andere Parameter wie Netzwerkgrösse und verschiedene Trainingsdaten auf Stärken und Schwächen untersucht, um eine möglichst optimale Kombination für die Erkennung von Pilzarten evaluieren zu können. Im Kapitel \textit{Vorgehen} wird nachvollziehbar auf die Verfahren und Massnahmen eingegangen, welche zu einer wesentlichen Verbesserung des Ergebnisses beigetragen haben.
 
 \subsubsection{Theorie}
-Für das erleichterte Verständnis der Dokumentation soll das Kapitel \textit{Grundlagen KNNs \& DNNs} einen Einblick in die Entwicklung der verwendeten Algorithmen geben sowie die grundlegende Funktionsweise derer verständlich beschreiben. 
+Für das erleichterte Verständnis der Dokumentation soll das Kapitel \textit{Grundlagen KNNs \& DNNs} einen Einblick in die Entwicklung der verwendeten Algorithmen geben sowie die grundlegende Funktionsweise derer beschreiben. Für das Verständnis des Theorieteils wird ein solides technisches und mathematisches Grundwissen vorausgesetzt.
 
 % Man kann Anwendungsbereiche von \textit{KNN}s folgendermassen kategorisieren: Approximation von Funktionen, Klassifikation und Datenverarbeitung.
 

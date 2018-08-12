@@ -26,6 +26,11 @@ Jonas~Harjunpää Teemu~Koivisto, Tuomo~Nieminen.
 \newblock https://tuomonieminen.github.io/deep-shrooms/, 2017.
 \newblock Abgerufen am 25.07.2018.
 
+\bibitem{bias}
+Stuart~Geman René~Doursat, Elie~Bienenstock.
+\newblock Neural networks and the dias/variance dilemma, 1992.
+\newblock Massachusetts Institute of Technology.
+
 \bibitem{theguardian}
 Steven Borowiec.
 \newblock Alphago seals 4-1 victory over go grandmaster lee sedol.
@@ -41,10 +46,10 @@ British~Go Association.
 \newblock Abgerufen am 30.07.2018.
 
 \bibitem{shannon}
-Wikipedia.
-\newblock Shannon number.
-\newblock https://en.wikipedia.org/wiki/Shannon\_number.
-\newblock Abgerufen am 30.07.2018.
+Claude~E. Shannon.
+\newblock Programming a computer for playing chess.
+\newblock Kapitel General Considerations, 1949.
+\newblock Bell Telephone Laboratories, Inc., Murray Hill, N.J.
 
 \bibitem{atoms}
 Wikipedia.
@@ -55,7 +60,73 @@ Wikipedia.
 \bibitem{deepblue}
 Wikipedia.
 \newblock Deep blue.
-\newblock https://en.wikipedia.org/wiki/Deep\_Blue\_(chess\_computer).
+\newblock https://en.wikipedia.org/wiki/Deep\_Blue\_(chess\_computer), 2017.
 \newblock Abgerufen am 09.08.2018.
+
+\bibitem{ai}
+Wikipedia.
+\newblock Artificial intelligence.
+\newblock https://en.wikipedia.org/wiki/Artificial\_intelligence.
+\newblock Abgerufen am 10.08.2018.
+
+\bibitem{ml}
+Wikipedia.
+\newblock Machine learning.
+\newblock https://en.wikipedia.org/wiki/Machine\_learning.
+\newblock Abgerufen am 10.08.2018.
+
+\bibitem{ann}
+Wikipedia.
+\newblock Artificial neural network.
+\newblock https://en.wikipedia.org/wiki/Artificial\_neural\_network.
+\newblock Abgerufen am 10.08.2018.
+
+\bibitem{dl}
+Wikipedia.
+\newblock Deep learning.
+\newblock https://en.wikipedia.org/wiki/Deep\_learning.
+\newblock Abgerufen am 10.08.2018.
+
+\bibitem{cnn}
+Wikipedia.
+\newblock Convolutional neural network.
+\newblock https://en.wikipedia.org/wiki/Convolutional\_neural\_network.
+\newblock Abgerufen am 10.08.2018.
+
+\bibitem{hasimon}
+H.~A. Simon.
+\newblock {\em The Shape of Automation for Men and Management}.
+\newblock 1965.
+\newblock New York: Harper \& Row, S. 96.
+
+\bibitem{alanturing}
+Alan Turing.
+\newblock On computable numbers, with an application to the
+  entscheindungsproblem, 1936.
+\newblock Proceedings of the London Mathematical Society.
+
+\bibitem{welch_prob}
+Welch Labs.
+\newblock Learning to see : Part 8.
+\newblock https://www.youtube.com/user/Taylorns34/, 2017.
+\newblock Abgerufen am 11.08.2018.
+
+\bibitem{nielsen}
+Michael~A. Nielsen.
+\newblock Neural networks and deep learning.
+\newblock http://neuralnetworksanddeeplearning.com/.
+\newblock Abgerufen am 05.06.2018.
+
+\bibitem{klett}
+Roman~Claus et~al.
+\newblock {\em Natura, Biologie für Gymnasien}.
+\newblock 1991.
+\newblock Klett, ISBN 3-12-042200-2, S. 252 ff.
+
+\bibitem{mnist}
+Christopher J.C.~Burges Yann~LeCun, Corinna~Cortes.
+\newblock The mnist database of handwritten digits.
+\newblock http://yann.lecun.com/exdb/mnist/.
+\newblock Abgerufen am 12.08.2018.
 
 \end{thebibliography}

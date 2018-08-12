@@ -9,6 +9,15 @@
 \usepackage{graphicx}
 \usepackage{newclude}
 \usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{mathabx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.16}
+
+
+\setlength\epigraphwidth{.71\textwidth}
 
 \geometry{left=3cm, right=3cm, top=3cm, bottom=2.5cm}
 
@@ -17,10 +26,15 @@
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 
-\lhead{\scriptsize Dokumentation MAR}
 \chead{\scriptsize ShroomNET}
 \rhead{\scriptsize Jan Obermeier, G15E NKSA}
+\fancyhead[L]{\scriptsize \slshape \leftmark}
 \cfoot{- \thepage \ -}
 \onehalfspacing
 
 \graphicspath{ {../images/} }
+
+\makeatletter
+\define@key{Gin}{resolution}{\pdfimageresolution=#1\relax}
+\makeatother
+
