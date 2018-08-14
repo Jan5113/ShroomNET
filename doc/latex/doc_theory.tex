@@ -110,7 +110,7 @@ Für das Beispiel bedeutet eine Unteranpassung, dass die Funktion $u(x)$ zu einf
 
 \paragraph{Validierung} Will man einen Lernalgorithmus allgemein anwendbar trainieren, ist auf die richtige Balance zwischen Einfachheit (\textit{Verzerrung}) und Komplexität (\textit{Varianz}) zu achten, wobei \textit{Überanpassung} als auch \textit{Unteranpassung} vermieden werden sollten. Um dies zu gewährleisten werden während dem Training regelmässig Validierungsdaten eingespeist, auf welche der Algorithmus \textbf{nicht} trainiert wird. Mit den durch die Validierungsdaten gelieferten Ergebnissen kann auf die Leistung des Algorithmus ausserhalb der Trainingsumgebung geschlossen werden. Sobald die Leistung des Algorithmus mit den Validierungsdaten sinkt während die der Trainingsdaten weiterhin steigt, kann man davon ausgehen, dass der Algorithmus ein Optimum erreicht hat und dass weiteres trainieren zu einer Überanpassung führen wird. Wenn der Trainierte Algorithmus in seinem Optimum trotzdem keine zufriedenstellenden Ergebnisse liefert, ist von einer \textit{Unteranpassung} auszugehen. Durch Ändern der Trainingsparameter\footnotemark oder durch Umgestaltung des Algorithmus kann der \textit{Unteranpassung} wie auch der \textit{Überanpassung} entgegengewirkt werden.
 
-\footnotetext{Nicht zu verwechseln mit den \textit{Parametern} des Algorithmus! Trainingsparameter beeinflussen den Trainingsprozess, d.h. Dauer des Trainings, Anzahl Trainings-/Validierungsdaten, etc. Die \textit{Parameter} des Algorithmus werden trainiert und berechnen aus den Eingangsdaten Ausgangsdaten. Um die Verwechslung dieser beiden relevanten Begriffe zu vermeiden, wird für die Trainingsparameter wie auch für die Architektur des Algorithmus der Begriff \textbf{Meta-Parameter} verwendet.}
+\footnotetext{\label{fn:meta}Nicht zu verwechseln mit den \textit{Parametern} des Algorithmus! Trainingsparameter beeinflussen den Trainingsprozess, d.h. Dauer des Trainings, Anzahl Trainings-/Validierungsdaten, etc. Die \textit{Parameter} des Algorithmus werden trainiert und berechnen aus den Eingangsdaten Ausgangsdaten. Um die Verwechslung dieser beiden relevanten Begriffe zu vermeiden, wird für die Trainingsparameter wie auch für die Architektur des Algorithmus der Begriff \textbf{Meta-Parameter} verwendet.}
 
 \newpage
 
@@ -133,11 +133,14 @@ Das \textit{Neuron} ist der Grundbaustein von \textit{KNN}s. Wie das biologische
 	\label{img:single_neuron}
 \end{figure}
 
-Den Eingangssignalen werden die Variablen  $x_1, x_2,...,x_n$ gegeben, wobei $n$ die Anzahl Eingangssignale ist --- im Fall der Abb. \ref{img:single_neuron} gilt $n=3$. Da \textit{Neuronen} den meisten Fällen mehr als $3$ Eingänge haben, wurde es hier verallgemeinert mit $n$ notiert. Die Eingangssignale $x_i$ können jeden Wert zwischen $1$ und $0$ annehmen. Des Weiteren wird jeder Verbindung ein Gewichtungs-\textit{Parameter} $w_1, w_2,...,w_n$ gegeben, welche im Wert nicht begrenzt sind und daher auch negative Werte annehmen können. Die Gewichtungs-\textit{Parameter} werden mit dem jeweiligen Eingangssignal multipliziert, d.h. durch $x_i\cdot w_i$ erhält man das gewichtete Signal vom $i$-ten Eingang. Im nächsten Schritt gilt es die gewichteten Signale zu summieren, welches mit folgender Formel bewerkstelligt wird:
+Den Eingangssignalen werden die Variablen  $x_1, x_2,...,x_n$ gegeben, wobei sie jeden Wert zwischen $1$ und $0$ annehmen können. Zur Verallgemeinerung der Formeln wird $n$ für die Anzahl der Eingangssignale verwendet. Jeder Verbindung wird ein Gewichtungs-\textit{Parameter} $w_1, w_2,...,w_n$\footnotemark gegeben, dessen Zahlenwert nicht begrenzt ist und daher auch negativ sein kann. Die Eingangssignale werden mit dem jeweiligen Gewichtungs-\textit{Parameter} multipliziert ($x_i\cdot w_i$), wodurch man das gewichtete Signal vom $i$-ten Eingang erhält. Im nächsten Schritt gilt es, alle gewichteten Signale zu summieren, welches in folgender Formel bewerkstelligt wird:
+
+\footnotetext{In den folgenden Kapiteln werden die Gewichtungen $w_1, w_2,...,w_n$ und der Schwellenwert $b$ eines Neurons allgemein als \textbf{Parameter} bezeichnet. Nicht zu verwechseln mit den \textbf{Meta-Parametern}(siehe Fussnote \ref{fn:meta})}
+	
 \begin{equation}\label{eq:weighted_input}
 	\sum_{i=1}^{n} x_i\cdot w_i
 \end{equation}
-Nun soll der Schwellenwert-\textit{Parameter} $b$ implementiert werden, welcher mit dem Wert der gewichteten Summe der Formel \ref{eq:weighted_input} den Ausgang $a$ steuern soll. Da der Ausgang $a$ für die Aufbau eines \textit{KNN}s wiederum als Eingangssignal von einem anderen \textit{Neuron} verwendet wird, soll wieder $0\leq a \leq 1$ gelten. Der Begriff ''Schwellenwert'' impliziert in der allgemeinen Literatur meistens jedoch folgende Funktion:
+Nun soll der Schwellenwert-\textit{Parameter} $b$\footnotemark[\value{footnote}]  implementiert werden. $b$ wird mit dem Ergebnis der Formel \ref{eq:weighted_input} verglichen, womit der Ausgang $a$ steuern soll. Da der Ausgang $a$ für die Aufbau eines \textit{KNN}s wiederum als Eingangssignal von einem anderen \textit{Neuron} verwendet wird, soll wieder $0\leq a \leq 1$ gelten. Der Begriff ''Schwellenwert'' würde auf dieses Problem folgende Beziehung implizieren:
 \begin{center}
 	\begin{minipage}{7cm}
 		wenn $\sum_{i}x_iw_i < b$ dann $a=1$\\
@@ -284,8 +287,10 @@ Bis jetzt wurden die \textit{Parameter} $b$ und $w$ der \textit{Neuronen} als ni
 
 Wie in den vorherigen Kapiteln \ref{cha:theo:neurons} und \ref{cha:theo:layers} betont wurde, kann das gesamte \textit{KNN} sowie die Fehlerrechnung $C$ auch als Funktion dargestellt werden. Das Impliziert, dass sich der Fehler $Err$ auch als Funktion der Eingangsdaten $x_1,...,x_n$ und dem erwarteten Ergebnis $y_1,...,y_m$ (sowie aller Gewichtungen $w$ und Schwellenwerten $b$) ausdrücken lässt:
 \begin{equation}\label{eq:err_func}
-Err = C(N(x_1,...,xn), y_1,...,y_m)
+Err = C(N(x_1,...,x_n), y_1,...,y_m)
 \end{equation}
+
+
 
 \begin{figure}[ht]
 	\centering
