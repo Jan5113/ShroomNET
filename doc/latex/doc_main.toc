@@ -10,23 +10,30 @@
 \contentsline {subsection}{\numberline {2.3}Maschinelles Lernen}{12}
 \contentsline {paragraph}{Training}{12}
 \contentsline {subsubsection}{\numberline {2.3.1}Verzerrung-Varianz-Dilemma \cite {bias}}{12}
-\contentsline {paragraph}{\IeC {\"U}beranpassung}{13}
+\contentsline {paragraph}{\IeC {\"U}beranpassung}{14}
 \contentsline {paragraph}{Unteranpassung}{14}
 \contentsline {paragraph}{Validierung}{15}
 \contentsline {subsection}{\numberline {2.4}KNNs}{15}
 \contentsline {subsubsection}{\numberline {2.4.1}Die Natur als Vorbild}{16}
 \contentsline {subsubsection}{\numberline {2.4.2}Neuronen \& Verbindungen}{17}
-\contentsline {subsubsection}{\numberline {2.4.3}Layers}{20}
+\contentsline {subsubsection}{\numberline {2.4.3}Layers}{19}
 \contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{21}
-\contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{22}
-\contentsline {paragraph}{Gradient Descent}{23}
-\contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{23}
+\contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{21}
+\contentsline {paragraph}{Gradient Descent}{22}
+\contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{22}
 \contentsline {subparagraph}{$\bullet $ Mini-Batch}{23}
 \contentsline {subparagraph}{$\bullet $ Lernepochen}{23}
-\contentsline {subsection}{\numberline {2.5}DNNs}{24}
-\contentsline {subsubsection}{\numberline {2.5.1}Convolutional Neural Networks}{25}
-\contentsline {subsection}{\numberline {2.6}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{25}
-\contentsline {paragraph}{Standardisierungsfunktionen}{25}
-\contentsline {subparagraph}{$\bullet $ Rectifier-Funktionen}{25}
-\contentsline {paragraph}{Fehlerberechnung}{26}
-\contentsline {section}{Literatur}{27}
+\contentsline {subsection}{\numberline {2.5}DNNs}{23}
+\contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{24}
+\contentsline {subsubsection}{\numberline {2.6.1}Convolution Layer}{24}
+\contentsline {subsubsection}{\numberline {2.6.2}Feature Maps}{25}
+\contentsline {subsubsection}{\numberline {2.6.3}Pooling}{26}
+\contentsline {subsubsection}{\numberline {2.6.4}Training von \textit {CNN}s}{27}
+\contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{27}
+\contentsline {subsubsection}{\numberline {2.7.1}ReLU-Layer}{27}
+\contentsline {subsubsection}{\numberline {2.7.2}Fehlerberechnung}{28}
+\contentsline {subsubsection}{\numberline {2.7.3}Dropout-Layer}{28}
+\contentsline {subsubsection}{\numberline {2.7.4}Data Augmentation}{28}
+\contentsline {subsubsection}{\numberline {2.7.5}Transfer Learning}{28}
+\contentsline {subsubsection}{\numberline {2.7.6}Ensemble}{28}
+\contentsline {section}{Literatur}{29}

@@ -41,14 +41,15 @@ In den Medien wie auch im Internet hört und liest man die Ausdrücke und Abkür
 
 Sie haben wahrscheinlich ohne zu zögern das Bild gesehen und sofort erkannt, dass darauf eine Hand mit 3 ausgestreckten Fingen gezeigt wird. Es scheint auf den ersten Blick ein simpler Prozess zu sein. So simpel, dass sogar Kleinkinder dazu fähig sind. Mit dieser Vorstellung waren ersten \textit{KI}-Forscher der 1960er der Meinung, sie könnten Rechnern die visuellen Interpretation von Bildern wie auch andere menschliche Fähigkeiten beibringen --- in der Zeitspanne von nur zwanzig Jahren. Wie es sich herausstellte, haben sie die Hürde massiv unterschätzt. Erst heute mit der steigenden Rechenleistung und neuen Entwicklungen beginnen die Computer langsam die Versprechen der 60er zu erfüllen. In anderen Worten: Ihr visueller Kortex hat für die Erkennung dieser Finger soeben das geleistet, wofür Rechner Jahrzehnte an Forschung und Entwicklung benötigt haben.\\
 
+
 \epigraph{\setstretch{2}{\Large ''Maschinen werden in 20 Jahren zu jeder Arbeit fähig sein, die ein Mensch verrichten kann.''}\cite{hasimon}}{\textit{Herbert A. Simon\\ \textit{KI}-Pionier, 1965}}
 
-Um die Schwierigkeiten der Bilderkennung zu verstehen, muss das Problem aus der sich von Rechnern betrachtet werden. Was wir als ein Bild von einer Hand erkennen sind für einen Computer Zahlen. Jeder Bildpunkt (\textit{Pixel}) besteht aus drei Intensitätswerten zwischen 0 und 255 für die Grundfarben rot, grün und blau; im Raster angeordnet ergeben sie das Bild. Die Frage besteht in diesem Beispiel darin, ob eine mathematische Funktion\footnote{Laut Alan Turing kann jede mathematische Funktion in einem Computerprogramm umgesetzt werden\cite{alanturing}, weswegen das Finden dieser Funktion das primäre Ziel ist. Wiederum können Programme beim Finden dieser Funktion helfen.} für diese Werte gefunden werden kann, welche \textit{Pixels} mit Fingern erkennt und dann zählt, wie viele Finger gezeigt werden. In Worten formuliert sähe der Vorgang wie folgt aus: ''Ein ausgestreckter Finger ist leicht rötlich, länglich und von der Hand gespreizt. Diese gilt es zu zählen''. Will man nun aber einen Algorithmus designen, welche diese Eigenschaften erkennen kann, so verliert man sich schnell in unzähligen Regeln und komplexen Ausnahmen für die zu erkennenden Muster und Regelmässigkeiten. Es sei denn, man lässt den Algorithmus anhand von Beispieldaten die Muster und Regeln dazu selber finden:
+Um die Schwierigkeiten der Bilderkennung zu verstehen, muss das Problem aus der sich von Rechnern betrachtet werden. Was wir als ein Bild von einer Hand erkennen sind für einen Computer Zahlen. Jeder Bildpunkt (\textit{Pixel}) besteht aus drei Intensitätswerten zwischen 0 und 255 für die Grundfarben rot, grün und blau; im Raster angeordnet ergeben sie das Bild. Die Frage besteht in diesem Beispiel darin, ob eine mathematische Funktion\footnote{Laut Alan Turing kann jede mathematische Funktion als Computerprogramm umgesetzt werden\cite{alanturing}, weswegen das Finden dieser Funktion das eigentliche Ziel ist.} für diese Pixelwerte gefunden werden kann, welche etwas über die Anzahl der gezeigten Finger aussagen kann. In Worten formuliert sähe die Funktion wie folgt aus: ''Ein ausgestreckter Finger ist leicht rötlich, länglich und von der Hand gespreizt. Diese gilt es zu zählen''. Will man nun aber einen Algorithmus designen, welche diese Eigenschaften erkennen kann, so verliert man sich schnell in unzähligen Regeln und komplexen Ausnahmen. Es sei denn, man lässt den Algorithmus anhand von Beispieldaten die Muster und Regeln selber finden:
 
 \subsection{Maschinelles Lernen}\label{cha:theo:ml}
 Maschinelle Lernalgorithmen sind auf den künstlichen Wissenserwerb spezialisiert. Dabei ist es wichtig, nicht durch ''Auswendiglernen'', sondern durch Erkennen und Verallgemeinern von Gesetzmässigkeiten Daten zu verarbeiten. Es sind viele verschiedene Umsetzungsansätze für lernfähige Algorithmen bekannt; so z.B. \textit{genetische Algorithmen}, \textit{Entscheidungsbäume} und \textit{künstliche neuronale Netze}.
 
-\paragraph{Training} Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}. Der \textit{Trainingsprozess} sieht generell folgendermassen aus: Ein Datensatz aus den \textit{Trainingsdaten} wird in den zu trainierenden Algorithmus eingespeist, worauf das erhaltene (meist falsche) Ergebnis mit dem erwünschten Ergebnis verglichen wird. Durch Anpassung der \textit{Parameter} des Algorithmus wird versucht, das Ergebnis zu verbessern. Dieser Prozess wird mit allen Datensätzen der Trainingsdaten wiederholt, wodurch der Algorithmus eine allgemein anwendbare Regel für seine Aufgabe finden soll.
+\paragraph{Training} Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}. Der \textit{Trainingsprozess} sieht generell folgendermassen aus: Ein Datensatz aus den \textit{Trainingsdaten} wird in den zu trainierenden Algorithmus eingespeist, worauf das erhaltene (meist falsche) Ergebnis mit dem erwünschten Ergebnis verglichen wird. Durch Anpassung der \textit{Parameter} des Algorithmus wird versucht, das Resultat zu verbessern. Dieser Prozess wird mit allen Datensätzen der Trainingsdaten wiederholt, wodurch der Algorithmus eine allgemein anwendbare Funktion für die Zuordnung von Eingangsdaten zum korrekten Ergebnis finden soll.
 
 \subsubsection{Verzerrung-Varianz-Dilemma \cite{bias}}\label{cha:theo:ml:b-v}
 Das Verzerrung-Varianz-Dilemma ist eine generelle Schwierigkeit von Lernalgorithmen. Der Algorithmus soll mit den \textit{Trainingsdaten} als auch mit komplett neuen Daten akkurate Ergebnisse liefern können.
@@ -61,7 +62,7 @@ Nehmen wir uns folgendes vereinfachtes Beispiel vor: Von einer unbekannten Funkt
 	\caption[Beispiel zur Funktionsfindung]{Beispiel zur Funktionsfindung}
 \end{figure}
 
-$x$ und $y$ sollen dabei Werte von gesammelten Daten repräsentieren, weswegen mit einem natürlichen Rauschen der Daten zu rechnen ist. Nun gilt es mithilfe dieser Datenpunkte ein Modell zu finden, mit dem man einen $y$-Wert mit gegebenen $x$ vorausberechnen lässt. Zwar liesse sich dieses Problem auch mit \textit{KNN}s lösen, jedoch werden einfachheitshalber vorerst Polynomfunktionen zur Modellierung verwendet.
+$x$ und $y$ sollen dabei Werte von gesammelten Daten repräsentieren, weswegen mit einem natürlichen Rauschen der Daten zu rechnen ist. Nun gilt es mithilfe dieser Datenpunkte ein Modell zu finden, mit dem man einen $y$-Wert mit gegebenen $x$ bestimmen lässt. Zwar liesse sich dieses Problem auch mit \textit{KNN}s lösen, jedoch werden einfachheitshalber vorerst Polynomfunktionen zur Modellierung verwendet.
 
 Bei 11 Datenpunkten kann ein Polynom zehnten Grades die Funktion folgendermassen modellieren:
 
@@ -224,16 +225,12 @@ Mit der \textit{Sigmoid}-Funktion als ideale Kurve zur Standardisierung von $z$ 
 a = \sigma \left( \sum_{i=1}^{n} x_i\cdot w_i+b\right)  \qquad \text{oder} \qquad a = \sigma \left( z \right)
 \vspace*{2mm}
 \end{equation}
-für welche gilt:
-\[x_1,...,x_n \in \left[0, 1\right] \qquad \text{als auch} \qquad a\in \left[0, 1\right] \]
 
 Dies ist die Formel eines jeden \textit{Neurons} und bildet (z.T. mit geringfügigen Modifikationen) den Grundbaustein aller \textit{KNN}s.\\
 
 Anzumerken ist, dass die Formel \ref{eq:neuron_eq} eine ganz normale Funktion ist, welche den Eingangswerten $x_1,...,x_n$ einen Ausgangswert $a$ zuordnet. Die Variablen $w_1,...,w_n$ und $b$ sind \textit{Parameter} und werden nicht von den Eingangsdaten beeinflusst.
 
 Auch ist hinzuzufügen, dass die Funktion \ref{eq:neuron_eq} aufgrund der \textit{Glätte} der \textit{Sigmoid}-Kurve und der Linearität der restlichen Operationen ebenfalls differenzierbar ist. Diese Eingenschaft wird später essenziell, um einen effizienten Trainingsalgorithmus für die Justierung der \textit{Parameter} zu entwickeln.
-
-\newpage
 
 \subsubsection{Layers}\label{cha:theo:layers}
 
@@ -314,90 +311,102 @@ Je mehr Epochen das Training durcharbeitet, umso genauer können die \textit{Par
 \subsection[DNNs]{Deep Neural Networks}\label{cha:theo:dl}
 Theoretisch liesse sich jedes Problem mit nur einem \textit{Hidden-Layer} lösen, jedoch ist es bewiesen, dass ein \textit{Shallow Neural Network} schon für die simpelste Logik-Funktionen z.B. um die Gleichheit mehrerer Signale zu prüfen, exponentiell mehr \textit{Hidden-Neuronen} benötigt\cite{hastad}. Weshalb sollte man also nicht die Anzahl der \textit{Hidden-Layers} erhöhen? Stichwort: \textit{Deep Neural Networks}. Die Idee dieser \textit{KNN}s ist es, durch weitere, spezialisierte \textit{Hidden-Layers} deren Komplexität und Leitung zu steigern.
 
-Mit dem Wissen der vorherigen Kapitel liesse sich ganz einfach ein sehr tiefes \textit{KNN}s bauen. Man braucht nur eine Menge \textit{Hidden-Layers} und schaltet diese in Serie, indem man alle \textit{Neuronen} miteinander verbindet:
+Mit dem Wissen der vorherigen Kapitel liesse sich ganz einfach ein sehr tiefes \textit{KNN}s für die Bilderkennung bauen. Man braucht nur eine Menge \textit{Hidden-Layers} und schaltet diese in Serie, indem man alle \textit{Neuronen} miteinander verbindet\footnote{Ab nun empfiehlt es sich, sich die \textit{Layers} als \textbf{2D-Ebenen} aus \textit{Neuronen} vorzustellen, da das Kapitel \ref{cha:theo:cnn} auf die Anwendung für die Verarbeitung von 2D-Bildern eingeht. An den Formeln ändert sich jedoch nichts; die \textit{Layers} werden nur anders dargestellt.}:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{deep_full}
+	\includegraphics[width=\textwidth]{deep_full_planes}
 	\caption[\textit{Fully Connected Deep Neural Network}]{Schema von einem \textit{Fully Connected Deep Neural Network}}
 	\label{img:deep_full}
 \end{figure}
 
-Per Definition handelt es sich dabei um ein \textit{DNN}, jedoch wird man feststellen, dass sich die Leistung trotz viel langsameren Training nur marginal verbessert. Der Grund dafür liegt in der Mathematik hinter der Vernetzung der Neuronen selber: Während des Trainings sind Gradienten für \textit{Parameter} der ersten Layers entweder verschwindend klein oder extrem gross, welches das Training destabilisieren. Man nennt dieses Phänomen \textit{Unstable Gradients}. Um das Problem zu umgehen, werden die \textit{Hidden-Layers} in \textit{DNN}s vereinfacht und spezialisiert. \\
+Per Definition handelt es sich dabei um ein \textit{DNN}, jedoch wird man feststellen, dass sich die Leistung trotz viel langsameren Training nur marginal verbessert. Der Grund dafür liegt in der Mathematik des \textit{Gradient Descent}-Trainingsverfahrens selber: Während dem Training sind Gradienten für \textit{Parameter} der ersten Layers entweder verschwindend klein oder extrem gross, welches das Training destabilisieren. Man nennt dieses Phänomen \textit{Unstable Gradients}. Um das Problem zu umgehen, werden die \textit{Hidden-Layers} in \textit{DNN}s vereinfacht und spezialisiert, um die Anzahl der Verbindungen und somit die der \textit{Parameter} zu verringern. \\
 
-Da es in dieser Arbeit Pilze anhand von Bildern zu kategorisieren gilt, soll in diesem Kapitel der Fokus auf sog. \textit{Convolutional Neural Networks} (kurz \textit{CNN}s) gelegt werden, welche sich v.a. im Bereich der Bilderkennung bewährt haben.
+In der Praxis gibt es einige verbreitete \textit{DNN}-Typen: \textit{RNN}s (\textit{Recurrent Neural Networks}), \textit{LSTM RNNs} (\textit{Long short-Term Memory RNN}), \textit{Deep Belief Networks}, etc., jedoch ist das \textit{Convolutional Neural Network} (\textit{CNN}) der geeignetste Typ für Bilderkennungsprobleme. Da es in der Arbeit Pilze anhand von Bildern zu kategorisieren gilt, wird im nächsten Kapitel der Fokus nur auf \textit{CNN}s gelegt.
 
-\subsubsection{Convolutional Neural Networks}
-Will man ein \textit{DNN} auf die Erkennung von Bildern spezialisieren, so ist das in Abb. \ref{img:deep_full} gezeigte Netz aus mehreren Gründen ungeeignet: Einerseits leidet es weiterhin an \textit{Unstable Gradients} und ist daher schwierig zu trainieren, andererseits werden durch \textit{Fully Connected Layers} die räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert. \textit{CNN}s verwenden sog. \textit{Convolution Layers}, welche es mittels \textit{Local Receptive Fields}, \textit{Shared Wieghts} und \textit{Pooling} ermöglichen, Kanten und Muster in Bildern zu erkennen.
+\subsection{Convolutional Neural Networks}\label{cha:theo:cnn}
+Will man ein \textit{DNN} für die Erkennung von Bildern verwenden, so ist das in der Abb. \ref{img:deep_full} gezeigte Netz aus mehreren Gründen ungeeignet: Einerseits leidet es u.a. wegen den vielen Verbindungen weiterhin an \textit{Unstable Gradients} und ist daher schwierig zu trainieren, andererseits werden durch \textit{Fully Connected Layers} die räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert. \textit{CNN}s verhindern dies mit sog. \textit{Convolution Layers}. Diese verwenden \textit{Local Receptive Fields}, \textit{Shared Parameters} und \textit{Pooling}, um Kanten und Muster in Bildern zu erkennen.
 
 
+\subsubsection{Convolution Layer}
+Das \textit{Local Receptive Field}, zu Deutsch ''lokales rezeptives Feld'', engt die Eingangssignale eines \textit{Neurons} auf einen lokalisierten Bereich des vorhergehenden Layers ein. Hat man z.B. den \textit{Input-Layer} und einen darauf folgenden \textit{Convolution-Layer}, auf die eine \textit{Local-Receptive-Field}-Grösse von $5\times 5$ \textit{Neuronen} angewandt wird, so ist ein \textit{Neuron} des \textit{Convolution-Layers} nur mit einem $5\times 5$ \textit{Neuronen} grossen Bereich des \textit{Input-Layers} verbunden. Für das erste \textit{Neuron} des \textit{Convolution-Layers} wird es folgendermassen aussehen:
+
+\begin{figure}[h]
+	\ContinuedFloat*
+	\centering
+	\includegraphics[width=\textwidth]{receptive_field_1}
+	\caption[Beispiel für das \textit{Local-Receptive-Field} 1. \textit{Neuron}]{Beispiel für das \textit{Local-Receptive-Field} vom 1. \textit{Neurons} des \textit{Convolution-Layers}}
+	\label{img:rec_field1}
+\end{figure}
+
+Für das nächste \textit{Neuron} des \textit{Convolution-Layers} verschiebt sich die gesamte Maske einen Schritt in die jeweilige Richtung. Wie die Grösse des \textit{Local-Receptive-Fields} ist auch die Schrittgrösse ein \textit{Meta-Parameter} und kann angepasst werden, in diesem Beispiel wird eine Schrittgrösse von einem \textit{Neuron}(/Pixel) verwendet:
+
+\begin{figure}[h]
+	\ContinuedFloat
+	\centering
+	\includegraphics[width=\textwidth]{receptive_field_2}
+	\caption[Beispiel für das \textit{Local-Receptive-Field} 2. \textit{Neuron}]{Beispiel für das \textit{Local-Receptive-Field} vom 2. \textit{Neurons} des \textit{Convolution-Layers}}
+	\label{img:rec_field2}
+\end{figure}
+
+\subsubsection{Feature Maps}
+Ein weiterer verwendeter Trick ist, dass alle Neuronen des \textit{Convolution-Layers} dieselben \textit{Parameter} verwenden. Dabei ist die Rede von sog. \textit{Shared weigths}, d.h. das \textit{Neuron}$_{ij}$ im jeweiligen \textit{Local-Receptive-Field} wird für jedes \textit{Convolution-Neuron} mit $w_{ij}$ gewichtet, wobei $i$ und $j$ die Indexes für die horizontale resp. vertikale Position im \textit{Local-Receptive-Field} bezeichnet. Im $5\times 5$-Beispiel von oben gibt es somit nur 25 verschiedene Gewichtungen, der Schwellenwert $b$ ist überall der selbe.
+
+Intuitiv kann man sich den \textit{Convolution Layer} als Schablone für das durch die \textit{Parameter} eingestellte Muster vorstellen, welche Schrittweise über das Eingangsbild geschoben wird. Entspricht das Bild dem Muster, wird ein hoher Wert zurückgegeben und vice versa. Je nach \textit{Parameter} kann man z.B. Kanten oder Ecken erkennen. Man hat somit eine sog. \textit{Feature Map} erstellt, welches das Vorkommen eines bestimmtes Musters im Bild kartiert. Da ein Bild nicht nur aus einem einzigen Muster besteht, werden in einem \textit{Convolution-Layer} sogleich mehrere \textit{Feature-Maps} erstellt, welche sich auf verschiedene Muster spezialisieren können.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{feature_maps}
+	\caption[\textit{Feature-Maps}]{Veranschaulichung von \textit{Feature-Maps}}
+	\label{img:feature_maps}
+\end{figure}
+
+\subsubsection{Pooling}
+Um die vom \textit{Convolution-Layer} erhaltenen \textit{Feature-Maps} weiter zu konzentrieren, folgt in der Regel ein sog. \textit{Pooling}-Layer. Dabei wird wiederum aus einem Bereich des vorherigen \textit{Layers} nur der höchste Wert (\textit{max-Pooling}) oder der durchschnittliche Wert (average-Pooling) an den nächsten \textit{Layer} weitergegeben.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{max_pooling}
+	\caption[\textit{\textit{max-Pooling-Layer}}]{Funktionsweise eines \textit{max-Pooling-Layers} mit Filtergrösse $2\times 2$ und Schrittgrösse 2}
+	\label{img:max_pooling}
+\end{figure}
+
+
+\subsubsection{Training von \textit{CNN}s}
 
 \subsection{Zusätzliche Meta-Parameter und Modifikation}
 Die in den vorherigen Kapiteln beschriebenen \textit{KNN}s und \textit{DNN}s als auch deren Training sind keineswegs starr und lassen sich in vielen Aspekten modifizieren und justieren. Auch diese \textit{Meta-Parameter} sind für spätere Kapitel relevant, weswegen sie in diesem Abschnitt kurz beschrieben werden. 
 
-\paragraph{Standardisierungsfunktionen}
-Die \textit{Sigmoid}-Kurve aus Kapitel \ref{cha:theo:neurons} ist nicht die einzige Funktion, die zur Standardisierung des gewichteten Ausgangssignals $z$ eines Neurons (siehe Formel \ref{eq:def_z}) verwendet wird. Neben der \textit{Sigmoid}-Funktion haben sich auch sog. \textit{Rectified}-Funktionen bewährt:
+\subsubsection{ReLU-Layer}
+Die \textit{Sigmoid}-Kurve aus Kapitel \ref{cha:theo:neurons} ist nicht die einzige Funktion, die zur Standardisierung des gewichteten Ausgangssignals $z$ eines Neurons (siehe Formel \ref{eq:def_z}) verwendet wird. Neben der \textit{Sigmoid}-Funktion haben sich auch die sog. \textit{Rectified-Linear}-Funktion bewährt. Ein \textit{Neuron}, welches diese Funktion verwendet, nennt man \textit{Rectified-Linear-Unit} (kurz \textit{ReLU}); ein \textit{ReLU}-Layer ist somit eine Schicht zusammengesetzt aus diesen \textit{ReLU}-\textit{Neuronen}.
 
-%\subparagraph{$\bullet$ tanh-Funktion} Im Gegensatz zur \textit{Sigmoid}-Funktion gibt die tanh-Funktion Werte im Bereich von $-1$ bis $1$ zurück und ist bei $z=0$ steiler. Die Leistung dieser Funktion ist in den meisten Fällen jedoch vergleichbar mit die der \textit{Sigmoid}-Funktion.
-%
-%\begin{figure}[h]
-%	\centering
-%	\begin{tikzpicture}
-%	\begin{axis}[
-%	xlabel={$z$},
-%	ylabel={$a$},
-%	xmin=-3.9, xmax=3.9,
-%	ymin=-0.998, ymax=0.998,
-%	ymajorgrids=true,
-%	xmajorgrids=true,
-%	grid style=dashed,
-%	width=10cm,
-%	height=5cm,
-%	axis line style = <->,
-%	axis lines=middle,
-%	axis y line=left
-%	]
-%	\addplot[-, thick, blue] expression[domain=-6:6,samples=100]{0.99*tanh(x)}; 
-%	\end{axis}
-%	\end{tikzpicture}
-%	\caption[tanh-Funktion]{tanh-Funktion $tanh(z) = a$}
-%	\label{plt:tanh}
-%\end{figure}
+Im Gegensatz zur \textit{Sigmoid}-Kurve liefert diese Funktion einen ganz anderen Ansatz: Bei $z > 0$ verhält sie sich linear und bei $z \leq 0$ gibt sie einen konstanten Wert von 0 zurück, d.h. der Ausgangswert ist nach oben nicht begrenzt und immer positiv.
 
-\subparagraph{$\bullet$ Rectifier-Funktionen} Im Gegensatz zur \textit{Sigmoid}-Funktion liefern die \textit{Rectifier}-Funktionen einen ganz anderen Ansatz: Bei $z\rightarrow \infty$ verhalten sie sich linear und bei $z\rightarrow -\infty$ geben sie einen Wert von 0 zurück, d.h. der Ausgangswert ist nach oben nicht begrenzt und ist immer positiv.
+\begin{equation}\label{eq:relu_func}
+	\sigma(z) = \begin{cases} z, & \mbox{wenn } z > 0 \\ 0, & \mbox{wenn } z \leq 0 \end{cases}
+\end{equation}
+
+Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectified-Linear}-Funktion verglichen mit der \textit{Sigmoid}-Funktion folgendermassen aus:
 
 \begin{figure}[h]
 	\centering
 	\begin{tikzpicture}
-	\begin{axis}[
-	xlabel={$z$},
-	ylabel={$a$},
-	xmin=-5, xmax=5,
-	ymin=0, ymax=4.99,
-	ymajorgrids=true,
-	xmajorgrids=true,
-	grid style=dashed,
-	width=10cm,
-	height=5cm,
-	axis line style = <->,
-	axis lines=middle,
-	axis y line=left
-	]
+	\begin{axis}[xlabel={$z$},ylabel={$a$},xmin=-5, xmax=5,ymin=0, ymax=4.99,ymajorgrids=true,
+	xmajorgrids=true,grid style=dashed,width=10cm,height=5cm,axis line style = <->,
+	axis lines=middle,axis y line=left]
 	\addplot[-, thick, blue] expression[domain=-5:5,samples=100]{max(0,x)}; 
-	\addplot[-, thick, red] expression[domain=-5:5,samples=100]{ln(1+2.7182818^x)}; 
-	\node [right, blue] at (axis cs: 1,0.7) {$a = r(z)$};
-	\node [right, red] at (axis cs: -1,1.5) {$a = s(z)$};
+	\addplot[-, thick, red] expression[domain=-5:5,samples=100]{(1+(2.7182818^(-x)))^(-1)}; 
+	\node [right, blue] at (axis cs: 2,3.5) {\textit{ReL}};
+	\node [right, red] at (axis cs: 3,1.4) {\textit{Sigmoid}};
 	\end{axis}
 	\end{tikzpicture}
-	\caption[\textit{Rectified-Linear}-Funktion \& \textit{Softplus}-Funktion]{\textit{Rectified-Linear}-Funktion $r(z) = max(z,0)$ und \textit{Softplus}-Funktion $s(z) = ln(1+e^z)$}
+	\caption[\textit{Rectified-Linear}-Funktion]{\textit{Rectified-Linear}-Funktion $\sigma(z) = max(z,0)$ verglichen mit der \textit{Sigmoid}-Funktion}
 	\label{plt:rect_lin}
 \end{figure}
 
-Die \textit{Rectified-Linear}-Funktion ist im Aufbau simpel: Ist $z$ grösser als 1, wird der Wert unverändert zurückgegeben, sobald aber $z<0$, ist das Ergebnis konstant 0. Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung zur Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung jedoch konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Diese Massnahme kann in machen Anwendungsszenarien die Leistung des \textit{KNN}s verbessern.
+\textbf{Vorteile:} Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung für die Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion in diesem Bereich nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung hingegen konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Diese Massnahme kann in machen Anwendungsszenarien die Leistung des \textit{KNN}s verbessern.
 
-Die \textit{Softplus}-Funtion ist eine abgerundete Version der \textit{Rectified-Linear}-Funktion, bei der durch die Glättung des Knicks bei $z=0$ ein komplettes Aussetzen des Lernprozesses verhindert wird.
-
-\paragraph{Fehlerberechnung}
+\subsubsection{Fehlerberechnung}
 Anstelle der \textit{Quadratic Cost}-Funktion aus Kapitel \ref{cha:theo:cost} zur Berechnung des Fehlers \textit{Err}, kann auch die \textit{Cross-Entropy-Cost}-Funktion verwendet werden:
 
 \begin{equation}\label{eq:cross_enropy_cost}
@@ -406,6 +415,13 @@ C(A_1,...,A_m,y_1,...,y_m)=-\sum_{i=1}^{m}\left[ y_i \cdot ln(a) + (1-y_i)\cdot 
 
 Diese \textit{Cost}-Funktion kann grosse Fehlerwerte für \textit{Sigmoid-Neuronen} besser handhaben, welche bei der \textit{Quadratic Cost}-Funktion z.T. zu einer Verlangsamung des Trainingsprozesses führen können.
 
+\subsubsection{Dropout-Layer}
+
+\subsubsection{Data Augmentation}
+
+\subsubsection{Transfer Learning}
+
+\subsubsection{Ensemble}
 
 
 
