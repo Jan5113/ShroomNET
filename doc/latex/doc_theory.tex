@@ -5,7 +5,7 @@ In diesem Kapitel werden die theoretischen Grundlagen für die in dieser Arbeit 
 Es ist anzumerken, dass es sich bei \textit{maschinellem Lernen} und \textit{künstlichen neuronalen Netzen} um ein sehr komplexes Themengebiet handelt. Für das Verständnis des Theorieteils wird somit ein solides Grundwissen für technische als auch mathematische Konzepte vorausgesetzt, um die relevanten Informationen in einem angemessenen Umfang behandeln zu können.
 
 \subsection{\textit{KI}, \textit{KNN}, \textit{DL}, usw.}
-In den Medien wie auch im Internet hört und liest man die Ausdrücke und Abkürzungen immer wieder: \textit{KI}s, \textit{Deep Learning} und \textit{neuronale Netze}, \textit{AI}s und \textit{DNN}s. Man könnte meinen, sie seien ähnlich, aber sie bedeuten nicht alle dasselbe. Folgender Überblick soll helfen, die verwirrenden Bezeichnungen und Fachausdrücke korrekt zu interpretieren. Der Inhalt greift dabei etwas vor, um späteres Nachschlagen zu ermöglichen.
+In den Medien wie auch im Internet hört und liest man die Ausdrücke und Abkürzungen immer wieder: \textit{KI}s, \textit{Deep Learning} und \textit{neuronale Netze}, \textit{AI}s und \textit{DNN}s. Man könnte meinen, sie seien ähnlich, jedoch bedeuten sie nicht alle dasselbe. Folgender Überblick soll helfen, die verwirrenden Bezeichnungen und Fachausdrücke korrekt zu interpretieren. Der Inhalt greift dabei etwas vor, um späteres Nachschlagen zu ermöglichen.
 
 \begin{itemize}[leftmargin=2cm]
 	\item[\textbf{\textit{KI}}:] Künstliche Intelligenz \textit{(engl. artificial intelligince, AI)}:\\
@@ -24,7 +24,7 @@ In den Medien wie auch im Internet hört und liest man die Ausdrücke und Abkür
 	Im Gegensatz zu \textit{SNN}s bezeichnet man mit \textit{Deep Learning} Netzarchitekturen, welche 2 oder mehr \textit{Hidden Layers} besitzen. Mit speziellen \textit{Layers} können dem \textit{KNN} andere Eigenschaften oder Charakteristiken gegeben werden, so z.B. verbesserte Verallgemeinerung oder ein ''Kurzzeitgedächtnis''. \textit{Deep Neural Network} weist spezifisch auf die Umsetzung eines \textit{DL}-Algorithmus mit \textit{NN}s hin, jedoch werden die beiden Begriffe meist synonym verwendet\cite{dl}.
 	
 	\item[\textbf{\textit{CNN}}:] Convolutional Neural Network:\\
-	 Spezielle Art eines \textit{Deep Neural Networks}, welche sich v.a. in der Bilderkennung bewährt. Mit verschiedenen \textit{Layers} werden die relevanten Informationen gefiltert und auf immer kleinere \textit{Layers} konzentriert. Diese Massnahme beschleunigt den Trainingsprozess massgeblich verglichen zu einem hypothetischen, konventionellen \textit{NN} der gleichen Tiefe\cite{cnn}.
+	 Spezielle Art eines \textit{Deep Neural Networks}, welche sich v.a. in der Bilderkennung bewährt. Mit verschiedenen \textit{Layers} werden die relevanten Informationen gefiltert und auf immer kleinere \textit{Layers} konzentriert. Diese Massnahme ermöglicht sehr komplexe und leistungsfähige Netze in absehbarer Zeit zu trainieren.
 	
 \end{itemize}
 
@@ -50,7 +50,7 @@ Maschinelle Lernalgorithmen sind auf den künstlichen Wissenserwerb spezialisier
 
 \paragraph{Training} Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}. Der \textit{Trainingsprozess} sieht generell folgendermassen aus: Ein Datensatz aus den \textit{Trainingsdaten} wird in den zu trainierenden Algorithmus eingespeist, worauf das erhaltene (meist falsche) Ergebnis mit dem erwünschten Ergebnis verglichen wird. Durch Anpassung der \textit{Parameter} des Algorithmus wird versucht, das Ergebnis zu verbessern. Dieser Prozess wird mit allen Datensätzen der Trainingsdaten wiederholt, wodurch der Algorithmus eine allgemein anwendbare Regel für seine Aufgabe finden soll.
 
-\subsubsection{Verzerrung-Varianz-Dilemma \cite{bias}}
+\subsubsection{Verzerrung-Varianz-Dilemma \cite{bias}}\label{cha:theo:ml:b-v}
 Das Verzerrung-Varianz-Dilemma ist eine generelle Schwierigkeit von Lernalgorithmen. Der Algorithmus soll mit den \textit{Trainingsdaten} als auch mit komplett neuen Daten akkurate Ergebnisse liefern können.
 
 Nehmen wir uns folgendes vereinfachtes Beispiel vor: Von einer unbekannten Funktion $f(x)$ sind einige Datenpunkte bekannt, welche als Trainingsdaten verwendet werden sollen:
@@ -108,24 +108,22 @@ Die ähnlichen Fehlerwerte von Trainingsdaten sowie den neuen Daten weist darauf
 
 Für das Beispiel bedeutet eine Unteranpassung, dass die Funktion $u(x)$ zu einfach ist (Polynom 2. Grades), um weder die Trainingsdaten noch neue Daten akkurat modellieren zu können.
 
-\paragraph{Validierung} Will man einen Lernalgorithmus allgemein anwendbar trainieren, ist auf die richtige Balance zwischen Einfachheit (\textit{Verzerrung}) und Komplexität (\textit{Varianz}) zu achten, wobei \textit{Überanpassung} als auch \textit{Unteranpassung} vermieden werden sollten. Um dies zu gewährleisten werden während dem Training regelmässig Validierungsdaten eingespeist, auf welche der Algorithmus \textbf{nicht} trainiert wird. Mit den durch die Validierungsdaten gelieferten Ergebnissen kann auf die Leistung des Algorithmus ausserhalb der Trainingsumgebung geschlossen werden. Sobald die Leistung des Algorithmus mit den Validierungsdaten sinkt während die der Trainingsdaten weiterhin steigt, kann man davon ausgehen, dass der Algorithmus ein Optimum erreicht hat und dass weiteres trainieren zu einer Überanpassung führen wird. Wenn der Trainierte Algorithmus in seinem Optimum trotzdem keine zufriedenstellenden Ergebnisse liefert, ist von einer \textit{Unteranpassung} auszugehen. Durch Ändern der Trainingsparameter\footnotemark oder durch Umgestaltung des Algorithmus kann der \textit{Unteranpassung} wie auch der \textit{Überanpassung} entgegengewirkt werden.
+\paragraph{Validierung} Will man einen Lernalgorithmus allgemein anwendbar trainieren, ist auf die richtige Balance zwischen Einfachheit (\textit{Verzerrung}) und Komplexität (\textit{Varianz}) zu achten, wobei \textit{Überanpassung} als auch \textit{Unteranpassung} vermieden werden sollten. Um dies zu gewährleisten, werden während dem Training regelmässig Validierungsdaten eingespeist, auf welche der Algorithmus \textbf{nicht} trainiert wird. Mit den durch die Validierungsdaten gelieferten Ergebnissen kann auf die Leistung des Algorithmus ausserhalb der Trainingsumgebung geschlossen werden. Sobald die Leistung mit den Validierungsdaten sinkt während die der Trainingsdaten weiterhin steigt, kann man davon ausgehen, dass der Algorithmus ein Optimum erreicht hat und dass weiteres Trainieren zu einer Überanpassung führen wird. Wenn der trainierte Algorithmus in seinem Optimum trotzdem keine zufriedenstellenden Ergebnisse liefert, ist von einer \textit{Unteranpassung} auszugehen. Durch Ändern der Trainingsparameter\footnotemark oder durch Umgestaltung des Algorithmus kann der \textit{Unteranpassung} aber auch der \textit{Überanpassung} entgegengewirkt werden.
 
 \footnotetext{\label{fn:meta}Nicht zu verwechseln mit den \textit{Parametern} des Algorithmus! Trainingsparameter beeinflussen den Trainingsprozess, d.h. Dauer des Trainings, Anzahl Trainings-/Validierungsdaten, etc. Die \textit{Parameter} des Algorithmus werden trainiert und berechnen aus den Eingangsdaten Ausgangsdaten. Um die Verwechslung dieser beiden relevanten Begriffe zu vermeiden, wird für die Trainingsparameter wie auch für die Architektur des Algorithmus der Begriff \textbf{Meta-Parameter} verwendet.}
 
-\newpage
-
 \subsection[KNNs]{Künstliche neuronale Netze}
-Obwohl die \textit{KNN}s erst in den letzten Jahren ihren grossen Durchbruch erlebt hatten, lässt sich die ursprüngliche Idee von \textit{künstlichen neuronalen Netzen} bis in die 40er Jahre zurückdatieren. In den 50er Jahren wurden die ersten Versuche mit Rechnern der damaligen Zeit durchgeführt, wobei mit dem Vorgänger des \textit{Neurons}, dem \textit{Perceptron}, nur müssiger Fortschritt erzielt worden ist. Erst mit der Entwicklung der sehr effizienten \textit{Backpropagation-Trainingsmethode} und der Einführung der heute gängigen \textit{Neuronen} kam die Forschung an \textit{KNN}s in den 70er Jahren wieder in Fahrt. Der richtige Durchbruch der \textit{KNN}s kam aber erst in den letzten beiden Jahrzehnten mit der rapiden Steigerung der Prozessorleistung, aber auch dem Aufkommen des Internets und der schieren Menge an gespeicherten und zugänglichen Daten. Das ermöglichte mit neuen Entwicklungen im Bereich des \textit{Deep Learnings} höchst komplexe Systeme. So waren solche \textit{DNN}s in der Lage, Aufgaben zu meistern, welche für Algorithmen lange als sehr schwierig oder unmöglich erachtet worden sind. Mit neusten Erfolgen in der Bilderkennung, aber auch der Entscheidungsfindung (siehe Kapitel 1 \textit{AlphaGo}) und vielen praktischen Anwendungen hat \textit{Deep Learning} öffentliche Aufmerksamkeit erhalten\cite{ann}.\\
+Obwohl die \textit{KNN}s erst in den letzten Jahren ihren grossen Durchbruch erlebt hatten, lässt sich die ursprüngliche Idee von \textit{künstlichen neuronalen Netzen} bis in die 40er Jahre zurückdatieren. In den 50er Jahren wurden die ersten Versuche mit Rechnern der damaligen Zeit durchgeführt, wobei mit dem Vorgänger des \textit{Neurons}, dem \textit{Perceptron}, nur müssiger Fortschritt erzielt worden ist. Erst mit der Entwicklung der sehr effizienten \textit{Gradient Descent-Trainingsmethode} und der Einführung der heute gängigen \textit{Neuronen} kam die Forschung an \textit{KNN}s in den 70er Jahren wieder in Fahrt. Der richtige Durchbruch der \textit{KNN}s kam aber erst in den letzten beiden Jahrzehnten mit der rapiden Steigerung der Prozessorleistung, aber auch dem Aufkommen des Internets und der schieren Menge an gespeicherten und zugänglichen Daten. Das ermöglichte mit neuen Entwicklungen im Bereich des \textit{Deep Learnings} höchst komplexe Systeme. So waren solche \textit{DNN}s in der Lage, Aufgaben zu meistern, welche für Algorithmen lange als sehr schwierig oder unmöglich erachtet worden sind. Mit neusten Erfolgen in der Bilderkennung, aber auch der Entscheidungsfindung (siehe Kapitel 1 \textit{AlphaGo}) und vielen praktischen Anwendungen hat \textit{Deep Learning} öffentliche Aufmerksamkeit erhalten\cite{ann}.\\
 
 Die technischen Informationen zu \textit{KNN}s und \textit{DNN}s in den folgenden Abschnitten sowie im Kapitel \ref{cha:theo:dl} basieren auf dem öffentlich verfügbaren Lernmittel \textit{Neural Networks and Deep Learning} von Michael Nielsen\cite{nielsen}.
 
 \subsubsection{Die Natur als Vorbild}
-Um die in Kapitel \ref{cha:theo:ml} erwähnten Lernverhalten simulieren zu können, bedienen sich die \textit{KNN}s dem Vorbild der Natur: das Gehirn. Die Lernfähigkeit des Gehirns lässt sich in wenigen Worten folgendermassen formulieren: Das menschliche Gehirn besteht aus etwa 15 Milliarden Neuronen, welche durch  Verbindungen miteinander vernetzt sind. Diese Neuronen sind in der Lage, Signale aus den eingehenden Verbindungen mittels Ionenkanäle zu gewichten und mithilfe der in der Zelle herrschenden Ladung miteinander zu verrechnen. Übersteigt die Ladung einen gewissen Schwellenwert, feuert das Neuron und gibt ein Signal an andere Neuronen weiter, welche diesen Prozess wiederholen. Der Lernprozess wird durch Belohnung von nützlichen und häufig verwendeten Verbindungen bewerkstelligt. Dabei werden diese Verbindungen verstärkt und stärker gewichtet, ungebrauchte oder ungünstige Verbindungen verkümmern\cite{klett}.
+Um die in Kapitel \ref{cha:theo:ml} erwähnten Lernverhalten simulieren zu können, bedienen sich die \textit{KNN}s dem Vorbild der Natur: das Gehirn. Die Lernfähigkeit des Gehirns lässt sich in wenigen Worten folgendermassen formulieren: Das menschliche Gehirn besteht aus etwa 15 Milliarden Neuronen, welche durch  Verbindungen miteinander vernetzt sind. Diese Neuronen sind in der Lage, Signale aus den eingehenden Verbindungen mittels Ionenkanäle zu gewichten und mithilfe der in der Zelle herrschenden Ladung miteinander zu verrechnen. Sobald die Ladung einen gewissen Schwellenwert übersteigt, feuert das Neuron und gibt das Signal an die folgenden Neuronen weiter, welche den selben Prozess wiederholen. Der Lernprozess wird durch Belohnung von nützlichen und häufig verwendeten Verbindungen bewerkstelligt, wobei diese Verbindungen verstärkt und stärker gewichtet werden und ungebrauchte oder ungünstige Verbindungen verkümmern\cite{klett}.
 
-Auf diesen Grundlagen basiert die Idee der \textit{KNN}s, jedoch wurden für die algorithmische Umsetzung einige Anpassungen vorgenommen. Heutige \textit{KNN}s sind daher nur noch im entferntesten Sinne mit biologischen neuronalen Netzen verwandt.
+Auf diesen Grundlagen basiert die Idee der \textit{KNN}s, weswegen sie auch noch eine weitere wichtige Eingenschaft gemeinsam haben: Als Aussenstehender ist einem genaue das genaue Funktionsprinzip unbekannt. So sind wir wie auch \textit{KNN}s dazu fähig, handschriftliche Ziffern voneinander zu unterscheiden, wie es aber im Detail bewerkstelligt wird, ist und bleibt unklar\footnote{Ironischerweise war eine Motivation für die Entwicklung von \textit{KNN}s, uns ein besseres Verständnis für die Funktionsweise von intelligentem Verhalten zu geben. Jedoch stellte es sich heraus, dass weder \textit{KNN}s noch das biologische Vorbild im Detail verstanden werden können.}. Für die algorithmische Umsetzung wurden jedoch einige Anpassungen vorgenommen, daher sind heutige \textit{KNN}s nur noch im entferntesten Sinne mit biologischen neuronalen Netzen verwandt. 
 
 \subsubsection{Neuronen \& Verbindungen}\label{cha:theo:neurons}
-Das \textit{Neuron} ist der Grundbaustein von \textit{KNN}s. Wie das biologische Vorbild enthält es mehrere Signaleingänge sowie einen Signalausgang, alle Eingangssignale werden mit einem Faktor Gewichtet und zudem hat jedes \textit{Neuron} seinen Schwellenwert. Die Gewichtungen wie auch der Schwellenwert sind \textbf{variabel}, d.h. sie sind die zu trainierenden \textit{Parameter} des \textit{KNN}s.
+Das \textit{Neuron} ist der Grundbaustein von \textit{KNN}s. Wie das biologische Vorbild enthält es mehrere Signaleingänge sowie einen Signalausgang, alle Eingangssignale werden mit einem Faktor Gewichtet und zudem hat jedes \textit{Neuron} seinen Schwellenwert. Die Gewichtungen wie auch der Schwellenwert sind die zu trainierenden \textit{Parameter} des \textit{KNN}s.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{single_neuron}
@@ -191,7 +189,7 @@ Die Zweite Änderung betrifft den digitalen Wechsel zwischen den $0$ und $1$ vom
 	\caption[Stufen-Funktion]{Stufen-Funktion step$(z) = a$}
 	\label{plt:step}
 \end{figure}
-Da die Stufen-Funktion nicht \textit{glatt}\footnote{Eine Funktion $f(x)$ ist \textit{glatt}, wenn die Ableitung $f'(x)$ existiert, d.h. $f(x)$ darf keine ''Ecken'' haben} ist, kann sie nicht in einem \textit{KNN} eingesetzt werden. Statt den Schwellenwert $-b$ also als klare Grenze zu nehmen, muss ein stufenloser Wechsel zwischen $0$ und $1$ ermöglicht werden. Die \textit{Sigmoid}-Funktion\footnote{Definition der \textit{Sigmoid}-Funktion: $\sigma(x) = \frac{1}{1+e^{-x}}$} $\sigma(z)$ ist die am verbreitetsten Funktion, die diese Eigenschaften erfüllt: 
+Da die Stufen-Funktion nicht differenzierbar ist und nirgends einen Gradienten aufweist, kann sie nicht in einem \textit{KNN} eingesetzt werden. Statt den Schwellenwert $-b$ also als klare Grenze zu nehmen, muss ein stufenloser Wechsel zwischen $0$ und $1$ ermöglicht werden. Die \textit{Sigmoid}-Funktion\footnote{Definition der \textit{Sigmoid}-Funktion: $\sigma(x) = \frac{1}{1+e^{-x}}$} $\sigma(z)$ ist die gängigste Funktion, die diese Eigenschaften erfüllt: 
 
 
 \begin{figure}[h]
@@ -219,7 +217,7 @@ Da die Stufen-Funktion nicht \textit{glatt}\footnote{Eine Funktion $f(x)$ ist \t
 	\caption[Sigmoid-Funktion]{Sigmoid-Funktion $\sigma(z) = a$}
 	\label{plt:sigmoid}
 \end{figure}
-Mit der \textit{Sigmoid}-Funktion als ideale Funktion zur Standardisierung von $z$ gilt es nur noch, alle Elemente miteinander zu verknüpfen:
+Mit der \textit{Sigmoid}-Funktion als ideale Kurve zur Standardisierung von $z$ gilt es nur noch, alle Elemente miteinander zu verknüpfen:
 
 
 \begin{equation}\label{eq:neuron_eq}
@@ -233,7 +231,7 @@ Dies ist die Formel eines jeden \textit{Neurons} und bildet (z.T. mit geringfüg
 
 Anzumerken ist, dass die Formel \ref{eq:neuron_eq} eine ganz normale Funktion ist, welche den Eingangswerten $x_1,...,x_n$ einen Ausgangswert $a$ zuordnet. Die Variablen $w_1,...,w_n$ und $b$ sind \textit{Parameter} und werden nicht von den Eingangsdaten beeinflusst.
 
-Auch ist hinzuzufügen, dass die Funktion \ref{eq:neuron_eq} aufgrund der \textit{Glätte} der \textit{Sigmoid}-Funktion und der Linearität der restlichen Operationen ebenfalls \textit{glatt} ist. Das ermöglicht das (partielle) Ableiten der Funktion, welches später essenziell wird um einen effizienten Trainingsalgorithmus für die Anpassung der \textit{Parameter} zu entwickeln.
+Auch ist hinzuzufügen, dass die Funktion \ref{eq:neuron_eq} aufgrund der \textit{Glätte} der \textit{Sigmoid}-Kurve und der Linearität der restlichen Operationen ebenfalls differenzierbar ist. Diese Eingenschaft wird später essenziell, um einen effizienten Trainingsalgorithmus für die Justierung der \textit{Parameter} zu entwickeln.
 
 \newpage
 
@@ -257,15 +255,15 @@ Die \textit{Neuronen} im Netz werden in Schichten strukturiert, in sog. \textit{
 	\item Zwischen-\textit{Layers}, sog. \textit{Hidden-Layers}
 	\item Ausgangs-\textit{Layers}, sog. \textit{Output-Layers}
 \end{itemize}
-Jedes \textit{KNN} hat einen \textit{Input-Layer} sowie einen \textit{Output-Layer}. Dazwischen befinden sich ein oder mehrere \textit{Hidden-Layers}. Die Neuronen eines \textit{Layers} werden mit den Ausgangssignalen der \textit{Neuronen} im vorherigen \textit{Layer} verbunden, wobei jede Verbindung separat gewichtet wird. Die \textit{Neuronen} des \textit{Input-Layers} sind an sich keine \textit{Neuronen}, da sie nur den Eingangswert annehmen und direkt an die folgenden \textit{Neuronen} weitergeben ($x = a$). Anzumerken ist, dass die vielen Ausgänge eines \textit{Neurons} alle dem selben Ausgangswert $a$ (siehe Kapitel \ref{cha:theo:neurons}) entsprechen. 
+Jedes \textit{KNN} hat einen \textit{Input-Layer} sowie einen \textit{Output-Layer}. Dazwischen befinden sich ein oder mehrere \textit{Hidden-Layers}. Die Neuronen eines \textit{Layers} werden mit allen Ausgangssignalen der \textit{Neuronen} im vorherigen \textit{Layer} verbunden (ein sog. \textit{Fully Connected Layer}), wobei jede Verbindung separat gewichtet wird. Die \textit{Neuronen} des \textit{Input-Layers} sind an sich keine \textit{Neuronen}, da sie nur den Eingangswert annehmen und direkt an die folgenden \textit{Neuronen} weitergeben ($x = a$). Anzumerken ist, dass die vielen Ausgänge eines \textit{Neurons} alle dem selben Ausgangswert $a$ (siehe Kapitel \ref{cha:theo:neurons}) entsprechen. 
 
 Die Funktionsweise lässt sich in wenigen Worten folgendermassen ausdrücken: Die Daten $x_1,...,x_n$ (in Abb. \ref{img:layers} $n=5$) werden in den \textit{Input-Layer} eingespeist und durch die einzelnen \textit{Hidden-Layers} verarbeitet. Das Ergebnis $A_1,...,A_m$ (in Abb. \ref{img:layers} $m=2$) lässt sich am \textit{Output-Layer} ablesen. 
 
-Mathematisch gesehen werden bei der Vernetzung der \textit{Neuronen} die Formeln ineinander verschachtelt, wodurch sich das ganze \textit{KNN} als mathematische Funktion schreiben lässt. Die gesamte Formel ist zwar sehr komplex und unübersichtlich zu notieren, jedoch werden die ursprünglichen Eigenschaften der Funktionen \ref{eq:neuron_eq} beibehalten, d.h. es bleibt eine differenzierbare mathematische Funktion. Das \textit{KNN} soll als Funktion zusammengefasst geschrieben werden als:
+Mathematisch gesehen werden bei der Vernetzung der \textit{Neuronen} die Formeln ineinander verschachtelt, wodurch sich das ganze \textit{KNN} als mathematische Funktion schreiben lässt. Die gesamte Formel ist zwar sehr komplex und unübersichtlich zu notieren, jedoch werden die ursprünglichen Eigenschaften der Funktion \ref{eq:neuron_eq} beibehalten, d.h. es bleibt eine differenzierbare mathematische Funktion. Das \textit{KNN} soll als Funktion zusammengefasst geschrieben werden als:
 \begin{equation}\label{eq:ann}
 N(x_1,...,x_n) = A_1,...,A_m
 \end{equation}
-wobei $N(...)$ das \textit{KNN} als Funktion darstellt, $n$ die Anzahl der Eingangswerte $x_1,...,x_n$ (sowie der \textit{Input-Neuronen}) ist und $m$ die Anzahl der Ausgangswerte $A_1,...,A_n$ (sowie der \textit{Output-Neuronen}) ist. Selbstverständlich sind die $w$- und $b$-\textit{Parameter} nach wie vor Teil des \textit{KNN}s, einfachheitshalber werden sie in der allgemeinen Formel \ref{eq:ann} weggelassen, das sie in der Regel konstant sind.
+wobei $N(...)$ das \textit{KNN} als Funktion darstellt, $n$ die Anzahl der Eingangswerte $x_1,...,x_n$ (sowie der \textit{Input-Neuronen}) ist und $m$ die Anzahl der Ausgangswerte $A_1,...,A_n$ (sowie der \textit{Output-Neuronen}) ist. Selbstverständlich sind die $w$- und $b$-\textit{Parameter} nach wie vor Teil des \textit{KNN}s, einfachheitshalber werden sie in der allgemeinen Darstellung weggelassen, das sie in der Regel konstant sind.
 
 %Zur Verdeutlichung soll der Prozess mit dem in Abb. \ref{img:layers} \textit{KNN} durchgespielt werden: Die Eingangsdaten, 5 Werte zwischen $0$ und $1$, werden in die \textit{Input-Neuronen} geschrieben. Das \textit{Neuron} $n_{11}$ erhält somit 5 eingehende Signale, welche individuell gewichtet sind, d.h.  \textit{Neuron} $n_{12}$ erhält somit anders gewichtete Eingangssignale. Nun verarbeiten alle \textit{Neuronen} des ersten \textit{Hidden-Layers} die gewichtete Summe mit ihren individuellen Schwellenwerten und der \textit{Sigmoid}-Funktion. Der zweite \textit{Hidden-Layer} wiederholt den selben Prozess mit den Ausgehenden Signalen des ersten \textit{Hidden-Layers} sowie die \textit{Output-Neuronen} mit den des zweiten \textit{Hidden-Layers}. Als Ausgang erhält man zwei Werte, welche ebenfalls zwischen 0 und 1 liegen.\\
 
@@ -273,68 +271,180 @@ Die Anzahl der \textit{Neuronen} pro \textit{Layer} gilt es der jeweiligen Probl
 
 \subsubsection{Leistung von KNNs messen}\label{cha:theo:cost}
 
-Das \textit{künstliche neuronale Netz} ist erstellt, doch bevor es mit trainiert werden kann, wird eine Methode zur Evaluation der Leistung des \textit{KNN}s benötigt. Eine Art dies zu bewerkstelligen ist die \textit{cost}-Funktion:
+Das \textit{künstliche neuronale Netz} ist erstellt, doch bevor es mit trainiert werden kann, wird eine Methode zur Evaluation der Leistung des \textit{KNN}s benötigt. Eine Art dies zu bewerkstelligen, ist die \textit{Quadratic-Cost}-Funktion:
 
 \begin{equation}\label{eq:cost}
 C(A_1,...,A_m,y_1,...,y_m)=\sum_{i=1}^{m}\left(A_i-y_i\right)^2=Err
 \end{equation}
-wobei $m$ die Anzahl der \textit{Output-Neuronen} ist. $A_1,...,A_m$ sind die durch das \textit{KNN} erhaltene Ergebnisse und $y_1,...,y_m$ die korrekten Ergebnisse der Trainingsdaten. Die neue Variable $Err$ steht für den erhaltenen Fehler.
+wobei $m$ die Anzahl der \textit{Output-Neuronen} ist. $A_1,...,A_m$ sind die durch das \textit{KNN} erhaltene Ergebnisse und $y_1,...,y_m$ die korrekten Ergebnisse der Trainingsdaten. Die neue Variable $Err$ steht für den erhaltenen Fehler. %Die \textit{cost}-Funktion ist wie die anderen vorher erwähnten Funktionen differenzierbar.
 
-Sind die Differenzen zwischen $A_i$ und $y_i$ gross, so erhält man einen grossen Wert für $Err$ und vice versa. Das heisst, wenn $Err \approx 0$ ist, hat das \textit{KNN} das Ergebnis $y_1,...,y_m$ mithilfe der Eingangsdaten sehr genau vorausbestimmen können. In anderen Worten: Beim Training gilt es diesen Wert $Err$ zu minimieren um die Leistung zu maximieren. (Auch die \textit{cost}-Funktion ist wie die anderen vorher erwähnten Funktionen differenzierbar.)
+Sind die Differenzen zwischen $A_i$ und $y_i$ gross, so erhält man einen grossen Wert für $Err$ und vice versa. Das heisst, wenn $Err \approx 0$ ist, hat das \textit{KNN} das Ergebnis $y_1,...,y_m$ mithilfe der Eingangsdaten sehr genau vorausbestimmen können. In anderen Worten: Beim Training gilt es diesen Wert $Err$ zu minimieren um die Leistung zu maximieren.
 
-\subsubsection{Training von KNNs}\label{cha:theo:backprop}
-Bis jetzt wurden die \textit{Parameter} $b$ und $w$ der \textit{Neuronen} als nicht-veränderliche Werte angenommen. Im Trainingsprozess geht es nun um die Justierung dieser Werte, um den Fehlerwert $Err$ des Netzes zu minimieren. Alle \textit{Parameter} werden am Anfang des Trainingsprozesses zufällig initialisiert, somit wird der Fehler $Err$ entsprechend gross sein. Eine Möglichkeit, den Fehler zu minimieren besteht darin, einen einzelnen \textit{Parameter} $p$ aus dem Netz ein wenig zu ändern um dann dessen Auswirkung auf $Err$ zu erkennen zu können. Wird $Err$ grösser, versucht man die andere Richtung, wird $Err$ kleiner, ist man dem Ziel einen Schritt näher. Zwar klingt diese Methode verständlich und machbar, jedoch ist sie sehr ineffizient, da viel Ausprobieren involviert ist. Wie also kann man die Auswirkung einer Parameteränderung auf den Fehler $Err$ am effizientesten Berechnen?
+Wie in den vorherigen Kapiteln \ref{cha:theo:neurons} und \ref{cha:theo:layers} betont wurde, kann das gesamte \textit{KNN} auch als Funktion dargestellt werden. Dadurch lässt sich der Fehler $Err$ auch als Funktion der Eingangsdaten $x_1,...,x_n$ (sowie aller Gewichtungen $w$ und Schwellenwerten $b$) eines \textit{KNNs} $N(...)$ und dem erwarteten Ergebnis $y_1,...,y_m$  ausdrücken:
 
-Wie in den vorherigen Kapiteln \ref{cha:theo:neurons} und \ref{cha:theo:layers} betont wurde, kann das gesamte \textit{KNN} sowie die Fehlerrechnung $C$ auch als Funktion dargestellt werden. Das Impliziert, dass sich der Fehler $Err$ auch als Funktion der Eingangsdaten $x_1,...,x_n$ und dem erwarteten Ergebnis $y_1,...,y_m$ (sowie aller Gewichtungen $w$ und Schwellenwerten $b$) ausdrücken lässt:
 \begin{equation}\label{eq:err_func}
 Err = C(N(x_1,...,x_n), y_1,...,y_m)
 \end{equation}
 
+\subsubsection{Training von KNNs}\label{cha:theo:backprop}
+Bis jetzt wurden die \textit{Parameter} $b$ und $w$ der \textit{Neuronen} als nicht-veränderliche Werte angenommen. Im Trainingsprozess geht es nun um die Justierung dieser Werte, um den Fehlerwert $Err$ des Netzes zu minimieren. Alle \textit{Parameter} werden am Anfang des Trainingsprozesses zufällig initialisiert, somit wird der Fehler $Err$ entsprechend gross sein.
+
+Eine Möglichkeit, den Fehler zu minimieren besteht darin, einen einzelnen \textit{Parameter} $p$ aus dem Netz ein wenig zu ändern um dann dessen Auswirkung auf $Err$ zu erkennen zu können. Wird $Err$ grösser, versucht man die andere Richtung, wird $Err$ kleiner, ist man dem Ziel einen Schritt näher und wiederholt dasselbe mit allen anderen Parameter. Zwar klingt diese Methode verständlich und machbar, jedoch ist sie sehr ineffizient, da viel Ausprobieren involviert ist. Wie also kann man die Auswirkung einer Parameteränderung auf den Fehler $Err$ am effizientesten berechnen?
+
+Um sich zuerst ein intuitives Bild von dieser Problemstellung machen zu können, muss man es sich als Parameterlandschaft vorstellen: In drei Dimensionen entsprächen die Ortskoordinaten zwei \textit{Parametern}, die Höhe stünde für den zu den \textit{Parametern} zugehörige Fehlerwert $Err$, die ''Landschaft'' mit ihren Bergen und Tälern wird durch die Trainingsdaten bestimmt (entspricht der Funktion $f(x)$ aus Kapitel \ref{cha:theo:ml:b-v}). Da \textit{KNN}s weithin mehr als zwei \textit{Parameter} besitzen, enthält deren Parameterlandschaft so viele ''Ortsdimensionen'' wie das \textit{KNN} \textit{Parameter} hat. Das Ziel ist es in dieser Landschaft, ein tiefes Tal zu finden --- mit einer Schwierigkeit: Man ist blind ($f(x)$ ist unbekannt).
+
+In diesem Gedankenmodell sähe die vorher erwähnte Brute-Force-Strategie zum Finden des Minimums folgendermassen aus: Man macht einen Stritt in eine beliebige Richtung. Ist man höher als vorher, geht man zwei Schritte in die entgegengesetzte Richtung und wiederholt den Prozess für die anderen Dimension(en)/\textit{Parameter}, bis man in einem Tal angekommen ist (eine Bewegung in jede Richtung bewirkt eine Verschlechterung des Ergebnisses).
+
+\paragraph{Gradient Descent}\label{cha:theo:backprop:gd} Eine elegantere Lösung lässt sich mithilfe der Analysis finden, weswegen bei der Herleitung der Formeln stets auf die Differenzierbarkeit geachtet wurde. Durch \textit{partielles Ableiten} der Funktion \ref{eq:err_func} nach allen \textit{Parametern} lässt sich die Steigung in der Parameterlandschaft im momentanen Punkt approximieren. Der erhaltene Richtungsvektor soll dabei als $\vec{v}$ bezeichnet werden, bei dem jede Dimension einem \textit{Parameter} entspricht. Auf das Gedankenmodell angewendet zeigt dieser Vektor $\vec{v}$ in die Richtung, in der man am meisten Höhe verliert, obwohl die umliegende Landschaft nicht bekannt ist. Da man dem Gradienten entlang absteigt, nennt man dieses Optimierungsverfahren \textit{Gradient Descent} (zu Deutsch \textit{Gradientenverfahren}). Das Ausprobieren fällt weg, wodurch sich das Training massiv beschleunigt.
+
+Bei der \textit{Gradient Descent}-Trainingsmethode lassen sich einige solcher \textit{Meta-Parameter} einstellen. Diese beeinflussen die Lerngeschwindigkeit, Genauigkeit und die Dauer des Trainings.
+
+\subparagraph{$\bullet$ Lernrate $\eta$} bestimmt die Grösse der ''Schritte'' in der Parameterlandschaft ($\vec{v} \cdot \eta$). Bei zu kleinen Werten wird das Training nur langsam vorangehen; bei zu grossen Stritten hingegen riskiert man das Überspringen eines Minimums und z.T. sogar eine Verschlechterung der Leistung. 
+
+\subparagraph{$\bullet$ Mini-Batch} Der Richtungsvektor $\vec{v}$ wird in der Regel über mehrere Trainingsexemplare gemittelt, wofür alle Trainingsdaten zufällig in sog. \textit{Mini-Batches} unterteilt werden. Der Trainingsalgorithmus berechnet für alle Exemplare eines \textit{Mini-Batches} die Steigung und mittelt diese, um die Richtung $\vec{v}$ zu erhalten. Erst dann werden die \textit{Parameter} angepasst (ein ''Schritt''). Dieser Prozess wird mit dem nächsten \textit{Mini-Batch} für die neue Position in der Parameterlandschaft wiederholt.
+
+Je grösser die Mini-Batches sind, umso genauer repräsentiert $\vec{v}$ die Parameterlandschaft aller Trainingsdaten, jedoch müssen für einen ''Schritt'' mehr Berechnungen angestellt werden, welche das Training verlangsamen.
 
 
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[xlabel={$p$},	ylabel={$Err$},	xmin=-0, xmax=9.9,	ymin=0, ymax=4.999,	ymajorgrids=true,	xmajorgrids=true,	grid style=dashed,	width=10cm,	height=5cm,
-	axis line style = <->,	axis lines=middle,	axis x line=bottom,	axis y line=left
-	]
-	\addplot[-, thick, blue] expression[domain=0:10,samples=100]{-0.0026*x^5+0.0641*x^4-0.5233*x^3+1.6965*x^2-2.5210*x+4.5000};
-	
-	\node[anchor=center] (source) at (axis cs:3,4){};
-	\node (destination) at (axis cs:3,2.7){};
-	\draw[->, thick, red](source)--(destination);
-	 
-	\end{axis}
-	\end{tikzpicture}
-	\caption[Sigmoid-Funktion]{Beispiel: Fehler $Err$ als Funktion eines \textit{Parameters} $p$}
-	\label{plt:paraboloid}
-\end{figure}
+\subparagraph{$\bullet$ Lernepochen} Sind alle \textit{Mini-Batches} schon einmal für die Berechnung des Gradienten verwendet worden, ist eine Lernepoche vorüber. Die Mini-Batches werden neu gemischt und können wieder in den Trainingsalgorithmus eingespeist werden.
 
+Je mehr Epochen das Training durcharbeitet, umso genauer können die \textit{Parametern} eingestellt werden, jedoch läuft man bei zu vielen Epochen Gefahr der \textit{Überanpassung}, welches man mithilfe von Validierungsdaten zu verhindern versucht (siehe Kapitel \ref{cha:theo:ml:b-v}: Validierung).
 
-\begin{equation}\label{eq:part_der}
-\Delta a \approx \sum_{i=1}^{n} \frac{\delta a}{\delta w_i}\Delta w_j + \frac{\delta a}{\delta b}\Delta b
-\end{equation}
 
 \subsection[DNNs]{Deep Neural Networks}\label{cha:theo:dl}
+Theoretisch liesse sich jedes Problem mit nur einem \textit{Hidden-Layer} lösen, jedoch ist es bewiesen, dass ein \textit{Shallow Neural Network} schon für die simpelste Logik-Funktionen z.B. um die Gleichheit mehrerer Signale zu prüfen, exponentiell mehr \textit{Hidden-Neuronen} benötigt\cite{hastad}. Weshalb sollte man also nicht die Anzahl der \textit{Hidden-Layers} erhöhen? Stichwort: \textit{Deep Neural Networks}. Die Idee dieser \textit{KNN}s ist es, durch weitere, spezialisierte \textit{Hidden-Layers} deren Komplexität und Leitung zu steigern.
 
-Bei kleinen \textit{KNN}s, sog. \textit{Shallow Neural Networks}, ist es üblich, jeden Ausgang mit jedem \textit{Neuron} zu verbinden, die Rede ist dabei von einem \textit{fully connected Layer}.
+Mit dem Wissen der vorherigen Kapitel liesse sich ganz einfach ein sehr tiefes \textit{KNN}s bauen. Man braucht nur eine Menge \textit{Hidden-Layers} und schaltet diese in Serie, indem man alle \textit{Neuronen} miteinander verbindet:
 
-\subsubsection{Einleitung (Titel löschen)}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{deep_full}
+	\caption[\textit{Fully Connected Deep Neural Network}]{Schema von einem \textit{Fully Connected Deep Neural Network}}
+	\label{img:deep_full}
+\end{figure}
 
+Per Definition handelt es sich dabei um ein \textit{DNN}, jedoch wird man feststellen, dass sich die Leistung trotz viel langsameren Training nur marginal verbessert. Der Grund dafür liegt in der Mathematik hinter der Vernetzung der Neuronen selber: Während des Trainings sind Gradienten für \textit{Parameter} der ersten Layers entweder verschwindend klein oder extrem gross, welches das Training destabilisieren. Man nennt dieses Phänomen \textit{Unstable Gradients}. Um das Problem zu umgehen, werden die \textit{Hidden-Layers} in \textit{DNN}s vereinfacht und spezialisiert. \\
 
+Da es in dieser Arbeit Pilze anhand von Bildern zu kategorisieren gilt, soll in diesem Kapitel der Fokus auf sog. \textit{Convolutional Neural Networks} (kurz \textit{CNN}s) gelegt werden, welche sich v.a. im Bereich der Bilderkennung bewährt haben.
 
-
-
-
-
-
-
-
-
-
-
-
-
+\subsubsection{Convolutional Neural Networks}
+Will man ein \textit{DNN} auf die Erkennung von Bildern spezialisieren, so ist das in Abb. \ref{img:deep_full} gezeigte Netz aus mehreren Gründen ungeeignet: Einerseits leidet es weiterhin an \textit{Unstable Gradients} und ist daher schwierig zu trainieren, andererseits werden durch \textit{Fully Connected Layers} die räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert. \textit{CNN}s verwenden sog. \textit{Convolution Layers}, welche es mittels \textit{Local Receptive Fields}, \textit{Shared Wieghts} und \textit{Pooling} ermöglichen, Kanten und Muster in Bildern zu erkennen.
 
 
 
+\subsection{Zusätzliche Meta-Parameter und Modifikation}
+Die in den vorherigen Kapiteln beschriebenen \textit{KNN}s und \textit{DNN}s als auch deren Training sind keineswegs starr und lassen sich in vielen Aspekten modifizieren und justieren. Auch diese \textit{Meta-Parameter} sind für spätere Kapitel relevant, weswegen sie in diesem Abschnitt kurz beschrieben werden. 
+
+\paragraph{Standardisierungsfunktionen}
+Die \textit{Sigmoid}-Kurve aus Kapitel \ref{cha:theo:neurons} ist nicht die einzige Funktion, die zur Standardisierung des gewichteten Ausgangssignals $z$ eines Neurons (siehe Formel \ref{eq:def_z}) verwendet wird. Neben der \textit{Sigmoid}-Funktion haben sich auch sog. \textit{Rectified}-Funktionen bewährt:
+
+%\subparagraph{$\bullet$ tanh-Funktion} Im Gegensatz zur \textit{Sigmoid}-Funktion gibt die tanh-Funktion Werte im Bereich von $-1$ bis $1$ zurück und ist bei $z=0$ steiler. Die Leistung dieser Funktion ist in den meisten Fällen jedoch vergleichbar mit die der \textit{Sigmoid}-Funktion.
+%
+%\begin{figure}[h]
+%	\centering
+%	\begin{tikzpicture}
+%	\begin{axis}[
+%	xlabel={$z$},
+%	ylabel={$a$},
+%	xmin=-3.9, xmax=3.9,
+%	ymin=-0.998, ymax=0.998,
+%	ymajorgrids=true,
+%	xmajorgrids=true,
+%	grid style=dashed,
+%	width=10cm,
+%	height=5cm,
+%	axis line style = <->,
+%	axis lines=middle,
+%	axis y line=left
+%	]
+%	\addplot[-, thick, blue] expression[domain=-6:6,samples=100]{0.99*tanh(x)}; 
+%	\end{axis}
+%	\end{tikzpicture}
+%	\caption[tanh-Funktion]{tanh-Funktion $tanh(z) = a$}
+%	\label{plt:tanh}
+%\end{figure}
+
+\subparagraph{$\bullet$ Rectifier-Funktionen} Im Gegensatz zur \textit{Sigmoid}-Funktion liefern die \textit{Rectifier}-Funktionen einen ganz anderen Ansatz: Bei $z\rightarrow \infty$ verhalten sie sich linear und bei $z\rightarrow -\infty$ geben sie einen Wert von 0 zurück, d.h. der Ausgangswert ist nach oben nicht begrenzt und ist immer positiv.
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	xlabel={$z$},
+	ylabel={$a$},
+	xmin=-5, xmax=5,
+	ymin=0, ymax=4.99,
+	ymajorgrids=true,
+	xmajorgrids=true,
+	grid style=dashed,
+	width=10cm,
+	height=5cm,
+	axis line style = <->,
+	axis lines=middle,
+	axis y line=left
+	]
+	\addplot[-, thick, blue] expression[domain=-5:5,samples=100]{max(0,x)}; 
+	\addplot[-, thick, red] expression[domain=-5:5,samples=100]{ln(1+2.7182818^x)}; 
+	\node [right, blue] at (axis cs: 1,0.7) {$a = r(z)$};
+	\node [right, red] at (axis cs: -1,1.5) {$a = s(z)$};
+	\end{axis}
+	\end{tikzpicture}
+	\caption[\textit{Rectified-Linear}-Funktion \& \textit{Softplus}-Funktion]{\textit{Rectified-Linear}-Funktion $r(z) = max(z,0)$ und \textit{Softplus}-Funktion $s(z) = ln(1+e^z)$}
+	\label{plt:rect_lin}
+\end{figure}
+
+Die \textit{Rectified-Linear}-Funktion ist im Aufbau simpel: Ist $z$ grösser als 1, wird der Wert unverändert zurückgegeben, sobald aber $z<0$, ist das Ergebnis konstant 0. Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung zur Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung jedoch konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Diese Massnahme kann in machen Anwendungsszenarien die Leistung des \textit{KNN}s verbessern.
+
+Die \textit{Softplus}-Funtion ist eine abgerundete Version der \textit{Rectified-Linear}-Funktion, bei der durch die Glättung des Knicks bei $z=0$ ein komplettes Aussetzen des Lernprozesses verhindert wird.
+
+\paragraph{Fehlerberechnung}
+Anstelle der \textit{Quadratic Cost}-Funktion aus Kapitel \ref{cha:theo:cost} zur Berechnung des Fehlers \textit{Err}, kann auch die \textit{Cross-Entropy-Cost}-Funktion verwendet werden:
+
+\begin{equation}\label{eq:cross_enropy_cost}
+C(A_1,...,A_m,y_1,...,y_m)=-\sum_{i=1}^{m}\left[ y_i \cdot ln(a) + (1-y_i)\cdot ln(1-A_i)\right]
+\end{equation}
+
+Diese \textit{Cost}-Funktion kann grosse Fehlerwerte für \textit{Sigmoid-Neuronen} besser handhaben, welche bei der \textit{Quadratic Cost}-Funktion z.T. zu einer Verlangsamung des Trainingsprozesses führen können.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{figure}[ht]
+%	\centering
+%	\begin{tikzpicture}
+%	\begin{axis}[xlabel={$p$},	ylabel={$Err$},	xmin=-0, xmax=9.9,	ymin=0, ymax=4.999,	ymajorgrids=true,	xmajorgrids=true,	grid style=dashed,	width=10cm,	height=5cm,
+%	axis line style = <->,	axis lines=middle,	axis x line=bottom,	axis y line=left
+%	]
+%	\addplot[-, thick, blue] expression[domain=0:10,samples=100]{-0.0026*x^5+0.0641*x^4-0.5233*x^3+1.6965*x^2-2.5210*x+4.5000};
+
+%	\node[anchor=center] (source) at (axis cs:3,4){};
+%	\node (destination) at (axis cs:3,2.7){};
+%	\draw[->, thick, red](source)--(destination);
+
+%	\end{axis}
+%	\end{tikzpicture}
+%	\caption[Sigmoid-Funktion]{Beispiel: Fehler $Err$ als Funktion eines \textit{Parameters} $p$}
+%	\label{plt:paraboloid}
+%\end{figure}
+
+
+%\begin{equation}\label{eq:part_der}
+%\Delta a \approx \sum_{i=1}^{n} \frac{\delta a}{\delta w_i}\Delta w_j + \frac{\delta a}{\delta b}\Delta b
+%\end{equation}

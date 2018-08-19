@@ -41,6 +41,13 @@ Warning--entry type for "mnist" isn't style-file defined
 --line 156 of file bibliography.bib
 Warning--entry type for "nielsen" isn't style-file defined
 --line 163 of file bibliography.bib
+Warning--entry type for "hastad" isn't style-file defined
+--line 172 of file bibliography.bib
+I was expecting a `,' or a `}'---line 177 of file bibliography.bib
+ :  
+ :  note = {Weizmann Institute of Science},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty publisher in hasimon
 Warning--empty publisher in klett
-(There were 22 warnings)
+(There was 1 error message)

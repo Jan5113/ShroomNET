@@ -129,4 +129,9 @@ Christopher J.C.~Burges Yann~LeCun, Corinna~Cortes.
 \newblock http://yann.lecun.com/exdb/mnist/.
 \newblock Abgerufen am 12.08.2018.
 
+\bibitem{hastad}
+Johan Hastad.
+\newblock On the correlation of parity and small-depth circuits.
+\newblock https://eccc.weizmann.ac.il//report/2012/137/, 2012.
+
 \end{thebibliography}

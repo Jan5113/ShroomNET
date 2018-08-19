@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.29)  14 AUG 2018 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.29)  19 AUG 2018 10:45
 entering extended mode
 **./doc_main.tex
 (doc_main.tex
@@ -1462,18 +1462,19 @@ Package pdftex.def Info: ../images/underfitting.png  used on input line 105.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14 <../images/overfitting_test.png (PNG copy)> <../images/fit.png (PNG copy)>]
-[15 <../images/underfitting.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
+[15 <../images/underfitting.png (PNG copy)>]
 <../images/single_neuron.png, id=81, 819.06pt x 245.718pt>
 File: ../images/single_neuron.png Graphic file (type png)
 <use ../images/single_neuron.png>
-Package pdftex.def Info: ../images/single_neuron.png  used on input line 131.
+Package pdftex.def Info: ../images/single_neuron.png  used on input line 129.
 (pdftex.def)             Requested size: 426.79135pt x 128.04028pt.
-[16] [17 <../images/single_neuron.png (PNG copy)>] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+ [16] [17 <../images/single_neuron.png (PNG copy)>] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
@@ -1481,25 +1482,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 <../images/layers.png, id=102, 819.06pt x 535.7616pt>
 File: ../images/layers.png Graphic file (type png)
 <use ../images/layers.png>
-Package pdftex.def Info: ../images/layers.png  used on input line 246.
+Package pdftex.def Info: ../images/layers.png  used on input line 244.
 (pdftex.def)             Requested size: 426.79135pt x 279.17805pt.
- [20 <../images/layers.png (PNG copy)>] [21] [22]) [23]
-(doc_bibliography.tex (doc_main.bbl [24
+ [20 <../images/layers.png (PNG copy)>] [21] [22]
+Overfull \hbox (21.89651pt too wide) in paragraph at lines 300--301
+[]\OT1/cmr/m/n/12 Bei der \OT1/cmr/m/it/12 Gra-di-ent De-scent\OT1/cmr/m/n/12 -
+Trainingsmethode las-sen sich ei-ni-ge sol-cher \OT1/cmr/m/it/12 Meta-Parameter
+
+ []
+
+[23]
+<../images/deep_full.png, id=116, 819.06pt x 511.6716pt>
+File: ../images/deep_full.png Graphic file (type png)
+<use ../images/deep_full.png>
+Package pdftex.def Info: ../images/deep_full.png  used on input line 321.
+(pdftex.def)             Requested size: 426.79135pt x 266.62509pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+
+ []
+
+[24 <../images/deep_full.png (PNG copy)>] [25]) [26] (doc_bibliography.tex
+(doc_main.bbl [27
 
 
-]) (doc_main.lof)
+]) (doc_main.lof [28])
 \tf@lof=\write5
 \openout5 = `doc_main.lof'.
 
-) [25] (doc_main.aux) ) 
+) [29] (doc_main.aux) ) 
 Here is how much of TeX's memory you used:
- 26094 strings out of 493305
- 656685 string characters out of 3130672
- 851405 words of memory out of 3000000
- 29112 multiletter control sequences out of 15000+200000
+ 26069 strings out of 493305
+ 656296 string characters out of 3130672
+ 858975 words of memory out of 3000000
+ 29086 multiletter control sequences out of 15000+200000
  22191 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,13n,129p,1542b,2016s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 77i,13n,129p,1542b,2037s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
 public\mathabx\dpi600\matha5.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\p
 k\ljfour\public\mathabx\dpi600\matha6.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.
@@ -1517,24 +1536,26 @@ Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/J
 an/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
 C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mmi6.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jan/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Jan/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jan/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Jan
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/
-Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl
-8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Jan/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/Jan/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Jan/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on doc_main.pdf (25 pages, 1074535 bytes).
+fonts/cm/cmmi7.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jan/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jan/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Jan/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ja
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+9.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsl8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Jan/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/Jan/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/
+Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+
+Output written on doc_main.pdf (29 pages, 1986936 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
+ 260 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
