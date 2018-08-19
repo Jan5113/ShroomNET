@@ -49,67 +49,26 @@ Um die Schwierigkeiten der Bilderkennung zu verstehen, muss das Problem aus der 
 \subsection{Maschinelles Lernen}\label{cha:theo:ml}
 Maschinelle Lernalgorithmen sind auf den künstlichen Wissenserwerb spezialisiert. Dabei ist es wichtig, nicht durch ''Auswendiglernen'', sondern durch Erkennen und Verallgemeinern von Gesetzmässigkeiten Daten zu verarbeiten. Es sind viele verschiedene Umsetzungsansätze für lernfähige Algorithmen bekannt; so z.B. \textit{genetische Algorithmen}, \textit{Entscheidungsbäume} und \textit{künstliche neuronale Netze}.
 
-\paragraph{Training} Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}. Der \textit{Trainingsprozess} sieht generell folgendermassen aus: Ein Datensatz aus den \textit{Trainingsdaten} wird in den zu trainierenden Algorithmus eingespeist, worauf das erhaltene (meist falsche) Ergebnis mit dem erwünschten Ergebnis verglichen wird. Durch Anpassung der \textit{Parameter} des Algorithmus wird versucht, das Resultat zu verbessern. Dieser Prozess wird mit allen Datensätzen der Trainingsdaten wiederholt, wodurch der Algorithmus eine allgemein anwendbare Funktion für die Zuordnung von Eingangsdaten zum korrekten Ergebnis finden soll.
+\subsubsection{Training}\label{cha:theo:ml:training}
+Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}. Abstrakt kann man das Ziel vom Training folgendermassen formulieren: Eine unbekannte Funktion $f(x)$ kann fehlerlos jedem $x$ das korrekte $y$ zuordnen, seinen $x$ und $y$ Zahlenwerte oder Bilder ($x$) und die dazugehörigen Namen ($y$). Für diese unbekannte Funktion $f(x)$  gilt es nun im Training, mithilfe von wenigen bekannten Datenpunkten ($x$, $y$) (den \textit{Trainingsdaten}) eine möglichst genaue Modellierung zu finden.
 
-\subsubsection{Verzerrung-Varianz-Dilemma \cite{bias}}\label{cha:theo:ml:b-v}
-Das Verzerrung-Varianz-Dilemma ist eine generelle Schwierigkeit von Lernalgorithmen. Der Algorithmus soll mit den \textit{Trainingsdaten} als auch mit komplett neuen Daten akkurate Ergebnisse liefern können.
+In der Praxis sieht der \textit{Trainingsprozess} generell folgendermassen aus: Ein Datenpunkt $x$ aus den \textit{Trainingsdaten} wird in den zu trainierenden Algorithmus $F(x)$ eingespeist, worauf das erhaltene Ergebnis mit dem erwünschten Ergebnis $y$ verglichen wird. Durch Anpassung der \textit{Parameter} des Algorithmus wird versucht, das Resultat zu verbessern. Dieser Prozess wird mit allen Datenpunkten der Trainingsdaten wiederholt, wodurch der Algorithmus eine möglichst genaue Repräsentation für $f(x)$ finden soll: $F(x) \approx f(x)$.
 
-Nehmen wir uns folgendes vereinfachtes Beispiel vor: Von einer unbekannten Funktion $f(x)$ sind einige Datenpunkte bekannt, welche als Trainingsdaten verwendet werden sollen:
+\subsubsection{Verzerrung-Varianz-Dilemma}\label{cha:theo:ml:b-v}
+Das Verzerrung-Varianz-Dilemma\cite{bias} ist eine generelle Schwierigkeit von Lernalgorithmen. Im Grunde genommen will man, dass der Algorithmus mit den \textit{Trainingsdaten} als auch mit komplett neuen Daten akkurate Ergebnisse liefern kann. Dazu muss man beim Designen eines maschinellen Lernalgorithmus die richtige Balance zwischen Genauigkeit (\textit{Varianz}) und Toleranz (\textit{Verzerrung}) finden. Ist das Gleichgewicht jedoch nicht bewerkstelligt, so äussert sich das mit den Symptomen der \textit{Überanpassung} oder \textit{Unteranpassung}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width= 14cm]{fittingproblem}
-	\caption[Beispiel zur Funktionsfindung]{Beispiel zur Funktionsfindung}
-\end{figure}
-
-$x$ und $y$ sollen dabei Werte von gesammelten Daten repräsentieren, weswegen mit einem natürlichen Rauschen der Daten zu rechnen ist. Nun gilt es mithilfe dieser Datenpunkte ein Modell zu finden, mit dem man einen $y$-Wert mit gegebenen $x$ bestimmen lässt. Zwar liesse sich dieses Problem auch mit \textit{KNN}s lösen, jedoch werden einfachheitshalber vorerst Polynomfunktionen zur Modellierung verwendet.
-
-Bei 11 Datenpunkten kann ein Polynom zehnten Grades die Funktion folgendermassen modellieren:
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width= 14cm]{overfitting}
-	\caption[Beispiel mit Polynom 10. Grades]{Beispiel mit Polynom 10. Grades,  $\diameter$ Fehler Training: $0.00$}
-\end{figure}
-
-Die Funktionskurve $o(x)$ repräsentiert die gegebenen Datenpunkte zwar perfekt, jedoch stellt sich die Frage, ob  $o(x)$ auch ein Modell von der Unbekannten $f(x)$ ist. Wie gross ist die Wahrscheinlichkeit, dass $f(x) = o(x)$ und somit weitere Datenpunkte von $f(x)$ auch auf $o(x)$ zu liegen kommen? Wendet man $o(x)$ auf neue, ungelernte Daten an, erhält man folgenden Plot:
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width= 14cm]{overfitting_test}
-	\caption[Beispiel mit Polynom 10. Grades mit neuen Datenpunkten]{Beispiel mit Polynom 10. Grades mit neuen Datenpunkten\\ $\diameter$ Fehler Training: $0.00$, $\diameter$ Fehler neu: $0.22$}
-\end{figure}
-
-Es stellt sich heraus, dass $f(x)$ keineswegs gleich $o(x)$ ist. Der Fehler der Trainingsdaten ist zwar klein, jedoch scheint $o(x)$ nicht auf neue Daten anwendbar zu sein.
-
-\paragraph{Überanpassung} Erhält man ein verdächtig akkurates Ergebnis mit den Trainingsdaten, läuft man Gefahr der \textit{Überanpassung}: Der Algorithmus erstellt zu detaillierte Regeln für die Trainingsdaten spezifisch und verallgemeinert schlecht (er ''lernt auswendig''). \textit{Überanpassung} führt dazu, dass der Algorithmus zwar ausserordentliche Leistungen innerhalb der Trainingsdaten erzielt, jedoch ungelernte Daten nur mit einer sehr grossen Fehlerquote verarbeiten kann (siehe Beispiel in Abb. 4).
+\paragraph{Überanpassung} Erhält man ein verdächtig akkurates Ergebnis mit den Trainingsdaten, läuft man Gefahr der \textit{Überanpassung}: Der Algorithmus erstellt zu detaillierte Regeln für die Trainingsdaten spezifisch und verallgemeinert schlecht (er ''lernt auswendig''). \textit{Überanpassung} führt dazu, dass der Algorithmus zwar ausserordentliche Leistungen innerhalb der Trainingsdaten erzielt, jedoch ungelernte Daten nur mit einer sehr grossen Fehlerquote verarbeiten kann.
 
 Um eine Überanpassung des Algorithmus zu vermeiden, verwendet man bei maschinellen Lernalgorithmen zwei sehr menschliche Eigenschaften:
 \begin{itemize}[leftmargin=2cm]
-	\item Gelegentlich Fehler machen dürfen
-	\item Annahme, dass manche Eigenschaften ignoriert werden können
+	\item Nicht perfekt sein
+	\item Annahme, dass manche Details ignoriert werden können
 \end{itemize}
-Wir selber würden diese wahrscheinlich als Schwäche bezeichnen, jedoch sind diese Eigenschaften Schlüssel für das \textit{maschinelle Lernen}. Sie erlauben es dem Algorithmus durch Weglassen von Details das Rauschen in den Trainingsdaten zu glätten. Es werden weniger Regeln aufgestellt, wodurch die Funktion weniger komplex wird. Die Reduktion der Komplexität führt aus rein probabilistischen Gründen dazu, dass der Algorithmus toleranter wird und somit verallgemeinert wird\cite{welch_prob}.
+Diese Eigenschaften erlauben es dem Algorithmus durch Weglassen von Details das Rauschen in den Trainingsdaten zu glätten. Es werden weniger Regeln aufgestellt, wodurch die Funktion weniger komplex wird. Die Reduktion der Komplexität führt aus rein probabilistischen Gründen dazu, dass der Algorithmus toleranter wird und somit verallgemeinert wird\cite{welch_prob}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width= 14cm]{fit}
-	\caption[Beispiel mit Polynom 3. Grades]{Beispiel mit Polynom 3. Grades, $\diameter$ Fehler Training: $0.11$, $\diameter$ Fehler neu: $0.12$}
-\end{figure}
+\paragraph{Unteranpassung} Wenn man nun aber zu viele Annahmen und Fehler zulässt, unterliegt man der Gefahr der \textit{Unteranpassung}, bei der die Leistung des Algorithmus über alle gelernten sowie ungelernten Daten konsistent schlecht ist: Der Algorithmus verallgemeinert zwar sehr gut, aber macht zu viele/falsche Annahmen und ignoriert für die Bestimmung relevante Details. Unteranpassung tritt dann auf, wenn der Algorithmus zu simpel ist oder unpassend für die Problemstellung designet worden ist.
 
-Die ähnlichen Fehlerwerte von Trainingsdaten sowie den neuen Daten weist darauf hin, dass ein Polynom 3. Grades die Unbekannte $f(s)$ besser repräsentiert als $o(x)$. Mit $F(x)$ können somit auch neue Datenpunkte zuverlässig bestimmt werden.
-
-\paragraph{Unteranpassung} Wenn man nun aber zu viele Annahmen und Fehler zulässt, unterliegt man der Gefahr der \textit{Unteranpassung}, bei der die Leistung des Algorithmus über alle gelernten sowie ungelernten Daten konsistent schlecht ist: Der Algorithmus verallgemeinert zwar sehr gut, aber macht zu viele/falsche Annahmen und ignoriert für die Bestimmung relevante Details. Unteranpassung tritt dann auf, wenn der Algorithmus zu simpel ist oder unpassend für die Problemstellung designet worden ist.\\
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width= 14cm]{underfitting}
-	\caption[Beispiel mit Polynom 2. Grades]{Beispiel mit Polynom 2. Grades $\diameter$ Fehler Training: $0.50$, $\diameter$ Fehler neu: $0.45$}
-\end{figure}
-
-Für das Beispiel bedeutet eine Unteranpassung, dass die Funktion $u(x)$ zu einfach ist (Polynom 2. Grades), um weder die Trainingsdaten noch neue Daten akkurat modellieren zu können.
-
-\paragraph{Validierung} Will man einen Lernalgorithmus allgemein anwendbar trainieren, ist auf die richtige Balance zwischen Einfachheit (\textit{Verzerrung}) und Komplexität (\textit{Varianz}) zu achten, wobei \textit{Überanpassung} als auch \textit{Unteranpassung} vermieden werden sollten. Um dies zu gewährleisten, werden während dem Training regelmässig Validierungsdaten eingespeist, auf welche der Algorithmus \textbf{nicht} trainiert wird. Mit den durch die Validierungsdaten gelieferten Ergebnissen kann auf die Leistung des Algorithmus ausserhalb der Trainingsumgebung geschlossen werden. Sobald die Leistung mit den Validierungsdaten sinkt während die der Trainingsdaten weiterhin steigt, kann man davon ausgehen, dass der Algorithmus ein Optimum erreicht hat und dass weiteres Trainieren zu einer Überanpassung führen wird. Wenn der trainierte Algorithmus in seinem Optimum trotzdem keine zufriedenstellenden Ergebnisse liefert, ist von einer \textit{Unteranpassung} auszugehen. Durch Ändern der Trainingsparameter\footnotemark oder durch Umgestaltung des Algorithmus kann der \textit{Unteranpassung} aber auch der \textit{Überanpassung} entgegengewirkt werden.
+\paragraph{Validierung} Um die Balance zwischen Genauigkeit und Toleranz zu gewährleisten, werden während dem Training regelmässig Validierungsdaten eingespeist, auf welche der Algorithmus \textbf{nicht} trainiert ist. Mit den durch die Validierungsdaten gelieferten Ergebnissen kann auf die Leistung des Algorithmus ausserhalb der Trainingsumgebung geschlossen werden. Sobald die Leistung mit den Validierungsdaten sinkt während die der Trainingsdaten weiterhin steigt, kann man davon ausgehen, dass der Algorithmus ein Optimum erreicht hat und dass weiteres Trainieren zu einer Überanpassung führen wird. Wenn der trainierte Algorithmus in seinem Optimum trotzdem keine zufriedenstellenden Ergebnisse liefert, ist von einer \textit{Unteranpassung} auszugehen. Durch Ändern der Trainingsparameter\footnotemark oder durch Umgestaltung des Algorithmus kann der \textit{Unteranpassung} wie auch der \textit{Überanpassung} entgegengewirkt werden.
 
 \footnotetext{\label{fn:meta}Nicht zu verwechseln mit den \textit{Parametern} des Algorithmus! Trainingsparameter beeinflussen den Trainingsprozess, d.h. Dauer des Trainings, Anzahl Trainings-/Validierungsdaten, etc. Die \textit{Parameter} des Algorithmus werden trainiert und berechnen aus den Eingangsdaten Ausgangsdaten. Um die Verwechslung dieser beiden relevanten Begriffe zu vermeiden, wird für die Trainingsparameter wie auch für die Architektur des Algorithmus der Begriff \textbf{Meta-Parameter} verwendet.}
 
@@ -119,7 +78,7 @@ Obwohl die \textit{KNN}s erst in den letzten Jahren ihren grossen Durchbruch erl
 Die technischen Informationen zu \textit{KNN}s und \textit{DNN}s in den folgenden Abschnitten sowie im Kapitel \ref{cha:theo:dl} basieren auf dem öffentlich verfügbaren Lernmittel \textit{Neural Networks and Deep Learning} von Michael Nielsen\cite{nielsen}.
 
 \subsubsection{Die Natur als Vorbild}
-Um die in Kapitel \ref{cha:theo:ml} erwähnten Lernverhalten simulieren zu können, bedienen sich die \textit{KNN}s dem Vorbild der Natur: das Gehirn. Die Lernfähigkeit des Gehirns lässt sich in wenigen Worten folgendermassen formulieren: Das menschliche Gehirn besteht aus etwa 15 Milliarden Neuronen, welche durch  Verbindungen miteinander vernetzt sind. Diese Neuronen sind in der Lage, Signale aus den eingehenden Verbindungen mittels Ionenkanäle zu gewichten und mithilfe der in der Zelle herrschenden Ladung miteinander zu verrechnen. Sobald die Ladung einen gewissen Schwellenwert übersteigt, feuert das Neuron und gibt das Signal an die folgenden Neuronen weiter, welche den selben Prozess wiederholen. Der Lernprozess wird durch Belohnung von nützlichen und häufig verwendeten Verbindungen bewerkstelligt, wobei diese Verbindungen verstärkt und stärker gewichtet werden und ungebrauchte oder ungünstige Verbindungen verkümmern\cite{klett}.
+Um die in Kapitel \ref{cha:theo:ml} erwähnten Lernverhalten simulieren zu können, bedienen sich die \textit{KNN}s dem Vorbild der Natur: das Gehirn. Der Aufbau des Gehirns lässt sich in wenigen Worten folgendermassen formulieren: Das Gehirn besteht aus einer Vielzahl an Neuronen, welche durch  Verbindungen miteinander vernetzt sind. Diese Neuronen sind in der Lage, Signale aus den eingehenden Verbindungen mittels Ionenkanäle zu gewichten und mithilfe der in der Zelle herrschenden Ladung miteinander zu verrechnen. Sobald die Ladung einen gewissen Schwellenwert übersteigt, feuert das Neuron und gibt das Signal an die folgenden Neuronen weiter, welche den selben Prozess wiederholen. Der Lernprozess wird durch Belohnung von nützlichen und häufig verwendeten Verbindungen bewerkstelligt, wobei diese Verbindungen verstärkt und stärker gewichtet werden und ungebrauchte oder ungünstige Verbindungen verkümmern\cite{klett}.
 
 Auf diesen Grundlagen basiert die Idee der \textit{KNN}s, weswegen sie auch noch eine weitere wichtige Eingenschaft gemeinsam haben: Als Aussenstehender ist einem genaue das genaue Funktionsprinzip unbekannt. So sind wir wie auch \textit{KNN}s dazu fähig, handschriftliche Ziffern voneinander zu unterscheiden, wie es aber im Detail bewerkstelligt wird, ist und bleibt unklar\footnote{Ironischerweise war eine Motivation für die Entwicklung von \textit{KNN}s, uns ein besseres Verständnis für die Funktionsweise von intelligentem Verhalten zu geben. Jedoch stellte es sich heraus, dass weder \textit{KNN}s noch das biologische Vorbild im Detail verstanden werden können.}. Für die algorithmische Umsetzung wurden jedoch einige Anpassungen vorgenommen, daher sind heutige \textit{KNN}s nur noch im entferntesten Sinne mit biologischen neuronalen Netzen verwandt. 
 
@@ -139,59 +98,11 @@ Den Eingangssignalen werden die Variablen  $x_1, x_2,...,x_n$ gegeben, wobei sie
 \begin{equation}\label{eq:weighted_input}
 	\sum_{i=1}^{n} x_i\cdot w_i
 \end{equation}
-Nun soll der Schwellenwert-\textit{Parameter} $b$\footnotemark[\value{footnote}]  implementiert werden. $b$ wird mit dem Ergebnis der Formel \ref{eq:weighted_input} verglichen, womit der Ausgang $a$ steuern soll. Da der Ausgang $a$ für die Aufbau eines \textit{KNN}s wiederum als Eingangssignal von einem anderen \textit{Neuron} verwendet wird, soll wieder $0\leq a \leq 1$ gelten. Der Begriff ''Schwellenwert'' würde auf dieses Problem folgende Beziehung implizieren:
-\begin{center}
-	\begin{minipage}{7cm}
-		wenn $\sum_{i}x_iw_i < b$ dann $a=1$\\
-		wenn $\sum_{i}x_iw_i > b$ dann $a=0$
-	\end{minipage}
-\end{center}
-was dem selben Entspricht wie
-\begin{center}
-\begin{minipage}{7cm}
-	wenn $\sum_{i}x_iw_i - b < 0$ dann $a=1$\\
-	wenn $\sum_{i}x_iw_i - b > 0$ dann $a=0$
-\end{minipage}
-\end{center}
-Mit dieser Annahme trifft man sogleich auf zwei Ungereimtheiten in den Konventionen der \textit{KNN}s. Die erste ist rein Formal: $b$ soll definiert werden als $b \equiv$ -Schwellenwert, wodurch das Vorzeichen von $b$ gewechselt werden kann:
-\begin{center}
-	\begin{minipage}{7cm}
-		wenn $\sum_{i}x_iw_i + b < 0$ dann $a=1$\\
-		wenn $\sum_{i}x_iw_i + b > 0$ dann $a=0$
-	\end{minipage}
-\end{center}
-An dieser Stelle soll zur Übersicht der linke Term der Ungleichung $\sum_{i=1}^{n} x_i\cdot w_i+b$ gleich zur Variable $z$ zusammengefasst werden:
+Nun soll der Schwellenwert-\textit{Parameter}\footnotemark[\value{footnote}] als $b \equiv -$Schwellenwert implementiert werden. $b$ kann somit ganz simpel mit dem Ergebnis der Formel \ref{eq:weighted_input} addiert werden, wodurch man $\sum_{i=1}^{n} x_i\cdot w_i+b$ erhält. An dieser Stelle soll zur Übersicht dieser gesamte Term gleich zur Variable $z$ zusammengefasst werden:
 \begin{equation}\label{eq:def_z}
 \sum_{i=1}^{n} x_i\cdot w_i+b\equiv z
 \end{equation}
-Die Zweite Änderung betrifft den digitalen Wechsel zwischen den $0$ und $1$ vom Ausgangswert $a$, sobald der Schwellenwert überschritten wird. Für das Ergebnis $a$ des Neurons sähe der Funktionsgraph in Relation zur neuen Variable $z$, welche für die gewichtete Summe abzüglich des Schwellenwertes steht, folgendermassen aus:
-
-\begin{figure}[h]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	xlabel={$z$},
-	ylabel={$a$},
-	xmin=-5.9, xmax=5.9,
-	ymin=0, ymax=0.999,
-	ymajorgrids=true,
-	xmajorgrids=true,
-	grid style=dashed,
-	width=10cm,
-	height=5cm,
-	axis line style = <->,
-	axis lines=middle,
-	axis x line=bottom,
-	axis y line=left
-	]
-	\addplot+[const plot, no marks, thick] coordinates {(-6,0) (0,0.999) (6,0.999)};
-	\end{axis}
-	\end{tikzpicture}
-	\caption[Stufen-Funktion]{Stufen-Funktion step$(z) = a$}
-	\label{plt:step}
-\end{figure}
-Da die Stufen-Funktion nicht differenzierbar ist und nirgends einen Gradienten aufweist, kann sie nicht in einem \textit{KNN} eingesetzt werden. Statt den Schwellenwert $-b$ also als klare Grenze zu nehmen, muss ein stufenloser Wechsel zwischen $0$ und $1$ ermöglicht werden. Die \textit{Sigmoid}-Funktion\footnote{Definition der \textit{Sigmoid}-Funktion: $\sigma(x) = \frac{1}{1+e^{-x}}$} $\sigma(z)$ ist die gängigste Funktion, die diese Eigenschaften erfüllt: 
-
+Wenn $z$ kleiner als 0 ist, bedeutet dies eine Unterschreitung des Schwellenwertes, ist $z$ grösser als 0, eine Überschreitung. Um für das Ergebnis $a$ vom \textit{Neuron} wieder einen Wert im Bereich $0 \leq a \leq 1$ zu erhalten, wird die stufenlose \textit{Sigmoid}-Funktion\footnote{Definition der \textit{Sigmoid}-Funktion: $\sigma(x) = \frac{1}{1+e^{-x}}$} zur Standardisierung von $z$ angewandt. Diese Funktion lässt die Werte für $a$ im Unendlichen gegen 1 resp. 0 gehen, jedoch ermöglicht sie im Bereich um $z=0$ eine Feinjustierung des Ausgangswertes. Zudem eignet sich die \textit{Sigmoid}-Funktion auch, weil sie sich differenzieren lässt.
 
 \begin{figure}[h]
 	\centering
@@ -225,12 +136,13 @@ Mit der \textit{Sigmoid}-Funktion als ideale Kurve zur Standardisierung von $z$ 
 a = \sigma \left( \sum_{i=1}^{n} x_i\cdot w_i+b\right)  \qquad \text{oder} \qquad a = \sigma \left( z \right)
 \vspace*{2mm}
 \end{equation}
+wobei $x_1,...,x_n$ den Eingangswerten und $a$ dem Ausgangswert $a$ entspricht. Die Variablen $w_1,...,w_n$ und $b$ sind \textit{Parameter} und werden nicht von den Eingangsdaten beeinflusst.
 
-Dies ist die Formel eines jeden \textit{Neurons} und bildet (z.T. mit geringfügigen Modifikationen) den Grundbaustein aller \textit{KNN}s.\\
+Dies ist die Formel eines jeden \textit{Neurons} und bildet (z.T. mit geringfügigen Modifikationen, siehe Kapitel \ref{cha:theo:relu}) den Grundbaustein aller \textit{KNN}s.\\
 
-Anzumerken ist, dass die Formel \ref{eq:neuron_eq} eine ganz normale Funktion ist, welche den Eingangswerten $x_1,...,x_n$ einen Ausgangswert $a$ zuordnet. Die Variablen $w_1,...,w_n$ und $b$ sind \textit{Parameter} und werden nicht von den Eingangsdaten beeinflusst.
+Anzumerken ist, dass die Funktion \ref{eq:neuron_eq} aufgrund der Differenzierbarkeit der \textit{Sigmoid}-Funktion und der Linearität der restlichen Operationen ebenfalls differenzierbar ist. Diese Eingenschaft wird später essenziell, um einen effizienten Trainingsalgorithmus für die Justierung der \textit{Parameter} zu entwickeln.
 
-Auch ist hinzuzufügen, dass die Funktion \ref{eq:neuron_eq} aufgrund der \textit{Glätte} der \textit{Sigmoid}-Kurve und der Linearität der restlichen Operationen ebenfalls differenzierbar ist. Diese Eingenschaft wird später essenziell, um einen effizienten Trainingsalgorithmus für die Justierung der \textit{Parameter} zu entwickeln.
+\newpage
 
 \subsubsection{Layers}\label{cha:theo:layers}
 
@@ -288,7 +200,7 @@ Bis jetzt wurden die \textit{Parameter} $b$ und $w$ der \textit{Neuronen} als ni
 
 Eine Möglichkeit, den Fehler zu minimieren besteht darin, einen einzelnen \textit{Parameter} $p$ aus dem Netz ein wenig zu ändern um dann dessen Auswirkung auf $Err$ zu erkennen zu können. Wird $Err$ grösser, versucht man die andere Richtung, wird $Err$ kleiner, ist man dem Ziel einen Schritt näher und wiederholt dasselbe mit allen anderen Parameter. Zwar klingt diese Methode verständlich und machbar, jedoch ist sie sehr ineffizient, da viel Ausprobieren involviert ist. Wie also kann man die Auswirkung einer Parameteränderung auf den Fehler $Err$ am effizientesten berechnen?
 
-Um sich zuerst ein intuitives Bild von dieser Problemstellung machen zu können, muss man es sich als Parameterlandschaft vorstellen: In drei Dimensionen entsprächen die Ortskoordinaten zwei \textit{Parametern}, die Höhe stünde für den zu den \textit{Parametern} zugehörige Fehlerwert $Err$, die ''Landschaft'' mit ihren Bergen und Tälern wird durch die Trainingsdaten bestimmt (entspricht der Funktion $f(x)$ aus Kapitel \ref{cha:theo:ml:b-v}). Da \textit{KNN}s weithin mehr als zwei \textit{Parameter} besitzen, enthält deren Parameterlandschaft so viele ''Ortsdimensionen'' wie das \textit{KNN} \textit{Parameter} hat. Das Ziel ist es in dieser Landschaft, ein tiefes Tal zu finden --- mit einer Schwierigkeit: Man ist blind ($f(x)$ ist unbekannt).
+Um sich zuerst ein intuitives Bild von dieser Problemstellung machen zu können, muss man es sich als Parameterlandschaft vorstellen: In drei Dimensionen entsprächen die Ortskoordinaten zwei \textit{Parametern}, die Höhe stünde für den zu den \textit{Parametern} zugehörige Fehlerwert $Err$, die ''Landschaft'' mit ihren Bergen und Tälern wird durch die Trainingsdaten bestimmt (entspricht der Funktion $f(x)$ aus Kapitel \ref{cha:theo:ml:training}). Da \textit{KNN}s weithin mehr als zwei \textit{Parameter} besitzen, enthält deren Parameterlandschaft so viele ''Ortsdimensionen'' wie das \textit{KNN} \textit{Parameter} hat. Das Ziel ist es in dieser Landschaft, ein tiefes Tal zu finden --- mit einer Schwierigkeit: Man ist blind ($f(x)$ ist unbekannt).
 
 In diesem Gedankenmodell sähe die vorher erwähnte Brute-Force-Strategie zum Finden des Minimums folgendermassen aus: Man macht einen Stritt in eine beliebige Richtung. Ist man höher als vorher, geht man zwei Schritte in die entgegengesetzte Richtung und wiederholt den Prozess für die anderen Dimension(en)/\textit{Parameter}, bis man in einem Tal angekommen ist (eine Bewegung in jede Richtung bewirkt eine Verschlechterung des Ergebnisses).
 
@@ -325,8 +237,7 @@ Per Definition handelt es sich dabei um ein \textit{DNN}, jedoch wird man festst
 In der Praxis gibt es einige verbreitete \textit{DNN}-Typen: \textit{RNN}s (\textit{Recurrent Neural Networks}), \textit{LSTM RNNs} (\textit{Long short-Term Memory RNN}), \textit{Deep Belief Networks}, etc., jedoch ist das \textit{Convolutional Neural Network} (\textit{CNN}) der geeignetste Typ für Bilderkennungsprobleme. Da es in der Arbeit Pilze anhand von Bildern zu kategorisieren gilt, wird im nächsten Kapitel der Fokus nur auf \textit{CNN}s gelegt.
 
 \subsection{Convolutional Neural Networks}\label{cha:theo:cnn}
-Will man ein \textit{DNN} für die Erkennung von Bildern verwenden, so ist das in der Abb. \ref{img:deep_full} gezeigte Netz aus mehreren Gründen ungeeignet: Einerseits leidet es u.a. wegen den vielen Verbindungen weiterhin an \textit{Unstable Gradients} und ist daher schwierig zu trainieren, andererseits werden durch \textit{Fully Connected Layers} die räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert. \textit{CNN}s verhindern dies mit sog. \textit{Convolution Layers}. Diese verwenden \textit{Local Receptive Fields}, \textit{Shared Parameters} und \textit{Pooling}, um Kanten und Muster in Bildern zu erkennen.
-
+Will man ein \textit{DNN} für die Erkennung von Bildern verwenden, so ist das in der Abb. \ref{img:deep_full} gezeigte Netz aus mehreren Gründen ungeeignet: Einerseits leidet es u.a. wegen den vielen Verbindungen weiterhin an \textit{Unstable Gradients} und ist daher schwierig zu trainieren, andererseits werden durch \textit{Fully Connected Layers} die räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert. \textit{CNN}s verhindern dies mit sog. \textit{Convolution-} und \textit{Pooling-Layers}, wobei mit sog. \textit{Feature-Maps} Muster und Regelmässigkeiten erkannt werden können.
 
 \subsubsection{Convolution Layer}
 Das \textit{Local Receptive Field}, zu Deutsch ''lokales rezeptives Feld'', engt die Eingangssignale eines \textit{Neurons} auf einen lokalisierten Bereich des vorhergehenden Layers ein. Hat man z.B. den \textit{Input-Layer} und einen darauf folgenden \textit{Convolution-Layer}, auf die eine \textit{Local-Receptive-Field}-Grösse von $5\times 5$ \textit{Neuronen} angewandt wird, so ist ein \textit{Neuron} des \textit{Convolution-Layers} nur mit einem $5\times 5$ \textit{Neuronen} grossen Bereich des \textit{Input-Layers} verbunden. Für das erste \textit{Neuron} des \textit{Convolution-Layers} wird es folgendermassen aussehen:
@@ -349,10 +260,12 @@ Für das nächste \textit{Neuron} des \textit{Convolution-Layers} verschiebt sic
 	\label{img:rec_field2}
 \end{figure}
 
-\subsubsection{Feature Maps}
-Ein weiterer verwendeter Trick ist, dass alle Neuronen des \textit{Convolution-Layers} dieselben \textit{Parameter} verwenden. Dabei ist die Rede von sog. \textit{Shared weigths}, d.h. das \textit{Neuron}$_{ij}$ im jeweiligen \textit{Local-Receptive-Field} wird für jedes \textit{Convolution-Neuron} mit $w_{ij}$ gewichtet, wobei $i$ und $j$ die Indexes für die horizontale resp. vertikale Position im \textit{Local-Receptive-Field} bezeichnet. Im $5\times 5$-Beispiel von oben gibt es somit nur 25 verschiedene Gewichtungen, der Schwellenwert $b$ ist überall der selbe.
+\subsubsection{Shared Weigths \& Feature Maps}
+Ein weiterer verwendeter Trick ist, dass alle Neuronen des \textit{Convolution-Layers} dieselben \textit{Parameter} verwenden. Dabei ist die Rede von sog. \textit{Shared weigths}, d.h. das \textit{Neuron}$_{ij}$ im \textit{Local-Receptive-Field} wird für jedes \textit{Convolution-Neuron} mit $w_{ij}$ gewichtet, wobei $i$ und $j$ die Indexes für die horizontale resp. vertikale Position im \textit{Local-Receptive-Field} bezeichnet. Im $5\times 5$-Beispiel von oben gibt es somit nur 25 verschiedene Gewichtungen für die Verbindungen, der Schwellenwert $b$ ist überall der selbe.
 
-Intuitiv kann man sich den \textit{Convolution Layer} als Schablone für das durch die \textit{Parameter} eingestellte Muster vorstellen, welche Schrittweise über das Eingangsbild geschoben wird. Entspricht das Bild dem Muster, wird ein hoher Wert zurückgegeben und vice versa. Je nach \textit{Parameter} kann man z.B. Kanten oder Ecken erkennen. Man hat somit eine sog. \textit{Feature Map} erstellt, welches das Vorkommen eines bestimmtes Musters im Bild kartiert. Da ein Bild nicht nur aus einem einzigen Muster besteht, werden in einem \textit{Convolution-Layer} sogleich mehrere \textit{Feature-Maps} erstellt, welche sich auf verschiedene Muster spezialisieren können.
+Intuitiv kann man sich den \textit{Convolution Layer} als Schablone für ein durch die \textit{Parameter} bestimmte Muster vorstellen, welche Schrittweise über das Eingangsbild geschoben wird. Entspricht das Bild dem Muster, wird ein hoher Wert zurückgegeben und vice versa. Je nach \textit{Parameter} kann man z.B. Kanten oder Ecken erkennen. Man hat somit eine sog. \textit{Feature Map} erstellt, welches das Vorkommen eines bestimmtes Musters im Bild kartiert. Da ein Bild nicht nur aus einem einzigen Muster besteht, werden in einem \textit{Convolution-Layer} sogleich mehrere \textit{Feature-Maps} erstellt, welche sich auf verschiedene Muster spezialisieren können.
+
+\vspace*{3cm}
 
 \begin{figure}[h]
 	\centering
@@ -372,20 +285,20 @@ Um die vom \textit{Convolution-Layer} erhaltenen \textit{Feature-Maps} weiter zu
 \end{figure}
 
 
-\subsubsection{Training von \textit{CNN}s}
+\subsubsection{Anwendung}
+
+
 
 \subsection{Zusätzliche Meta-Parameter und Modifikation}
 Die in den vorherigen Kapiteln beschriebenen \textit{KNN}s und \textit{DNN}s als auch deren Training sind keineswegs starr und lassen sich in vielen Aspekten modifizieren und justieren. Auch diese \textit{Meta-Parameter} sind für spätere Kapitel relevant, weswegen sie in diesem Abschnitt kurz beschrieben werden. 
 
-\subsubsection{ReLU-Layer}
+\subsubsection{ReLU-Layer}\label{cha:theo:relu}
 Die \textit{Sigmoid}-Kurve aus Kapitel \ref{cha:theo:neurons} ist nicht die einzige Funktion, die zur Standardisierung des gewichteten Ausgangssignals $z$ eines Neurons (siehe Formel \ref{eq:def_z}) verwendet wird. Neben der \textit{Sigmoid}-Funktion haben sich auch die sog. \textit{Rectified-Linear}-Funktion bewährt. Ein \textit{Neuron}, welches diese Funktion verwendet, nennt man \textit{Rectified-Linear-Unit} (kurz \textit{ReLU}); ein \textit{ReLU}-Layer ist somit eine Schicht zusammengesetzt aus diesen \textit{ReLU}-\textit{Neuronen}.
 
 Im Gegensatz zur \textit{Sigmoid}-Kurve liefert diese Funktion einen ganz anderen Ansatz: Bei $z > 0$ verhält sie sich linear und bei $z \leq 0$ gibt sie einen konstanten Wert von 0 zurück, d.h. der Ausgangswert ist nach oben nicht begrenzt und immer positiv.
-
 \begin{equation}\label{eq:relu_func}
 	\sigma(z) = \begin{cases} z, & \mbox{wenn } z > 0 \\ 0, & \mbox{wenn } z \leq 0 \end{cases}
 \end{equation}
-
 Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectified-Linear}-Funktion verglichen mit der \textit{Sigmoid}-Funktion folgendermassen aus:
 
 \begin{figure}[h]
@@ -404,16 +317,16 @@ Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectif
 	\label{plt:rect_lin}
 \end{figure}
 
-\textbf{Vorteile:} Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung für die Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion in diesem Bereich nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung hingegen konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Diese Massnahme kann in machen Anwendungsszenarien die Leistung des \textit{KNN}s verbessern.
+\paragraph{Vorteile:} Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung für die Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion in diesem Bereich nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung hingegen konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Diese Massnahme kann in machen Anwendungsszenarien die Leistung des \textit{KNN}s verbessern.
 
-\subsubsection{Fehlerberechnung}
-Anstelle der \textit{Quadratic Cost}-Funktion aus Kapitel \ref{cha:theo:cost} zur Berechnung des Fehlers \textit{Err}, kann auch die \textit{Cross-Entropy-Cost}-Funktion verwendet werden:
-
-\begin{equation}\label{eq:cross_enropy_cost}
-C(A_1,...,A_m,y_1,...,y_m)=-\sum_{i=1}^{m}\left[ y_i \cdot ln(a) + (1-y_i)\cdot ln(1-A_i)\right]
-\end{equation}
-
-Diese \textit{Cost}-Funktion kann grosse Fehlerwerte für \textit{Sigmoid-Neuronen} besser handhaben, welche bei der \textit{Quadratic Cost}-Funktion z.T. zu einer Verlangsamung des Trainingsprozesses führen können.
+%\subsubsection{Fehlerberechnung}
+%Anstelle der \textit{Quadratic Cost}-Funktion aus Kapitel \ref{cha:theo:cost} zur Berechnung des Fehlers \textit{Err}, kann auch die \textit{Cross-Entropy-Cost}-Funktion verwendet werden:
+%
+%\begin{equation}\label{eq:cross_enropy_cost}
+%C(A_1,...,A_m,y_1,...,y_m)=-\sum_{i=1}^{m}\left[ y_i \cdot ln(a) + (1-y_i)\cdot ln(1-A_i)\right]
+%\end{equation}
+%
+%Diese \textit{Cost}-Funktion kann grosse Fehlerwerte für \textit{Sigmoid-Neuronen} besser handhaben, welche bei der \textit{Quadratic Cost}-Funktion z.T. zu einer Verlangsamung des Trainingsprozesses führen können.
 
 \subsubsection{Dropout-Layer}
 
