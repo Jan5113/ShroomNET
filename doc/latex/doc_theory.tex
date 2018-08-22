@@ -136,7 +136,7 @@ Mit der \textit{Sigmoid}-Funktion als ideale Kurve zur Standardisierung von $z$ 
 a = \sigma \left( \sum_{i=1}^{n} x_i\cdot w_i+b\right)  \qquad \text{oder} \qquad a = \sigma \left( z \right)
 \vspace*{2mm}
 \end{equation}
-wobei $x_1,...,x_n$ den Eingangswerten und $a$ dem Ausgangswert $a$ entspricht. Die Variablen $w_1,...,w_n$ und $b$ sind \textit{Parameter} und werden nicht von den Eingangsdaten beeinflusst.
+wobei $x_1,...,x_n$ den Eingangswerten und $a$ dem Ausgangswert $a$ entspricht. Die Variablen $w_1,...,w_n$ und $b$ sind \textit{Parameter} und verändern das Verhalten des Neurons.
 
 Dies ist die Formel eines jeden \textit{Neurons} und bildet (z.T. mit geringfügigen Modifikationen, siehe Kapitel \ref{cha:theo:relu}) den Grundbaustein aller \textit{KNN}s.\\
 
@@ -146,7 +146,7 @@ Anzumerken ist, dass die Funktion \ref{eq:neuron_eq} aufgrund der Differenzierba
 
 \subsubsection{Layers}\label{cha:theo:layers}
 
-Da ein einzelnes \textit{Neuron} alleine nicht viel leisten kann, werden sie miteinander vernetzt --- daher auch der Name \textit{künstliches neuronales Netz}. Die gängigste Art schlägt folgende Vernetzung vor:
+Da ein einzelnes \textit{Neuron} alleine nicht viel leisten kann, werden sie miteinander vernetzt --- daher auch der Name \textit{künstliches neuronales Netz}. Die einfachste Art der Vernetzung schlägt folgende Struktur vor:
 
 \begin{figure}[h]
 	\centering
@@ -155,18 +155,24 @@ Da ein einzelnes \textit{Neuron} alleine nicht viel leisten kann, werden sie mit
 	\label{img:layers}
 \end{figure}
 
-Die \textit{Neuronen} im Netz werden in Schichten strukturiert, in sog. \textit{Layers}\footnotemark. Generell gibt es drei Arten von \textit{Layers}:
+Die \textit{Neuronen} im Netz werden in Schichten strukturiert, in sog. \textit{Layers}\footnote{Da die Literatur der \textit{KNN}s praktisch ausschließlich in der englischen Sprache niedergeschrieben wird, wird auf weitere deutsche Übersetzungen der Fachausdrücke verzichtet.}. Die Neuronen eines \textit{Layers} werden mit allen Ausgangssignalen der \textit{Neuronen} im vorherigen \textit{Layer} verbunden (ein sog. \textit{Fully Connected Layer}), wobei jede Verbindung separat gewichtet wird. Anzumerken ist, dass die vielen Ausgänge eines \textit{Neurons} alle dem selben Ausgangswert $a$ (siehe Kapitel \ref{cha:theo:neurons}) entsprechen. 
 
-\footnotetext{Da die Literatur der \textit{KNN}s praktisch ausschließlich in der englischen Sprache festgehalten wird, wird auf weitere deutsche Übersetzungen dieser Fachausdrücke verzichtet.}
+Generell gibt es drei Typen von \textit{Layern}:
 
 \begin{itemize}
 	\item Eingangs-\textit{Layers}, sog. \textit{Input-Layers}
 	\item Zwischen-\textit{Layers}, sog. \textit{Hidden-Layers}
 	\item Ausgangs-\textit{Layers}, sog. \textit{Output-Layers}
 \end{itemize}
-Jedes \textit{KNN} hat einen \textit{Input-Layer} sowie einen \textit{Output-Layer}. Dazwischen befinden sich ein oder mehrere \textit{Hidden-Layers}. Die Neuronen eines \textit{Layers} werden mit allen Ausgangssignalen der \textit{Neuronen} im vorherigen \textit{Layer} verbunden (ein sog. \textit{Fully Connected Layer}), wobei jede Verbindung separat gewichtet wird. Die \textit{Neuronen} des \textit{Input-Layers} sind an sich keine \textit{Neuronen}, da sie nur den Eingangswert annehmen und direkt an die folgenden \textit{Neuronen} weitergeben ($x = a$). Anzumerken ist, dass die vielen Ausgänge eines \textit{Neurons} alle dem selben Ausgangswert $a$ (siehe Kapitel \ref{cha:theo:neurons}) entsprechen. 
+Jedes \textit{KNN} hat genau einen \textit{Input-Layer} sowie einen \textit{Output-Layer}. Dazwischen befinden sich ein oder mehrere \textit{Hidden-Layers}.
 
-Die Funktionsweise lässt sich in wenigen Worten folgendermassen ausdrücken: Die Daten $x_1,...,x_n$ (in Abb. \ref{img:layers} $n=5$) werden in den \textit{Input-Layer} eingespeist und durch die einzelnen \textit{Hidden-Layers} verarbeitet. Das Ergebnis $A_1,...,A_m$ (in Abb. \ref{img:layers} $m=2$) lässt sich am \textit{Output-Layer} ablesen. 
+Die Eingangsdaten $x_1,...,x_n$ (in Abbildung \ref{img:layers} $n=5$) werden in die \textit{Neuronen} des \textit{Input-Layers} geschrieben\footnote{Die \textit{Neuronen} des \textit{Input-Layers} sind daher an sich keine \textit{Neuronen}, da sie nur den Eingangswert annehmen und direkt an die folgenden \textit{Neuronen} weitergeben ($x = a$).}. Dies sind z.B. Testwerte von einem Versuch oder Pixel eines Bildes (wobei $n$ der Pixelanzahl entsprechen muss).
+
+Darauf werden die Werte durch die \textit{Neuronen} der \textit{Hidden-Layers} verarbeitet. Zwar bestehen die Rechenoperationen nur aus denen im letzten Kapitel \ref{cha:theo:neurons} beschriebenen Funktion \ref{eq:neuron_eq}, jedoch können durch richtige Justierung der \textit{Parameter} $w$ und $b$ im Trainingsprozess (siehe Kapitel \ref{cha:theo:backprop:gd}) auch sehr komplexe Funktionen modelliert werden.
+
+Die Neuronen im \textit{Output-Layer} geben das berechnete Resultat $A_1,...,A_m$ (in Abbildung \ref{img:layers} $m=2$) aus. Wird das \textit{KNN} zur Kategorisierung von Daten, z.B. Bildern, verwendet, wird jedem $A_i$ eine Kategorie zugeordnet, z.B. $A_1 \equiv$ Hund und $A_2 \equiv$ Katze. Die erhaltenen Werte für $A_1,...,A_m$ entsprechen dabei der Wahrscheinlichkeit, dass die Eingangsdaten zur jeweiligen Kategorie gehören.\\
+
+Die Grösse der \textit{Input-} und \textit{Output-Layers} müssen den Eingangsdaten respektive der Anzahl Kategorien angepasst werden. Die Grösse und Anzahl der \textit{Hidden-Layers} ist hingegen frei wählbar und gehört zu den \textit{Meta-Parametern}\footnote{Parameter, die die Architektur des \textit{KNN}s (Grösse, Tiefe, etc.) aber auch den Trainingsprozess (Dauer, Daten, etc.) beeinflussen} des \textit{KNN}s. Kleinere Probleme lassen sich noch mit einem einzelnen \textit{Hidden-Layer} bewerkstelligen, wobei von einem \textit{Shallow Neural Network} die Rede ist. Bei komplexeren Problemen empfiehlt sich jedoch die Verwendung eines \textit{DNN}s, in welchem mehrere (oft spezialisierte) \textit{Hidden-Layers} in Serie geschaltet werden.\\
 
 Mathematisch gesehen werden bei der Vernetzung der \textit{Neuronen} die Formeln ineinander verschachtelt, wodurch sich das ganze \textit{KNN} als mathematische Funktion schreiben lässt. Die gesamte Formel ist zwar sehr komplex und unübersichtlich zu notieren, jedoch werden die ursprünglichen Eigenschaften der Funktion \ref{eq:neuron_eq} beibehalten, d.h. es bleibt eine differenzierbare mathematische Funktion. Das \textit{KNN} soll als Funktion zusammengefasst geschrieben werden als:
 \begin{equation}\label{eq:ann}
@@ -174,9 +180,7 @@ N(x_1,...,x_n) = A_1,...,A_m
 \end{equation}
 wobei $N(...)$ das \textit{KNN} als Funktion darstellt, $n$ die Anzahl der Eingangswerte $x_1,...,x_n$ (sowie der \textit{Input-Neuronen}) ist und $m$ die Anzahl der Ausgangswerte $A_1,...,A_n$ (sowie der \textit{Output-Neuronen}) ist. Selbstverständlich sind die $w$- und $b$-\textit{Parameter} nach wie vor Teil des \textit{KNN}s, einfachheitshalber werden sie in der allgemeinen Darstellung weggelassen, das sie in der Regel konstant sind.
 
-%Zur Verdeutlichung soll der Prozess mit dem in Abb. \ref{img:layers} \textit{KNN} durchgespielt werden: Die Eingangsdaten, 5 Werte zwischen $0$ und $1$, werden in die \textit{Input-Neuronen} geschrieben. Das \textit{Neuron} $n_{11}$ erhält somit 5 eingehende Signale, welche individuell gewichtet sind, d.h.  \textit{Neuron} $n_{12}$ erhält somit anders gewichtete Eingangssignale. Nun verarbeiten alle \textit{Neuronen} des ersten \textit{Hidden-Layers} die gewichtete Summe mit ihren individuellen Schwellenwerten und der \textit{Sigmoid}-Funktion. Der zweite \textit{Hidden-Layer} wiederholt den selben Prozess mit den Ausgehenden Signalen des ersten \textit{Hidden-Layers} sowie die \textit{Output-Neuronen} mit den des zweiten \textit{Hidden-Layers}. Als Ausgang erhält man zwei Werte, welche ebenfalls zwischen 0 und 1 liegen.\\
-
-Die Anzahl der \textit{Neuronen} pro \textit{Layer} gilt es der jeweiligen Problemstellung anzupassen. Soll z.B. ein \textit{KNN} $28\times 28$ Pixel grosse Bilder von handschriftlichen Ziffern 0-9 kategorisieren können\footnote{MNIST Datensatz\cite{mnist}: Verbreitete Einstiegsanwendung von kleinen \textit{KNN}s, bei der es gilt, handschriftliche Ziffern zu kategorisieren.}, so braucht man einen \textit{Input-Layer} mit $28^2=784$ \textit{Neuronen} sowie einen \textit{Output-Layer} mit 10 \textit{Neuronen}. Die Grösse und Anzahl der \textit{Hidden-Layers} ist hingegen frei wählbar und gehört zu den \textit{Meta-Parametern}\footnote{Parameter, die die Architektur des \textit{KNN}s (Grösse, Tiefe, etc.) aber auch den Trainingsprozess (Dauer, Daten, etc.) beeinflussen} des \textit{KNN}s. Kleinere Probleme wie das Erkennen von handschriftlichen Ziffern lassen sich noch mit einem \textit{Hidden-Layer} bewerkstelligen, wobei von einem \textit{Shallow Neural Network} die Rede ist. Bei komplexeren Problemen empfiehlt sich jedoch die Verwendung eines \textit{DNN}s, in welchem mehrere (oft spezialisierte) \textit{Hidden-Layers} in Serie geschaltet werden.
+%Zur Verdeutlichung soll der Prozess mit dem in Abbildung \ref{img:layers} \textit{KNN} durchgespielt werden: Die Eingangsdaten, 5 Werte zwischen $0$ und $1$, werden in die \textit{Input-Neuronen} geschrieben. Das \textit{Neuron} $n_{11}$ erhält somit 5 eingehende Signale, welche individuell gewichtet sind, d.h.  \textit{Neuron} $n_{12}$ erhält somit anders gewichtete Eingangssignale. Nun verarbeiten alle \textit{Neuronen} des ersten \textit{Hidden-Layers} die gewichtete Summe mit ihren individuellen Schwellenwerten und der \textit{Sigmoid}-Funktion. Der zweite \textit{Hidden-Layer} wiederholt den selben Prozess mit den Ausgehenden Signalen des ersten \textit{Hidden-Layers} sowie die \textit{Output-Neuronen} mit den des zweiten \textit{Hidden-Layers}. Als Ausgang erhält man zwei Werte, welche ebenfalls zwischen 0 und 1 liegen.\\
 
 \subsubsection{Leistung von KNNs messen}\label{cha:theo:cost}
 
@@ -237,7 +241,7 @@ Per Definition handelt es sich dabei um ein \textit{DNN}, jedoch wird man festst
 In der Praxis gibt es einige verbreitete \textit{DNN}-Typen: \textit{RNN}s (\textit{Recurrent Neural Networks}), \textit{LSTM RNNs} (\textit{Long short-Term Memory RNN}), \textit{Deep Belief Networks}, etc., jedoch ist das \textit{Convolutional Neural Network} (\textit{CNN}) der geeignetste Typ für Bilderkennungsprobleme. Da es in der Arbeit Pilze anhand von Bildern zu kategorisieren gilt, wird im nächsten Kapitel der Fokus nur auf \textit{CNN}s gelegt.
 
 \subsection{Convolutional Neural Networks}\label{cha:theo:cnn}
-Will man ein \textit{DNN} für die Erkennung von Bildern verwenden, so ist das in der Abb. \ref{img:deep_full} gezeigte Netz aus mehreren Gründen ungeeignet: Einerseits leidet es u.a. wegen den vielen Verbindungen weiterhin an \textit{Unstable Gradients} und ist daher schwierig zu trainieren, andererseits werden durch \textit{Fully Connected Layers} die räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert. \textit{CNN}s verhindern dies mit sog. \textit{Convolution-} und \textit{Pooling-Layers}, wobei mit sog. \textit{Feature-Maps} Muster und Regelmässigkeiten erkannt werden können.
+Will man ein \textit{DNN} für die Erkennung von Bildern verwenden, so ist das in der Abbildung \ref{img:deep_full} gezeigte Netz aus mehreren Gründen ungeeignet: Einerseits leidet es u.a. wegen den vielen Verbindungen weiterhin an \textit{Unstable Gradients} und ist daher schwierig zu trainieren, andererseits werden durch \textit{Fully Connected Layers} die räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert. \textit{CNN}s verhindern dies mit sog. \textit{Convolution-} und \textit{Pooling-Layers}, wobei mit sog. \textit{Feature-Maps} Muster und Regelmässigkeiten erkannt werden können.
 
 \subsubsection{Convolution Layer}
 Das \textit{Local Receptive Field}, zu Deutsch ''lokales rezeptives Feld'', engt die Eingangssignale eines \textit{Neurons} auf einen lokalisierten Bereich des vorhergehenden Layers ein. Hat man z.B. den \textit{Input-Layer} und einen darauf folgenden \textit{Convolution-Layer}, auf die eine \textit{Local-Receptive-Field}-Grösse von $5\times 5$ \textit{Neuronen} angewandt wird, so ist ein \textit{Neuron} des \textit{Convolution-Layers} nur mit einem $5\times 5$ \textit{Neuronen} grossen Bereich des \textit{Input-Layers} verbunden. Für das erste \textit{Neuron} des \textit{Convolution-Layers} wird es folgendermassen aussehen:
@@ -265,8 +269,6 @@ Ein weiterer verwendeter Trick ist, dass alle Neuronen des \textit{Convolution-L
 
 Intuitiv kann man sich den \textit{Convolution Layer} als Schablone für ein durch die \textit{Parameter} bestimmte Muster vorstellen, welche Schrittweise über das Eingangsbild geschoben wird. Entspricht das Bild dem Muster, wird ein hoher Wert zurückgegeben und vice versa. Je nach \textit{Parameter} kann man z.B. Kanten oder Ecken erkennen. Man hat somit eine sog. \textit{Feature Map} erstellt, welches das Vorkommen eines bestimmtes Musters im Bild kartiert. Da ein Bild nicht nur aus einem einzigen Muster besteht, werden in einem \textit{Convolution-Layer} sogleich mehrere \textit{Feature-Maps} erstellt, welche sich auf verschiedene Muster spezialisieren können.
 
-\vspace*{3cm}
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{feature_maps}
@@ -285,9 +287,11 @@ Um die vom \textit{Convolution-Layer} erhaltenen \textit{Feature-Maps} weiter zu
 \end{figure}
 
 
-\subsubsection{Anwendung}
+\subsubsection{Aufbau eines CNNs}
 
+Beim Aufbau eines \textit{CNN}s werden einem viele Freiheiten gelassen, jedoch hat sich folgende Grundstruktur für viele Bildklassifizierungsprobleme bewährt: Nach dem \textit{Input-Layer} werden ein \textit{Convolution-Layer} und ein \textit{Pooling Layer} hintereinandergeschaltet, z.T. werden noch weitere \textit{Layers} (z.B. \textit{ReLU-Layer}, siehe Kapitel \ref{cha:theo:relu}) hinzugefügt. Zusammen bilden diese eine Einheit, welche einige Male wiederholt wird. Die Grösse der Layers nimmt mit der Tiefe ab, wodurch sich der charakteristische trichterförmige Aufbau von \textit{CNN}s bildet. Auf die letzte Einheit folgen wenige \textit{fully connected Layers}, wodurch die erkannten Muster miteinander kombiniert werden. Schliesslich werden mithilfe eines sog. \textit{Softmax-Layers} die Ausgangssignale auf Werte zwischen 0 und 1 normalisiert, um sich für Klassifizierung zu eignen.
 
+%Die Erklärung, mehrere solcher \textit{Convolution}-Einheiten hintereinander zu schalten, ist dass somit komplexere Muster und Formen erkannt werden können. Wie vorher beschrieben, kann man mit den \textit{Feature Maps} der ersten Einheit einfache Muster wie Kanten und Ecken erkennen. In der zweiten Einheit können diese einfachen Muster zu komplexeren Formen zusammengefügt werden, etc.
 
 \subsection{Zusätzliche Meta-Parameter und Modifikation}
 Die in den vorherigen Kapiteln beschriebenen \textit{KNN}s und \textit{DNN}s als auch deren Training sind keineswegs starr und lassen sich in vielen Aspekten modifizieren und justieren. Auch diese \textit{Meta-Parameter} sind für spätere Kapitel relevant, weswegen sie in diesem Abschnitt kurz beschrieben werden. 
@@ -329,8 +333,15 @@ Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectif
 %Diese \textit{Cost}-Funktion kann grosse Fehlerwerte für \textit{Sigmoid-Neuronen} besser handhaben, welche bei der \textit{Quadratic Cost}-Funktion z.T. zu einer Verlangsamung des Trainingsprozesses führen können.
 
 \subsubsection{Dropout-Layer}
+Da die vielen Verbindung von \textit{fully connected Layers} anfällig sind für Überanpassung, versucht man dies mit sog. \textit{Dropout-Layers} zu minimieren. Diese \textit{Layers} werden ähnlich wie \textit{fully connected Layers} in einem \textit{KNN} eingesetzt, jedoch unterscheiden sie sich wesentlich im Trainingsprozess:
+
+Ein gewisser Prozentsatz der \textit{Neuronen} eines \textit{Dropout-Layers} wird für das Training temporär deaktiviert, d.h. sie werden bei der Berechnung des Gradienten nicht berücksichtigt noch justiert. Diese Methode macht das \textit{KNN} robuster, reduziert Überanpassung und beschleunigt dazu noch das Training.
 
 \subsubsection{Data Augmentation}
+
+Ein wichtiger Aspekt für die Entwicklung eines zuverlässigen maschinellen Lernalgorithmus ist der Umfang der Trainingsdaten. Wenn zu wenige vorhanden sind, kann der Algorithmus keine allgemeine Funktion finden und riskiert das Überanpassen auf die wenigen Exemplare.
+
+Mithilfe von \textit{Data augmentation} lässt sich die Anzahl der Trainingsexemplare jedoch künstlich vergrössern. Dazu werden die Trainingsbilder um einige Pixel verschoben, gespiegelt, ein wenig rotiert oder verzerrt. Man generiert dadurch viele weitere Trainingsexemplare, welche wiederum das Risiko einer Überanpassung senken.
 
 \subsubsection{Transfer Learning}
 

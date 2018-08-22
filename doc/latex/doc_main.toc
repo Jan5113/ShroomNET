@@ -17,23 +17,23 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Die Natur als Vorbild}{14}
 \contentsline {subsubsection}{\numberline {2.4.2}Neuronen \& Verbindungen}{15}
 \contentsline {subsubsection}{\numberline {2.4.3}Layers}{17}
-\contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{18}
+\contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{19}
 \contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{19}
 \contentsline {paragraph}{Gradient Descent}{20}
 \contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{20}
 \contentsline {subparagraph}{$\bullet $ Mini-Batch}{20}
-\contentsline {subparagraph}{$\bullet $ Lernepochen}{20}
+\contentsline {subparagraph}{$\bullet $ Lernepochen}{21}
 \contentsline {subsection}{\numberline {2.5}DNNs}{21}
 \contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{22}
 \contentsline {subsubsection}{\numberline {2.6.1}Convolution Layer}{22}
 \contentsline {subsubsection}{\numberline {2.6.2}Shared Weigths \& Feature Maps}{23}
 \contentsline {subsubsection}{\numberline {2.6.3}Pooling}{24}
-\contentsline {subsubsection}{\numberline {2.6.4}Anwendung}{24}
-\contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{24}
-\contentsline {subsubsection}{\numberline {2.7.1}ReLU-Layer}{24}
+\contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{24}
+\contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{25}
+\contentsline {subsubsection}{\numberline {2.7.1}ReLU-Layer}{25}
 \contentsline {paragraph}{Vorteile:}{25}
-\contentsline {subsubsection}{\numberline {2.7.2}Dropout-Layer}{25}
-\contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{25}
-\contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{25}
-\contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{25}
-\contentsline {section}{Literatur}{26}
+\contentsline {subsubsection}{\numberline {2.7.2}Dropout-Layer}{26}
+\contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{26}
+\contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{26}
+\contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{26}
+\contentsline {section}{Literatur}{27}

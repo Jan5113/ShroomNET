@@ -3,8 +3,8 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Schema von einem k\IeC {\"u}nstlichen Neuron}}{15}
 \contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid-Funktion}}{16}
 \contentsline {figure}{\numberline {4}{\ignorespaces Schema von kleinem \textit {KNN}}}{17}
-\contentsline {figure}{\numberline {5}{\ignorespaces \textit {Fully Connected Deep Neural Network}}}{21}
-\contentsline {figure}{\numberline {6a}{\ignorespaces Beispiel f\IeC {\"u}r das \textit {Local-Receptive-Field} 1. \textit {Neuron}}}{22}
+\contentsline {figure}{\numberline {5}{\ignorespaces \textit {Fully Connected Deep Neural Network}}}{22}
+\contentsline {figure}{\numberline {6a}{\ignorespaces Beispiel f\IeC {\"u}r das \textit {Local-Receptive-Field} 1. \textit {Neuron}}}{23}
 \contentsline {figure}{\numberline {6b}{\ignorespaces Beispiel f\IeC {\"u}r das \textit {Local-Receptive-Field} 2. \textit {Neuron}}}{23}
 \contentsline {figure}{\numberline {7}{\ignorespaces \textit {Feature-Maps}}}{24}
 \contentsline {figure}{\numberline {8}{\ignorespaces \textit {\textit {max-Pooling-Layer}}}}{24}
