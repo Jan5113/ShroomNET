@@ -55,7 +55,7 @@ Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}.
 In der Praxis sieht der \textit{Trainingsprozess} generell folgendermassen aus: Ein Datenpunkt $x$ aus den \textit{Trainingsdaten} wird in den zu trainierenden Algorithmus $F(x)$ eingespeist, worauf das erhaltene Ergebnis mit dem erwünschten Ergebnis $y$ verglichen wird. Durch Anpassung der \textit{Parameter} des Algorithmus wird versucht, das Resultat zu verbessern. Dieser Prozess wird mit allen Datenpunkten der Trainingsdaten wiederholt, wodurch der Algorithmus eine möglichst genaue Repräsentation für $f(x)$ finden soll: $F(x) \approx f(x)$.
 
 \subsubsection{Verzerrung-Varianz-Dilemma}\label{cha:theo:ml:b-v}
-Das Verzerrung-Varianz-Dilemma\cite{bias} ist eine generelle Schwierigkeit von Lernalgorithmen. Im Grunde genommen will man, dass der Algorithmus mit den \textit{Trainingsdaten} als auch mit komplett neuen Daten akkurate Ergebnisse liefern kann. Dazu muss man beim Designen eines maschinellen Lernalgorithmus die richtige Balance zwischen Genauigkeit (\textit{Varianz}) und Toleranz (\textit{Verzerrung}) finden. Ist das Gleichgewicht jedoch nicht bewerkstelligt, so äussert sich das mit den Symptomen der \textit{Überanpassung} oder \textit{Unteranpassung}.
+Das Verzerrung-Varianz-Dilemma\cite{bias} ist eine grundlegende Schwierigkeit von Lernalgorithmen. Im Grunde genommen will man, dass der Algorithmus mit den \textit{Trainingsdaten} als auch mit komplett neuen Daten akkurate Ergebnisse liefern kann. Dazu muss man beim Designen eines maschinellen Lernalgorithmus die richtige Balance zwischen Genauigkeit (\textit{Varianz}) und Toleranz (\textit{Verzerrung}) finden. Ist das Gleichgewicht jedoch nicht bewerkstelligt, so äussert sich das mit den Symptomen der \textit{Überanpassung} oder \textit{Unteranpassung}.
 
 \paragraph{Überanpassung} Erhält man ein verdächtig akkurates Ergebnis mit den Trainingsdaten, läuft man Gefahr der \textit{Überanpassung}: Der Algorithmus erstellt zu detaillierte Regeln für die Trainingsdaten spezifisch und verallgemeinert schlecht (er ''lernt auswendig''). \textit{Überanpassung} führt dazu, dass der Algorithmus zwar ausserordentliche Leistungen innerhalb der Trainingsdaten erzielt, jedoch ungelernte Daten nur mit einer sehr grossen Fehlerquote verarbeiten kann.
 
@@ -333,17 +333,19 @@ Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectif
 %Diese \textit{Cost}-Funktion kann grosse Fehlerwerte für \textit{Sigmoid-Neuronen} besser handhaben, welche bei der \textit{Quadratic Cost}-Funktion z.T. zu einer Verlangsamung des Trainingsprozesses führen können.
 
 \subsubsection{Dropout-Layer}
-Da die vielen Verbindung von \textit{fully connected Layers} anfällig sind für Überanpassung, versucht man dies mit sog. \textit{Dropout-Layers} zu minimieren. Diese \textit{Layers} werden ähnlich wie \textit{fully connected Layers} in einem \textit{KNN} eingesetzt, jedoch unterscheiden sie sich wesentlich im Trainingsprozess:
+Da die vielen Verbindungen von \textit{fully connected Layers} anfällig für eine Überanpassung sind, versucht man dies mit sog. \textit{Dropout-Layers} zu minimieren. Diese \textit{Layers} werden ähnlich wie \textit{fully connected Layers} in einem \textit{KNN} eingesetzt, jedoch unterscheiden sie sich wesentlich im Trainingsprozess:
 
-Ein gewisser Prozentsatz der \textit{Neuronen} eines \textit{Dropout-Layers} wird für das Training temporär deaktiviert, d.h. sie werden bei der Berechnung des Gradienten nicht berücksichtigt noch justiert. Diese Methode macht das \textit{KNN} robuster, reduziert Überanpassung und beschleunigt dazu noch das Training.
+Ein gewisser Prozentsatz der \textit{Neuronen} eines \textit{Dropout-Layers} wird für das Training temporär deaktiviert, d.h. sie werden bei der Berechnung des Gradienten weder berücksichtigt noch justiert. Diese Methode macht das \textit{KNN} robuster, reduziert Überanpassung und beschleunigt zudem noch das Training.
 
 \subsubsection{Data Augmentation}
 
-Ein wichtiger Aspekt für die Entwicklung eines zuverlässigen maschinellen Lernalgorithmus ist der Umfang der Trainingsdaten. Wenn zu wenige vorhanden sind, kann der Algorithmus keine allgemeine Funktion finden und riskiert das Überanpassen auf die wenigen Exemplare.
+Ein wichtiger Aspekt für die Entwicklung eines zuverlässigen maschinellen Lernalgorithmus ist der Umfang der Trainingsdaten. Wenn jedoch zu wenige vorhanden sind, ist das Training sehr unzuverlässig und man riskiert eine Überanpassung an die wenigen Trainingsexemplare.
 
-Mithilfe von \textit{Data augmentation} lässt sich die Anzahl der Trainingsexemplare jedoch künstlich vergrössern. Dazu werden die Trainingsbilder um einige Pixel verschoben, gespiegelt, ein wenig rotiert oder verzerrt. Man generiert dadurch viele weitere Trainingsexemplare, welche wiederum das Risiko einer Überanpassung senken.
+Mithilfe von \textit{Data augmentation} lässt sich die Anzahl der Trainingsexemplare künstlich vergrössern. Dazu werden die Trainingsbilder vervielfacht und um einige Pixel verschoben, gespiegelt, ein wenig rotiert oder verzerrt. Man generiert dadurch viele weitere, voneinander verschiedene Trainingsexemplare, welche für das Training eines \textit{KNN}s verwendet werden können.
 
 \subsubsection{Transfer Learning}
+
+Ein \textit{KNN} kann man stets von Grund auf neu aufbauen und trainieren, jedoch ist es auch verbreitet, das \textit{Wissen} von bereits trainierten \textit{DNN}s zu verwenden, um es auf ähnliche Probleme zu spezialisieren. Durch sogenanntes \textit{Transfer Learning} wird ein bereits trainiertes \textit{KNN} (z.B. \textit{GoogLeNet} oder \textit{AlexNET}) nochmals trainiert, jedoch mit neuen Trainingsdaten und den dazugehörigen Kategorien. Man erhofft sich dabei, dass häufig vorkommende Muster wie Kanten und Formen nicht von Neuem gelernt werden müssen. Dadurch soll das Training einerseits beschleunigt und andererseits soll dessen Leistung gesteigert werden.
 
 \subsubsection{Ensemble}
 
