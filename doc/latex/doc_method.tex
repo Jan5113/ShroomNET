@@ -1,0 +1,43 @@
+\section{Methode}\label{cha:method}
+
+In diesem Kapitel wird die Spezialisierung eines \textit{CNN}s auf die Erkennung von Pilzbildern behandelt. Vorerst wird die Aufgabestellung formuliert und begründet. Darauf wird auf den Datenbeschaffungsprozess sowie der Datenvorverarbeitung eingegangen. Die folgenden Abschnitte behandeln den Optimierungsprozess der \textit{Metaparameter} und erwähnen kurz die Massnahmen, welche zu einer signifikanten Verbesserung der Erkennungsleistung des \textit{KNN}s führten.
+
+\subsection{Aufgabenstellung}\label{cha:aim}
+Ziel ist es, einen auf \textit{CNN}s basierenden Algorithmus auf die Pilzartenerkennung anhand von Bildern zu optimieren. Um den Rahmen der Arbeit einzuschränken, werden nur die 20 häufigsten und bekanntesten Arten der Nordwestschweiz für das Projekt in Erwägung gezogen (siehe Tabelle \ref{table:shrooms}), da es in erster Linie um die Umsetzbarkeit eines solchen Algorithmus geht. Neben den 20 ausgewählten Arten soll eine weitere Kategorie hinzugefügt werden, welche unbekannte Pilzarten beinhaltet. Dadurch soll gewährleistet werden, dass der Algorithmus nicht durch mittels Ausschlussverfahren schwierig zu identifizierende Pilzarten kategorisieren kann. auch praktische Anwendung finden könnte, bei welcher unbekannte Pilze auch als solche identifiziert werden können. 
+
+\subsection{Datenbeschaffung} \label{cha:met:datagathering}
+Trainingsdaten bilden die Grundlage jedes auf \textit{Machine Learning} basierenden Algorithmus. Für ein solides Fundament würde man mehrere Tausend Bilder von jeder Pilzart benötigen; die Datenlage für Pilzbilder hingegen ist eher schlecht, weswegen die Datenbeschaffung ein wichtiger Bestandteil dieser Arbeit ist.\\
+
+Für das Training sollen von jeder der 20 Pilzarten mindestens 250 verschiedene Bilder beschaffen werden, von den unbekannten etwa 2000. Diese Zahlen begründen sich lediglich mit der geringen Anzahl der verfügbaren Bilddaten.
+
+\subsubsection{Datenbank SwissFungi}
+Um einen Grunddatensatz zu erhalten, wurde die gesamte Fotodatenbank vom offiziellen SwissFungi Pilzatlas der WSL Schweiz verwendet\cite{wsl}. Von den 20 ausgewählten Arten können dadurch je wenige Dutzend Bilder gesammelt werden; von den unbekannten Arten wurden dem Projekt schon einige Tausend Exemplare zu Verfügung gestellt.
+
+\subsubsection{Internet Crawler}
+Mithilfe eines kleinen Python-Skriptes konnten von den 20 Arten je nochmals etwa 100 
+
+\subsubsection{Website}
+
+
+\subsubsection{Videos}
+
+\subsection{Datenvorverarbeitung}
+
+
+\subsection{Entwicklungsprozess}\label{cha:met:dev}
+
+\subsubsection{Basis-SNN}
+
+\subsubsection{Basis-CNN}
+
+\subsubsection{Data-Augmentation}
+
+\subsubsection{Farbfilter}
+
+\subsubsection{Justierung des CNNs}
+
+\subsubsection{Einspeisung von Zusatzinformationen}
+
+\subsubsection{Transfer-Learning}
+
+\subsubsection{CNN-Ensemble}

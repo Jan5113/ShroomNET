@@ -1,39 +1,57 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Einf\IeC {\"u}hrung}{6}
-\contentsline {subsection}{\numberline {1.1}Zielsetzung}{7}
-\contentsline {subsubsection}{\numberline {1.1.1}Datenbeschaffung \& Datenaufbereitung}{7}
-\contentsline {subsubsection}{\numberline {1.1.2}Entwicklung \& Optimierung}{7}
-\contentsline {subsubsection}{\numberline {1.1.3}Theorie}{8}
-\contentsline {section}{\numberline {2}Grundlagen \textit {KNNs} \& \textit {DNN}s}{9}
-\contentsline {subsection}{\numberline {2.1}\textit {KI}, \textit {KNN}, \textit {DL}, usw.}{9}
-\contentsline {subsection}{\numberline {2.2}Einleitung}{11}
-\contentsline {subsection}{\numberline {2.3}Maschinelles Lernen}{12}
-\contentsline {subsubsection}{\numberline {2.3.1}Training}{12}
-\contentsline {subsubsection}{\numberline {2.3.2}Verzerrung-Varianz-Dilemma}{12}
-\contentsline {paragraph}{\IeC {\"U}beranpassung}{12}
-\contentsline {paragraph}{Unteranpassung}{13}
-\contentsline {paragraph}{Validierung}{13}
-\contentsline {subsection}{\numberline {2.4}KNNs}{14}
-\contentsline {subsubsection}{\numberline {2.4.1}Die Natur als Vorbild}{14}
-\contentsline {subsubsection}{\numberline {2.4.2}Neuronen \& Verbindungen}{15}
-\contentsline {subsubsection}{\numberline {2.4.3}Layers}{17}
-\contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{19}
-\contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{19}
-\contentsline {paragraph}{Gradient Descent}{20}
-\contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{20}
-\contentsline {subparagraph}{$\bullet $ Mini-Batch}{20}
-\contentsline {subparagraph}{$\bullet $ Lernepochen}{21}
-\contentsline {subsection}{\numberline {2.5}DNNs}{21}
-\contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{22}
-\contentsline {subsubsection}{\numberline {2.6.1}Convolution Layer}{22}
-\contentsline {subsubsection}{\numberline {2.6.2}Shared Weigths \& Feature Maps}{23}
-\contentsline {subsubsection}{\numberline {2.6.3}Pooling}{24}
-\contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{24}
+\contentsline {section}{\numberline {1}Einf\IeC {\"u}hrung}{7}
+\contentsline {subsection}{\numberline {1.1}Zielsetzung}{8}
+\contentsline {subsubsection}{\numberline {1.1.1}Datenbeschaffung \& Datenaufbereitung}{8}
+\contentsline {subsubsection}{\numberline {1.1.2}Entwicklung \& Optimierung}{8}
+\contentsline {subsubsection}{\numberline {1.1.3}Theorie}{9}
+\contentsline {section}{\numberline {2}Grundlagen \textit {KNNs} \& \textit {DNN}s}{10}
+\contentsline {subsection}{\numberline {2.1}\textit {KI}, \textit {KNN}, \textit {DL}, usw.}{10}
+\contentsline {subsection}{\numberline {2.2}Einleitung}{12}
+\contentsline {subsection}{\numberline {2.3}Maschinelles Lernen}{13}
+\contentsline {subsubsection}{\numberline {2.3.1}Training}{13}
+\contentsline {subsubsection}{\numberline {2.3.2}Verzerrung-Varianz-Dilemma}{13}
+\contentsline {paragraph}{\IeC {\"U}beranpassung}{13}
+\contentsline {paragraph}{Unteranpassung}{14}
+\contentsline {paragraph}{Validierung}{14}
+\contentsline {subsection}{\numberline {2.4}KNNs}{15}
+\contentsline {subsubsection}{\numberline {2.4.1}Die Natur als Vorbild}{15}
+\contentsline {subsubsection}{\numberline {2.4.2}Neuronen \& Verbindungen}{16}
+\contentsline {subsubsection}{\numberline {2.4.3}Layers}{18}
+\contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{20}
+\contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{20}
+\contentsline {paragraph}{Gradient Descent}{21}
+\contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{21}
+\contentsline {subparagraph}{$\bullet $ Mini-Batch}{21}
+\contentsline {subparagraph}{$\bullet $ Lernepochen}{22}
+\contentsline {subsection}{\numberline {2.5}DNNs}{22}
+\contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{23}
+\contentsline {subsubsection}{\numberline {2.6.1}Convolution Layer}{23}
+\contentsline {subsubsection}{\numberline {2.6.2}Shared Weigths \& Feature Maps}{24}
+\contentsline {subsubsection}{\numberline {2.6.3}Pooling}{25}
+\contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{25}
 \contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{25}
 \contentsline {subsubsection}{\numberline {2.7.1}ReLU-Layer}{25}
-\contentsline {paragraph}{Vorteile:}{25}
+\contentsline {paragraph}{Vorteile:}{26}
 \contentsline {subsubsection}{\numberline {2.7.2}Dropout-Layer}{26}
-\contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{26}
-\contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{26}
-\contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{26}
-\contentsline {section}{Literatur}{27}
+\contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{27}
+\contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{27}
+\contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{27}
+\contentsline {section}{\numberline {3}Methode}{28}
+\contentsline {subsection}{\numberline {3.1}Aufgabenstellung}{28}
+\contentsline {subsection}{\numberline {3.2}Datenbeschaffung}{28}
+\contentsline {subsubsection}{\numberline {3.2.1}Internet Crawler}{28}
+\contentsline {subsubsection}{\numberline {3.2.2}Website}{29}
+\contentsline {subsubsection}{\numberline {3.2.3}Videos}{29}
+\contentsline {subsection}{\numberline {3.3}Datenvorverarbeitung}{29}
+\contentsline {subsection}{\numberline {3.4}Entwicklungsprozess}{29}
+\contentsline {subsubsection}{\numberline {3.4.1}Basis-SNN}{29}
+\contentsline {subsubsection}{\numberline {3.4.2}Basis-CNN}{29}
+\contentsline {subsubsection}{\numberline {3.4.3}Data-Augmentation}{29}
+\contentsline {subsubsection}{\numberline {3.4.4}Farbfilter}{29}
+\contentsline {subsubsection}{\numberline {3.4.5}Justierung des CNNs}{29}
+\contentsline {subsubsection}{\numberline {3.4.6}Einspeisung von Zusatzinformationen}{29}
+\contentsline {subsubsection}{\numberline {3.4.7}Transfer-Learning}{29}
+\contentsline {subsubsection}{\numberline {3.4.8}CNN-Ensemble}{29}
+\contentsline {section}{Literatur}{30}
+\contentsline {section}{\numberline {4}Anhang}{32}
+\contentsline {subsection}{\numberline {4.1}Tabelle Pilzarten}{32}

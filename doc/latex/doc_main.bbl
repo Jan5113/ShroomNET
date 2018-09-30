@@ -26,11 +26,6 @@ Jonas~Harjunpää Teemu~Koivisto, Tuomo~Nieminen.
 \newblock https://tuomonieminen.github.io/deep-shrooms/, 2017.
 \newblock Abgerufen am 25.07.2018.
 
-\bibitem{bias}
-Stuart~Geman René~Doursat, Elie~Bienenstock.
-\newblock Neural networks and the dias/variance dilemma, 1992.
-\newblock Massachusetts Institute of Technology.
-
 \bibitem{theguardian}
 Steven Borowiec.
 \newblock Alphago seals 4-1 victory over go grandmaster lee sedol.
@@ -87,12 +82,6 @@ Wikipedia.
 \newblock https://en.wikipedia.org/wiki/Deep\_learning.
 \newblock Abgerufen am 10.08.2018.
 
-\bibitem{cnn}
-Wikipedia.
-\newblock Convolutional neural network.
-\newblock https://en.wikipedia.org/wiki/Convolutional\_neural\_network.
-\newblock Abgerufen am 10.08.2018.
-
 \bibitem{hasimon}
 H.~A. Simon.
 \newblock {\em The Shape of Automation for Men and Management}.
@@ -104,6 +93,11 @@ Alan Turing.
 \newblock On computable numbers, with an application to the
   entscheindungsproblem, 1936.
 \newblock Proceedings of the London Mathematical Society.
+
+\bibitem{bias}
+Stuart~Geman René~Doursat, Elie~Bienenstock.
+\newblock Neural networks and the dias/variance dilemma, 1992.
+\newblock Massachusetts Institute of Technology.
 
 \bibitem{welch_prob}
 Welch Labs.
@@ -123,15 +117,9 @@ Roman~Claus et~al.
 \newblock 1991.
 \newblock Klett, ISBN 3-12-042200-2, S. 252 ff.
 
-\bibitem{mnist}
-Christopher J.C.~Burges Yann~LeCun, Corinna~Cortes.
-\newblock The mnist database of handwritten digits.
-\newblock http://yann.lecun.com/exdb/mnist/.
-\newblock Abgerufen am 12.08.2018.
-
-\bibitem{hastad}
-Johan Hastad.
-\newblock On the correlation of parity and small-depth circuits.
-\newblock https://eccc.weizmann.ac.il//report/2012/137/, 2012.
+\bibitem{siegelmann}
+Eduardo D.~Sontag Hava T.~Siegelmann.
+\newblock On the computational power of neural nets.
+\newblock http://binds.cs.umass.edu/papers/1992\_Siegelmann\_COLT.pdf, 1992.
 
 \end{thebibliography}

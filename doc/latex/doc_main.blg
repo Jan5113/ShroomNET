@@ -29,25 +29,26 @@ Warning--entry type for "ann" isn't style-file defined
 --line 99 of file bibliography.bib
 Warning--entry type for "dl" isn't style-file defined
 --line 106 of file bibliography.bib
-Warning--entry type for "cnn" isn't style-file defined
---line 113 of file bibliography.bib
 Warning--entry type for "alanturing" isn't style-file defined
 --line 127 of file bibliography.bib
 Warning--entry type for "bias" isn't style-file defined
 --line 134 of file bibliography.bib
 Warning--entry type for "welch_prob" isn't style-file defined
 --line 141 of file bibliography.bib
-Warning--entry type for "mnist" isn't style-file defined
---line 156 of file bibliography.bib
 Warning--entry type for "nielsen" isn't style-file defined
 --line 163 of file bibliography.bib
-Warning--entry type for "hastad" isn't style-file defined
---line 172 of file bibliography.bib
 I was expecting a `,' or a `}'---line 177 of file bibliography.bib
  :  
  :  note = {Weizmann Institute of Science},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--entry type for "siegelmann" isn't style-file defined
+--line 181 of file bibliography.bib
+I was expecting a `,' or a `}'---line 186 of file bibliography.bib
+ :  
+ :  note = {Rutgers University},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty publisher in hasimon
 Warning--empty publisher in klett
-(There was 1 error message)
+(There were 2 error messages)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.1)  22 AUG 2018 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.1)  28 SEP 2018 16:17
 entering extended mode
 **./doc_main.tex
 (doc_main.tex
@@ -1378,18 +1378,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 [3
 
 
-]) [4] (doc_main.toc)
+]) [4] (doc_main.toc [5
+
+])
 \tf@toc=\write4
 \openout4 = `doc_main.toc'.
 
- [5
-
-] (doc_introduction.tex
+ [6] (doc_introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-[6
+[7
 
 ]
 Overfull \hbox (6.95502pt too wide) in paragraph at lines 28--29
@@ -1397,13 +1397,13 @@ Overfull \hbox (6.95502pt too wide) in paragraph at lines 28--29
 -den aus den sel-ben Gr[]unden
  []
 
-[7]) [8] (doc_theory.tex
+[8]) [9] (doc_theory.tex
 Overfull \hbox (12.30687pt too wide) in paragraph at lines 8--9
 \OT1/cmr/m/n/12 In den Me-di-en wie auch im In-ter-net h[]ort und liest man die
  Aus-dr[]ucke und Abk[]urzungen
  []
 
-[9
+[10
 
 
 ]
@@ -1412,8 +1412,8 @@ Overfull \hbox (0.59566pt too wide) in paragraph at lines 20--22
 12 Layers \OT1/cmr/m/n/12 hin (i.d.R. 1, h[]ochstens
  []
 
-[10]
-<../images/fingers.jpg, id=54, 401.5pt x 647.41875pt>
+[11]
+<../images/fingers.jpg, id=57, 401.5pt x 647.41875pt>
 File: ../images/fingers.jpg Graphic file (type jpg)
 <use ../images/fingers.jpg>
 Package pdftex.def Info: ../images/fingers.jpg  used on input line 38.
@@ -1423,7 +1423,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[11 <../images/fingers.jpg>] [12]
+[12 <../images/fingers.jpg>] [13]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 64.
 
 ("C:\Users\Jan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -1436,24 +1436,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[13] [14]
-<../images/single_neuron.png, id=71, 819.06pt x 245.718pt>
+[14] [15]
+<../images/single_neuron.png, id=74, 819.06pt x 245.718pt>
 File: ../images/single_neuron.png Graphic file (type png)
 <use ../images/single_neuron.png>
 Package pdftex.def Info: ../images/single_neuron.png  used on input line 89.
 (pdftex.def)             Requested size: 426.79135pt x 128.04028pt.
- [15 <../images/single_neuron.png (PNG copy)>]
+ [16 <../images/single_neuron.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-[16]
-<../images/layers.png, id=87, 819.06pt x 535.7616pt>
+[17]
+<../images/layers.png, id=90, 819.06pt x 535.7616pt>
 File: ../images/layers.png Graphic file (type png)
 <use ../images/layers.png>
 Package pdftex.def Info: ../images/layers.png  used on input line 153.
 (pdftex.def)             Requested size: 426.79135pt x 279.17805pt.
- [17 <../images/layers.png (PNG copy)>]
+ [18 <../images/layers.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
@@ -1463,121 +1463,123 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-[18] [19]
+[19] [20]
 Overfull \hbox (21.89651pt too wide) in paragraph at lines 213--214
 []\OT1/cmr/m/n/12 Bei der \OT1/cmr/m/it/12 Gra-di-ent De-scent\OT1/cmr/m/n/12 -
 Trainingsmethode las-sen sich ei-ni-ge sol-cher \OT1/cmr/m/it/12 Meta-Parameter
 
  []
 
-[20]
-<../images/deep_full_planes.png, id=102, 829.6596pt x 513.8397pt>
-File: ../images/deep_full_planes.png Graphic file (type png)
-<use ../images/deep_full_planes.png>
-Package pdftex.def Info: ../images/deep_full_planes.png  used on input line 234
-.
-(pdftex.def)             Requested size: 426.79135pt x 264.32071pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-[21]
-<../images/receptive_field_1.png, id=106, 819.06pt x 323.7696pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+
+Overfull \hbox (9.14465pt too wide) in paragraph at lines 239--240
+\OT1/cmr/m/n/12 nem \OT1/cmr/m/it/12 Ful-ly Connec-ted Layer \OT1/cmr/m/n/12 au
+s meh-re-ren Gr[]unden un-ge-eig-net, u.a. wer-den r[]aumlichen
+ []
+
+[22]
+<../images/receptive_field_1.png, id=108, 819.06pt x 323.7696pt>
 File: ../images/receptive_field_1.png Graphic file (type png)
 <use ../images/receptive_field_1.png>
-Package pdftex.def Info: ../images/receptive_field_1.png  used on input line 25
-2.
+Package pdftex.def Info: ../images/receptive_field_1.png  used on input line 24
+9.
 (pdftex.def)             Requested size: 426.79135pt x 168.71193pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../images/receptive_field_2.png, id=107, 819.06pt x 323.7696pt>
+<../images/receptive_field_2.png, id=109, 819.06pt x 323.7696pt>
 File: ../images/receptive_field_2.png Graphic file (type png)
 <use ../images/receptive_field_2.png>
-Package pdftex.def Info: ../images/receptive_field_2.png  used on input line 26
-2.
+Package pdftex.def Info: ../images/receptive_field_2.png  used on input line 25
+9.
 (pdftex.def)             Requested size: 426.79135pt x 168.71193pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <../images/deep_full_planes.png (PNG copy)>]
-<../images/feature_maps.png, id=111, 819.06pt x 323.7696pt>
+[23 <../images/receptive_field_1.png (PNG copy)>]
+<../images/feature_maps.png, id=113, 819.06pt x 323.7696pt>
 File: ../images/feature_maps.png Graphic file (type png)
 <use ../images/feature_maps.png>
-Package pdftex.def Info: ../images/feature_maps.png  used on input line 274.
+Package pdftex.def Info: ../images/feature_maps.png  used on input line 269.
 (pdftex.def)             Requested size: 426.79135pt x 168.71193pt.
- [23 <../images/receptive_field_1.png (PNG copy)> <../images/receptive_field_2.
-png (PNG copy)>]
-<../images/max_pooling.png, id=115, 819.06pt x 213.4374pt>
+ [24 <../images/receptive_field_2.png (PNG copy)> <../images/feature_maps.png (
+PNG copy)>]
+<../images/max_pooling.png, id=117, 819.06pt x 213.4374pt>
 File: ../images/max_pooling.png Graphic file (type png)
 <use ../images/max_pooling.png>
-Package pdftex.def Info: ../images/max_pooling.png  used on input line 284.
+Package pdftex.def Info: ../images/max_pooling.png  used on input line 281.
 (pdftex.def)             Requested size: 426.79135pt x 111.2193pt.
- [24 <../images/feature_maps.png (PNG copy)> <../images/max_pooling.png (PNG co
-py)>] [25]
-Overfull \hbox (0.54948pt too wide) in paragraph at lines 336--337
-\OT1/cmr/m/n/12 Da die vie-len Ver-bin-dung von \OT1/cmr/m/it/12 ful-ly connec-
-ted Layers \OT1/cmr/m/n/12 anf[]allig sind f[]ur []Uberanpassung,
+ [25 <../images/max_pooling.png (PNG copy)>]
+Overfull \hbox (8.31746pt too wide) in paragraph at lines 333--334
+\OT1/cmr/m/n/12 Da die vie-len Ver-bin-dun-gen von \OT1/cmr/m/it/12 ful-ly conn
+ec-ted Layers \OT1/cmr/m/n/12 anf[]allig f[]ur ei-ne []Uberanpassung
  []
 
-) [26] (doc_bibliography.tex (doc_main.bbl [27
+[26]) [27] (doc_method.tex) [28
+
+
+] [29] (doc_bibliography.tex (doc_main.bbl
+[30
 
 
 ]) (doc_main.lof)
 \tf@lof=\write5
 \openout5 = `doc_main.lof'.
 
-) [28] [29]
-(doc_main.aux) ) 
+) [31] (doc_appendix.tex) [32
+
+
+] (doc_main.aux) ) 
 Here is how much of TeX's memory you used:
- 27120 strings out of 493305
- 675142 string characters out of 3130673
- 869848 words of memory out of 3000000
- 30131 multiletter control sequences out of 15000+200000
+ 27127 strings out of 493305
+ 675294 string characters out of 3130673
+ 870477 words of memory out of 3000000
+ 30133 multiletter control sequences out of 15000+200000
  22191 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,13n,129p,1542b,2038s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\
-mathabx\dpi600\matha5.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\public\mathabx\dpi600\matha6.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\public\mathabx\dpi600\matha10.pk> <C:\Users\Jan\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk> <C:\Users\Jan\AppData\Loc
-al\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi720\mathx10.pk> <C:\Users\Jan\A
-ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha12.pk><C:/Us
-ers/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Jan/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jan/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Jan/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/User
-s/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pf
-b><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Jan/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jan/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Jan/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/J
-an/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl8.pfb><
-C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmti10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmti12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/Jan/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Jan/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on doc_main.pdf (29 pages, 3958727 bytes).
+ <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\publi
+c\mathabx\dpi600\matha5.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\public\mathabx\dpi600\matha6.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\public\mathabx\dpi600\matha10.pk> <C:\Users\Jan\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk> <C:\Users\Jan\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi720\mathx10.pk> <C:\Users\Jan
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha12.pk><C:/
+Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Jan/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Jan/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Jan/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Us
+ers/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.
+pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Jan/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jan/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Jan/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users
+/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl8.pfb
+><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmti10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/Jan/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Jan/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on doc_main.pdf (32 pages, 1435393 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
+ 260 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
