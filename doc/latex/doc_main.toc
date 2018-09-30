@@ -30,28 +30,29 @@
 \contentsline {subsubsection}{\numberline {2.6.3}Pooling}{25}
 \contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{25}
 \contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{25}
-\contentsline {subsubsection}{\numberline {2.7.1}ReLU-Layer}{25}
+\contentsline {subsubsection}{\numberline {2.7.1}ReLU-Layer}{26}
 \contentsline {paragraph}{Vorteile:}{26}
 \contentsline {subsubsection}{\numberline {2.7.2}Dropout-Layer}{26}
 \contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{27}
 \contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{27}
 \contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{27}
 \contentsline {section}{\numberline {3}Methode}{28}
-\contentsline {subsection}{\numberline {3.1}Aufgabenstellung}{28}
-\contentsline {subsection}{\numberline {3.2}Datenbeschaffung}{28}
-\contentsline {subsubsection}{\numberline {3.2.1}Internet Crawler}{28}
-\contentsline {subsubsection}{\numberline {3.2.2}Website}{29}
-\contentsline {subsubsection}{\numberline {3.2.3}Videos}{29}
-\contentsline {subsection}{\numberline {3.3}Datenvorverarbeitung}{29}
-\contentsline {subsection}{\numberline {3.4}Entwicklungsprozess}{29}
-\contentsline {subsubsection}{\numberline {3.4.1}Basis-SNN}{29}
-\contentsline {subsubsection}{\numberline {3.4.2}Basis-CNN}{29}
-\contentsline {subsubsection}{\numberline {3.4.3}Data-Augmentation}{29}
-\contentsline {subsubsection}{\numberline {3.4.4}Farbfilter}{29}
-\contentsline {subsubsection}{\numberline {3.4.5}Justierung des CNNs}{29}
-\contentsline {subsubsection}{\numberline {3.4.6}Einspeisung von Zusatzinformationen}{29}
-\contentsline {subsubsection}{\numberline {3.4.7}Transfer-Learning}{29}
-\contentsline {subsubsection}{\numberline {3.4.8}CNN-Ensemble}{29}
-\contentsline {section}{Literatur}{30}
-\contentsline {section}{\numberline {4}Anhang}{32}
-\contentsline {subsection}{\numberline {4.1}Tabelle Pilzarten}{32}
+\contentsline {subsection}{\numberline {3.1}Datenbeschaffung}{28}
+\contentsline {subsubsection}{\numberline {3.1.1}Datenbank SwissFungi}{28}
+\contentsline {subsubsection}{\numberline {3.1.2}Webseite ShroomNET}{28}
+\contentsline {subsubsection}{\numberline {3.1.3}Internet Crawler}{29}
+\contentsline {subsubsection}{\numberline {3.1.4}Videos}{29}
+\contentsline {subsection}{\numberline {3.2}Datenaufbereitung}{29}
+\contentsline {subsection}{\numberline {3.3}Entwicklungsprozess}{31}
+\contentsline {subsubsection}{\numberline {3.3.1}Basis-SNN}{31}
+\contentsline {subsubsection}{\numberline {3.3.2}Basis-CNN}{31}
+\contentsline {subsubsection}{\numberline {3.3.3}Data-Augmentation}{31}
+\contentsline {subsubsection}{\numberline {3.3.4}Farbfilter}{31}
+\contentsline {subsubsection}{\numberline {3.3.5}Justierung des CNNs}{31}
+\contentsline {subsubsection}{\numberline {3.3.6}Einspeisung von Zusatzinformationen}{31}
+\contentsline {subsubsection}{\numberline {3.3.7}Transfer-Learning}{31}
+\contentsline {subsubsection}{\numberline {3.3.8}CNN-Ensemble}{31}
+\contentsline {section}{Literatur}{32}
+\contentsline {section}{\numberline {4}Anhang}{35}
+\contentsline {subsection}{\numberline {4.1}Tabelle Pilzarten}{35}
+\contentsline {subsection}{\numberline {4.2}Hochladeformular \& Quiz}{36}

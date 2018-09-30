@@ -49,6 +49,19 @@ I was expecting a `,' or a `}'---line 186 of file bibliography.bib
  :  note = {Rutgers University},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--entry type for "wsl" isn't style-file defined
+--line 190 of file bibliography.bib
+I was expecting a `,' or a `}'---line 195 of file bibliography.bib
+ :  
+ :  note = {Eidg. Forschungsanstalt für Wald, Schnee und Landschaft},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "crawler" isn't style-file defined
+--line 198 of file bibliography.bib
+Warning--entry type for "bachmeier" isn't style-file defined
+--line 212 of file bibliography.bib
 Warning--empty publisher in hasimon
 Warning--empty publisher in klett
-(There were 2 error messages)
+Warning--empty journal in szp
+Warning--empty year in szp
+(There were 3 error messages)

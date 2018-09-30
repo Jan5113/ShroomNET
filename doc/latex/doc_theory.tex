@@ -50,7 +50,7 @@ Um die Schwierigkeiten der Bilderkennung zu verstehen, muss das Problem aus der 
 Maschinelle Lernalgorithmen sind auf den künstlichen Wissenserwerb spezialisiert. Dabei ist es wichtig, nicht durch ''Auswendiglernen'', sondern durch Erkennen und Verallgemeinern von Gesetzmässigkeiten Daten zu verarbeiten. Es sind viele verschiedene Umsetzungsansätze für lernfähige Algorithmen bekannt; so z.B. \textit{genetische Algorithmen}, \textit{Entscheidungsbäume} und \textit{künstliche neuronale Netze}.
 
 \subsubsection{Training}\label{cha:theo:ml:training}
-Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}. Abstrakt kann man das Ziel vom Training folgendermassen formulieren: Eine unbekannte Funktion $f(x)$ kann fehlerlos jedem $x$ das korrekte $y$ zuordnen, seien $x$ und $y$ Zahlenwerte oder Bilder ($x$) und die dazugehörigen Namen ($y$). Für diese unbekannte Funktion $f(x)$  gilt es nun im Training, mithilfe von wenigen bekannten Datenpunkten ($x$, $y$) (den \textit{Trainingsdaten}) eine möglichst genaue Modellierung von $f(x)$ zu finden.
+Um ''Wissen zu erwerben'' werden maschinelle Lernalgorithmen \textit{trainiert}. Abstrakt kann man das Ziel vom Training folgendermassen formulieren: Eine unbekannte Funktion $f(x)$ kann fehlerlos jedem $x$ das korrekte $y$ zuordnen, seien $x$ und $y$ Zahlenwerte oder Bilder ($x$) und die dazugehörigen Kategorien ($y$). Für diese unbekannte Funktion $f(x)$  gilt es nun im Training, mithilfe von wenigen bekannten Datenpunkten ($x$, $y$) (den \textit{Trainingsdaten}) eine möglichst genaue Modellierung von $f(x)$ zu finden.
 
 In der Praxis sieht der \textit{Trainingsprozess} generell folgendermassen aus: Ein Datenpunkt $x$ aus den \textit{Trainingsdaten} wird in den zu trainierenden Algorithmus $F(x)$ eingespeist, worauf das erhaltene Ergebnis mit dem erwünschten Ergebnis $y$ verglichen wird. Durch Anpassung der \textit{Parameter} des Algorithmus wird versucht, das Resultat zu verbessern. Dieser Prozess wird mit allen Datenpunkten der Trainingsdaten wiederholt, wodurch der Algorithmus eine möglichst genaue Repräsentation für $f(x)$ finden soll: $F(x) \approx f(x)$.
 
@@ -191,7 +191,7 @@ C(A_1,...,A_m,y_1,...,y_m)=\sum_{i=1}^{m}\left(A_i-y_i\right)^2=Err
 \end{equation}
 wobei $m$ die Anzahl der \textit{Output-Neuronen} ist. $A_1,...,A_m$ sind die durch das \textit{KNN} erhaltene Ergebnisse und $y_1,...,y_m$ die korrekten Ergebnisse der Trainingsdaten. Die neue Variable $Err$ steht für den erhaltenen Fehler. %Die \textit{cost}-Funktion ist wie die anderen vorher erwähnten Funktionen differenzierbar.
 
-Sind die Differenzen zwischen $A_i$ und $y_i$ gross, so erhält man einen grossen Wert für $Err$ und vice versa. Das heisst, wenn $Err \approx 0$ ist, hat das \textit{KNN} das Ergebnis $y_1,...,y_m$ mithilfe der Eingangsdaten sehr genau vorausbestimmen können. In anderen Worten: Beim Training gilt es diesen Wert $Err$ zu minimieren um die Leistung zu maximieren.
+Sind die Differenzen zwischen $A_i$ und $y_i$ gross, so erhält man einen grossen Wert für $Err$ und vice versa. Das bedeutet, wenn $Err \approx 0$ ist, hat das \textit{KNN} das Ergebnis $y_1,...,y_m$ mithilfe der Eingangsdaten sehr genau vorausbestimmen können. In anderen Worten: Beim Training gilt es diesen Wert $Err$ zu minimieren um die Leistung zu maximieren.
 
 Wie in den vorherigen Kapiteln \ref{cha:theo:neurons} und \ref{cha:theo:layers} betont wurde, kann das gesamte \textit{KNN} auch als Funktion dargestellt werden. Dadurch lässt sich der Fehler $Err$ auch als Funktion der Eingangsdaten $x_1,...,x_n$ (sowie aller Gewichtungen $w$ und Schwellenwerten $b$) eines \textit{KNNs} $N(...)$ und dem erwarteten Ergebnis $y_1,...,y_m$  ausdrücken:
 
@@ -206,7 +206,7 @@ Eine Möglichkeit, den Fehler zu minimieren besteht darin, einen einzelnen \text
 
 Um sich zuerst ein intuitives Bild von dieser Problemstellung machen zu können, muss man es sich als Parameterlandschaft vorstellen: In drei Dimensionen entsprächen die Ortskoordinaten zwei \textit{Parametern}, die Höhe stünde für den zu den \textit{Parametern} zugehörige Fehlerwert $Err$, die ''Landschaft'' mit ihren Bergen und Tälern wird durch die Trainingsdaten bestimmt (entspricht der Funktion $f(x)$ aus Kapitel \ref{cha:theo:ml:training}). Da \textit{KNN}s weithin mehr als zwei \textit{Parameter} besitzen, enthält deren Parameterlandschaft so viele ''Ortsdimensionen'' wie das \textit{KNN} \textit{Parameter} hat. Das Ziel ist es in dieser Landschaft, ein tiefes Tal zu finden --- mit einer Schwierigkeit: Man ist blind ($f(x)$ ist unbekannt).
 
-In diesem Gedankenmodell sähe die vorher erwähnte Brute-Force-Strategie zum Finden des Minimums folgendermassen aus: Man macht einen Stritt in eine beliebige Richtung. Ist man höher als vorher, geht man zwei Schritte in die entgegengesetzte Richtung und wiederholt den Prozess für die anderen Dimension(en)/\textit{Parameter}, bis man in einem Tal angekommen ist (eine Bewegung in jede Richtung bewirkt eine Verschlechterung des Ergebnisses).
+In diesem Gedankenmodell sähe die vorher erwähnte Brute-Force-Strategie zum Finden des Minimums folgendermassen aus: Man macht einen Stritt in eine beliebige Richtung. Ist man höher als vorher, geht man zwei Schritte in die entgegengesetzte Richtung und wiederholt den Prozess für die anderen Dimension(en)/\textit{Parameter}, bis man in einem Tal angekommen ist (d.h. eine Bewegung in jede Richtung bewirkt eine Verschlechterung des Ergebnisses).
 
 \paragraph{Gradient Descent}\label{cha:theo:backprop:gd} Eine elegantere Lösung lässt sich mithilfe der Analysis finden, weswegen bei der Herleitung der Formeln stets auf die Differenzierbarkeit geachtet wurde. Durch \textit{partielles Ableiten} der Funktion \ref{eq:err_func} nach allen \textit{Parametern} lässt sich die Steigung in der Parameterlandschaft im momentanen Punkt approximieren. Der erhaltene Richtungsvektor soll dabei als $\vec{v}$ bezeichnet werden, bei dem jede Dimension einem \textit{Parameter} entspricht. Auf das Gedankenmodell angewendet zeigt dieser Vektor $\vec{v}$ in die Richtung, in der man am meisten Höhe verliert, obwohl die umliegende Landschaft nicht bekannt ist. Da man dem Gradienten entlang absteigt, nennt man dieses Optimierungsverfahren \textit{Gradient Descent} (zu Deutsch \textit{Gradientenverfahren}). Das Ausprobieren fällt weg, wodurch sich das Training massiv beschleunigt.
 
@@ -225,20 +225,20 @@ Je mehr Epochen das Training durcharbeitet, umso genauer können die \textit{Par
 
 
 \subsection[DNNs]{Deep Neural Networks}\label{cha:theo:dl}
-Theoretisch bräuchte man für die Nachbildung jeglicher berechenbaren Funktion $f(x)$ nicht mehr als einen einzigen \textit{Hidden Layer}. Man nennt diese Eigenschaft von Algorithmen \textit{Turing-Complete}. In anderen Worten bedeutet dies, dass zu jedem berechenbaren Problem $f(x)$ ein exakt passendes \textit{SNN}$(x) = f(x)$ existiert\cite{siegelmann}. Daraus folgt jedoch auch, dass zusätzliche \textit{Hidden-Layers} nicht zur Verbesserung Leistung eines neuronalen Netzes beitragen\footnotemark.\\
+Theoretisch bräuchte man für die Nachbildung jeglicher berechenbaren Funktion $f(x)$ nicht mehr als einen einzigen \textit{Hidden Layer}. Man nennt diese Eigenschaft von Algorithmen \textit{Turing-Complete}. In anderen Worten bedeutet dies, dass zu jedem berechenbaren Problem $f(x)$ ein exakt passendes, entsprechend breites \textit{SNN}$(x) = f(x)$ existiert\cite{siegelmann}. Daraus folgt jedoch auch, dass zusätzliche \textit{Hidden-Layers} nicht zur Verbesserung Leistung eines neuronalen Netzes beitragen können\footnotemark.\\
 
 \footnotetext{Im Gegenteil entstehen durch weitere \textit{Fully Connected-Layers} zusätzliche Probleme beim Training mittels \textit{Gradient-Descent}, da sog. \textit{Unstable Gradients} den Trainingsprozess destabilisieren.}
 
-Wendet man aber nun ein \textit{SNN} auf komplexere Probleme wie z.B. der Bilderkennung an, so wird man jedoch feststellen, dass es praktisch unmöglich ist, die Funktion $f(x)$ mittels Training zu finden. Das Problem besteht darin, dass die Parameterlandschaft enorm gross ist und viele lokale Minima das Training frühzeitig beenden.
+Wendet man aber nun ein breites \textit{SNN} auf komplexere Probleme wie z.B. der Bilderkennung an, so wird man jedoch feststellen, dass es praktisch unmöglich ist, die Funktion $f(x)$ mittels \textit{Gradient-Descent} zu finden. Das Problem besteht darin, dass die Parameterlandschaft aufgrund der vielen \textit{Parameter} enorm gross ist und viele lokale Minima aufweist, welche das Training frühzeitig beenden.
 
 Um brauchbare Ergebnisse mittels \textit{Neuronalen Netzen} zu erzielen, wurden in der Vergangenheit die wesentlichen Informationen manuell aus den Eingangsdaten gefiltert, um die Anzahl der Neuronen und Verbindungen und somit die Grösse der Parameterlandschaft zu reduzieren. Die grundlegende Idee hinter \textit{DNN}s ist es nun, diesen ersten Schritt der Vorverarbeitung mittels zusätzlichen, spezialisierten \textit{Layers} zu erlernen. Somit werden die rohen Informationen der Eingangsdaten von den ersten \textit{Layers} zuerst gefiltert, bevor diese durch einen \textit{Fully Connected Layer} verarbeitet werden.\\
 
 In der Praxis gibt es einige verbreitete \textit{DNN}-Typen: \textit{RNN}s (\textit{Recurrent Neural Networks}), \textit{LSTM RNNs} (\textit{Long short-Term Memory RNN}), \textit{Deep Belief Networks}, etc., jedoch ist das \textit{Convolutional Neural Network} (\textit{CNN}) der geeignetste Typ für Bilderkennungsprobleme. Da es in der Arbeit Pilze anhand von Bildern zu kategorisieren gilt, wird im nächsten Kapitel der Fokus nur auf \textit{CNN}s gelegt.
 
 \subsection{Convolutional Neural Networks}\label{cha:theo:cnn}
-Will man ein \textit{KNN} für die Erkennung von Bildern verwenden, so sind \textit{SNNs} mit einem \textit{Fully Connected Layer} aus mehreren Gründen ungeeignet, u.a. werden räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert, wodurch das erkennen von Mustern und Formen deutlich erschwert wird. \textit{CNN}s verschaffen mit \textit{Convolution-Layers} Abhilfe, wobei durch sog. \textit{Feature-Maps} Muster erkannt und gefiltert werden können. Zusätzliche \textit{Pooling-Layers} konzentrieren zudem die von den \textit{Convolution-Layers} erhaltenen Informationen weiter.
+Will man ein \textit{KNN} für die Erkennung von Bildern verwenden, so sind \textit{SNNs} mit einem \textit{Fully Connected Layer} aus mehreren Gründen ungeeignet, u.a. werden räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert, wodurch das erkennen von Mustern und Formen nicht verunmöglicht wird, aber deutlich erschwert wird. \textit{CNN}s verschaffen mit \textit{Convolution-Layers} Abhilfe, wobei mit sog. \textit{Feature-Maps} Muster erkannt und gefiltert werden können. Zusätzliche \textit{Pooling-Layers} konzentrieren zudem die von den \textit{Convolution-Layers} erhaltenen Informationen weiter.
 
-Man erhofft sich durch Hinzufügen dieser Schichten (daher ''Deep Neural Network'') eine Konzentration der für die Bilderkennung relevanten Informationen, welche von einem letzten \textit{Fully Connected Layer} einfacher verarbeitet werden können.
+Durch Hinzufügen dieser Schichten (daher ''Deep Neural Network'') erhofft man sich eine Konzentration der für die Bilderkennung relevanten Informationen (sog. \textit{Bias} der \textit{Layers}), welche von einem letzten, kleineren \textit{Fully Connected Layer} verarbeitet werden können.
 
 \subsubsection{Convolution Layer}
 Um räumliche Zusammenhänge erkennen zu können, werden einem Neuron eines \textit{Convolution-Layers} die Eingangssignale auf einen lokalisierten Bereich des vorhergehenden Layers eingeengt. Diesen Bereich nennt man \textit{Local Receptive Field}. Hat man z.B. den \textit{Input-Layer} und einen darauf folgenden \textit{Convolution-Layer}, auf die eine \textit{Local-Receptive-Field}-Grösse von $5\times 5$ \textit{Neuronen} angewandt wird, so ist ein \textit{Neuron} des \textit{Convolution-Layers} nur mit einem $5\times 5$ \textit{Neuronen} grossen Bereich des \textit{Input-Layers} verbunden. Für das erste \textit{Neuron} des \textit{Convolution-Layers} wird es folgendermassen aussehen:
@@ -274,7 +274,7 @@ Ein weiterer verwendeter Trick ist, dass alle Neuronen des \textit{Convolution-L
 Intuitiv kann man sich den \textit{Convolution Layer} als Schablone für ein durch die \textit{Parameter} bestimmte Muster vorstellen, welche Schrittweise über das Eingangsbild geschoben wird. Entspricht das Bild dem Muster, wird ein hoher Wert zurückgegeben und vice versa. Je nach \textit{Parameter} kann man z.B. Kanten oder Ecken erkennen. Man hat somit eine sog. \textit{Feature Map} erstellt, welches das Vorkommen eines bestimmtes Musters im Bild kartiert. Da ein Bild nicht nur aus einem einzigen Muster besteht, werden in einem \textit{Convolution-Layer} sogleich mehrere \textit{Feature-Maps} erstellt, welche sich auf verschiedene Muster spezialisieren können.
 
 \subsubsection{Pooling}
-Um die vom \textit{Convolution-Layer} erhaltenen \textit{Feature-Maps} weiter zu konzentrieren, folgt in der Regel ein sog. \textit{Pooling}-Layer. Dabei wird wiederum aus einem Bereich des vorherigen \textit{Layers} nur der höchste Wert (\textit{max-Pooling}) oder der durchschnittliche Wert (average-Pooling) an den nächsten \textit{Layer} weitergegeben.
+Um die vom \textit{Convolution-Layer} erhaltenen \textit{Feature-Maps} weiter zu konzentrieren, folgt in der Regel ein sog. \textit{Pooling}-Layer. Dabei wird wiederum aus einem Bereich des vorherigen \textit{Layers} nur der höchste Wert (\textit{max-Pooling}) oder der durchschnittliche Wert (average-Pooling) an den nächsten \textit{Layer} weitergegeben. Da \textit{Pooling-Layers} ebenfalls nach dem Prinzip der \textit{Local-Receptive-Fields} funktionieren, haben auch sie eine Filter- wie auch Schrittgrösse.
 
 \begin{figure}[h]
 	\centering
@@ -286,11 +286,11 @@ Um die vom \textit{Convolution-Layer} erhaltenen \textit{Feature-Maps} weiter zu
 
 \subsubsection{Aufbau eines CNNs}
 
-Beim Aufbau eines \textit{CNN}s werden einem viele Freiheiten gelassen, jedoch hat sich folgende Grundstruktur für viele Bildklassifizierungsprobleme bewährt: Nach dem \textit{Input-Layer} werden ein \textit{Convolution-Layer} und ein \textit{Pooling Layer} hintereinandergeschaltet, z.T. werden noch weitere \textit{Layers} (z.B. \textit{ReLU-Layer}, siehe Kapitel \ref{cha:theo:relu}) hinzugefügt. Zusammen bilden diese eine Einheit, welche einige Male wiederholt wird. Die Grösse der Layers nimmt mit der Tiefe ab, wodurch sich der charakteristische trichterförmige Aufbau von \textit{CNN}s bildet. Auf die letzte Einheit folgen wenige \textit{fully connected Layers}, wodurch die erkannten Muster miteinander kombiniert werden. Schliesslich werden mithilfe eines sog. \textit{Softmax-Layers} die Ausgangssignale auf Werte zwischen 0 und 1 normalisiert, um sich für Klassifizierung zu eignen.
+Beim Aufbau eines \textit{CNN}s werden einem viele Freiheiten gelassen, jedoch hat sich folgende Grundstruktur für viele Bildklassifizierungsprobleme bewährt: Nach dem \textit{Input-Layer} werden ein \textit{Convolution-Layer} und ein \textit{Pooling Layer} hintereinandergeschaltet, z.T. werden noch weitere \textit{Layers} (z.B. \textit{ReLU-Layer}, siehe Kapitel \ref{cha:theo:relu}) hinzugefügt. Zusammen bilden diese eine Einheit, welche einige Male wiederholt wird. Die Grösse der Layers nimmt mit der Tiefe ab, wodurch sich der charakteristische trichterförmige Aufbau von \textit{CNN}s bildet. Auf die letzte Einheit folgt ein \textit{fully connected Layer}, wodurch die erkannten Muster miteinander kombiniert und ausgewertet werden. Schliesslich werden mithilfe eines sog. \textit{Softmax-Layers} die Ausgangssignale auf Prozentwerte normalisiert, um anschliessend die Klassifizierung durchzuführen.
 
 %Die Erklärung, mehrere solcher \textit{Convolution}-Einheiten hintereinander zu schalten, ist dass somit komplexere Muster und Formen erkannt werden können. Wie vorher beschrieben, kann man mit den \textit{Feature Maps} der ersten Einheit einfache Muster wie Kanten und Ecken erkennen. In der zweiten Einheit können diese einfachen Muster zu komplexeren Formen zusammengefügt werden, etc.
 
-\subsection{Zusätzliche Meta-Parameter und Modifikation}
+\subsection{Zusätzliche Meta-Parameter und Modifikation}\label{cha:theo:mod}
 Die in den vorherigen Kapiteln beschriebenen \textit{KNN}s und \textit{DNN}s als auch deren Training sind keineswegs starr und lassen sich in vielen Aspekten modifizieren und justieren. Auch diese \textit{Meta-Parameter} sind für spätere Kapitel relevant, weswegen sie in diesem Abschnitt kurz beschrieben werden. 
 
 \subsubsection{ReLU-Layer}\label{cha:theo:relu}
@@ -332,7 +332,7 @@ Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectif
 \subsubsection{Dropout-Layer}
 Da die vielen Verbindungen von \textit{fully connected Layers} anfällig für eine Überanpassung sind, versucht man dies mit sog. \textit{Dropout-Layers} zu minimieren. Diese \textit{Layers} werden ähnlich wie \textit{fully connected Layers} in einem \textit{KNN} eingesetzt, jedoch unterscheiden sie sich wesentlich im Trainingsprozess:
 
-Ein gewisser Prozentsatz der \textit{Neuronen} eines \textit{Dropout-Layers} wird für das Training temporär deaktiviert, d.h. sie werden bei der Berechnung des Gradienten weder berücksichtigt noch justiert. Diese Methode macht das \textit{KNN} robuster, reduziert Überanpassung und beschleunigt zudem noch das Training.
+Ein gewisser Prozentsatz der \textit{Neuronen} eines \textit{Dropout-Layers} wird für das Training temporär deaktiviert, d.h. sie werden bei der Berechnung des Gradienten weder berücksichtigt noch justiert. Diese Methode macht das \textit{KNN} robuster, reduziert Überanpassung und beschleunigt zudem das Training.
 
 \subsubsection{Data Augmentation}
 
@@ -340,13 +340,13 @@ Ein wichtiger Aspekt für die Entwicklung eines zuverlässigen maschinellen Lern
 
 Mithilfe von \textit{Data augmentation} lässt sich die Anzahl der Trainingsexemplare künstlich vergrössern. Dazu werden die Trainingsbilder vervielfacht und um einige Pixel verschoben, gespiegelt, ein wenig rotiert oder verzerrt. Man generiert dadurch viele weitere, voneinander verschiedene Trainingsexemplare, welche für das Training eines \textit{KNN}s verwendet werden können.
 
-\subsubsection{Transfer Learning}
+\subsubsection{Transfer Learning}\label{cha:theo:mod:tl}
 
 Ein \textit{KNN} kann man stets von Grund auf neu aufbauen und trainieren, jedoch kann man auch das \textit{Wissen} von bereits trainierten \textit{DNN}s verwenden, um es auf ähnliche Probleme zu spezialisieren. Durch sogenanntes \textit{Transfer Learning} wird ein bereits trainiertes \textit{KNN} (z.B. \textit{GoogLeNet} oder \textit{AlexNET}) nochmals mit neuen Trainingsdaten und den dazugehörigen Kategorien trainiert. Man erhofft sich dabei, dass häufig vorkommende Muster wie Kanten und Formen nicht von Neuem gelernt werden müssen. Dadurch soll das Training einerseits beschleunigt und andererseits soll dessen Leistung gesteigert werden.
 
 \subsubsection{Ensemble}
 
-Da ein \textit{KNN} vor dem Training stets mit zufälligen Anfangswerten initialisiert wird, erhält man nach dem Training insgesamt ähnliche Leistungen, aber nicht zwingend identische Ergebnisse. Bei einem Ensemble von mehreren strukturell gleichen \textit{KNN}s erhofft man sich, dass Schwachstellen eines \textit{KNN}s durch die anderen Netze beglichen wird.
+Da ein \textit{KNN} vor dem Training immer mit zufälligen Anfangswerten initialisiert wird, findet der Trainingsalgorithmus ähnliche, aber stets andere Minima. Bei einem Ensemble von mehreren strukturell gleichen \textit{KNN}s erhofft man sich dadurch, dass Schwachstellen eines einzelnen \textit{KNN}s durch die anderen Netze des Ensembles beglichen werden.
 
 
 

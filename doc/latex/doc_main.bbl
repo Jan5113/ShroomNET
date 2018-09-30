@@ -122,4 +122,25 @@ Eduardo D.~Sontag Hava T.~Siegelmann.
 \newblock On the computational power of neural nets.
 \newblock http://binds.cs.umass.edu/papers/1992\_Siegelmann\_COLT.pdf, 1992.
 
+\bibitem{wsl}
+Dr. Stefan~Blaser Dr. Andrin~Gross.
+\newblock Swissfungi, verbreitungsatlas der schweiz.
+\newblock https://www.wsl.ch/, 2018.
+
+\bibitem{szp}
+Jan Obermeier.
+\newblock Pilzbestimmung in codezeilen gefasst.
+
+\bibitem{crawler}
+hardikvasa.
+\newblock Google images download.
+\newblock https://github.com/hardikvasa/google-images-download.
+\newblock Abgerufen am 12.09.2018.
+
+\bibitem{bachmeier}
+Michael Bachmeier.
+\newblock Pilzwelten.
+\newblock https://www.youtube.com/channel/UCezNep13jlv8Wrsaxv\_saeA.
+\newblock Abgerufen am 20.07.2018.
+
 \end{thebibliography}
