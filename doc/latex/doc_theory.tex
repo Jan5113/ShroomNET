@@ -293,7 +293,7 @@ Beim Aufbau eines \textit{CNN}s werden einem viele Freiheiten gelassen, jedoch h
 \subsection{Zusätzliche Meta-Parameter und Modifikation}\label{cha:theo:mod}
 Die in den vorherigen Kapiteln beschriebenen \textit{KNN}s und \textit{DNN}s als auch deren Training sind keineswegs starr und lassen sich in vielen Aspekten modifizieren und justieren. Auch diese \textit{Meta-Parameter} sind für spätere Kapitel relevant, weswegen sie in diesem Abschnitt kurz beschrieben werden. 
 
-\subsubsection{ReLU-Layer}\label{cha:theo:relu}
+\subsubsection{ReLU-Layer \& Batch-Normalisation-Layer}\label{cha:theo:relu}
 Die \textit{Sigmoid}-Kurve aus Kapitel \ref{cha:theo:neurons} ist nicht die einzige Funktion, die zur Standardisierung des gewichteten Ausgangssignals $z$ eines Neurons (siehe Formel \ref{eq:def_z}) verwendet wird. Neben der \textit{Sigmoid}-Funktion haben sich auch die sog. \textit{Rectified-Linear}-Funktion bewährt. Ein \textit{Neuron}, welches diese Funktion verwendet, nennt man \textit{Rectified-Linear-Unit} (kurz \textit{ReLU}); ein \textit{ReLU}-Layer ist somit eine Schicht zusammengesetzt aus diesen \textit{ReLU}-\textit{Neuronen}.
 
 Im Gegensatz zur \textit{Sigmoid}-Kurve liefert diese Funktion einen ganz anderen Ansatz: Bei $z > 0$ verhält sie sich linear und bei $z \leq 0$ gibt sie einen konstanten Wert von 0 zurück, d.h. der Ausgangswert ist nach oben nicht begrenzt und immer positiv.
@@ -318,7 +318,7 @@ Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectif
 	\label{plt:rect_lin}
 \end{figure}
 
-\paragraph{Vorteile:} Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung für die Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion in diesem Bereich nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung hingegen konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Diese Massnahme kann in machen Anwendungsszenarien die Leistung des \textit{KNN}s verbessern.
+\paragraph{Vorteile:} Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung für die Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion in diesem Bereich nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung hingegen konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Dies führt dazu, dass je nach Eingangsdaten werden ein Teil der Neuronen nicht trainiert, welches wiederum die Parameterlandschaft kleiner macht. Zudem sind \textit{ReLU-Layers} nicht sehr rechenintensiv weil für die Berechnung keine aufwendigen Berechnungen angestellt werden müssen.
 
 %\subsubsection{Fehlerberechnung}
 %Anstelle der \textit{Quadratic Cost}-Funktion aus Kapitel \ref{cha:theo:cost} zur Berechnung des Fehlers \textit{Err}, kann auch die \textit{Cross-Entropy-Cost}-Funktion verwendet werden:
