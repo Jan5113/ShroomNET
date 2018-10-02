@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.29)  1 OCT 2018 10:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.1)  2 OCT 2018 14:53
 entering extended mode
 **./doc_main.tex
 (doc_main.tex
@@ -1549,7 +1549,7 @@ File: ../images/video_frames.png Graphic file (type png)
 <use ../images/video_frames.png>
 Package pdftex.def Info: ../images/video_frames.png  used on input line 39.
 (pdftex.def)             Requested size: 426.79135pt x 107.8731pt.
-) [30 <../images/cropping.png> <../images/video_frames.png>] [31]
+[30 <../images/cropping.png> <../images/video_frames.png>]) [31]
 (doc_bibliography.tex (doc_main.bbl [32
 
 
@@ -1569,10 +1569,10 @@ Package pdftex.def Info: ../images/web_form.png  used on input line 36.
 (pdftex.def)             Requested size: 426.79135pt x 504.56685pt.
 ) [36 <../images/web_form.png>] (doc_main.aux) ) 
 Here is how much of TeX's memory you used:
- 27202 strings out of 493305
- 676919 string characters out of 3130672
- 872458 words of memory out of 3000000
- 30203 multiletter control sequences out of 15000+200000
+ 27203 strings out of 493305
+ 676637 string characters out of 3130673
+ 872487 words of memory out of 3000000
+ 30204 multiletter control sequences out of 15000+200000
  22191 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,13n,129p,1542b,2038s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1609,7 +1609,7 @@ ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/U
 sers/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8
 .pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmti9.pfb>
-Output written on doc_main.pdf (36 pages, 9155431 bytes).
+Output written on doc_main.pdf (36 pages, 9156234 bytes).
 PDF statistics:
  276 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
