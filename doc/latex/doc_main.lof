@@ -1,13 +1,16 @@
 \babel@toc {ngerman}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Finger, https://img.livestrongcdn.com/, 2017, Artikel 541001}}{12}
-\contentsline {figure}{\numberline {2}{\ignorespaces Schema von einem k\IeC {\"u}nstlichen Neuron}}{16}
-\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid-Funktion}}{17}
-\contentsline {figure}{\numberline {4}{\ignorespaces Schema von kleinem \textit {KNN}}}{18}
-\contentsline {figure}{\numberline {5a}{\ignorespaces Beispiel f\IeC {\"u}r das \textit {Local-Receptive-Field} 1. \textit {Neuron}}}{23}
-\contentsline {figure}{\numberline {5b}{\ignorespaces Beispiel f\IeC {\"u}r das \textit {Local-Receptive-Field} 2. \textit {Neuron}}}{24}
-\contentsline {figure}{\numberline {6}{\ignorespaces \textit {Feature-Maps}}}{24}
-\contentsline {figure}{\numberline {7}{\ignorespaces \textit {\textit {max-Pooling-Layer}}}}{25}
-\contentsline {figure}{\numberline {8}{\ignorespaces \textit {Rectified-Linear}-Funktion}}{26}
-\contentsline {figure}{\numberline {9}{\ignorespaces \textit {\textit {Hilfsprogramm}}}}{30}
-\contentsline {figure}{\numberline {10}{\ignorespaces \textit {\textit {Video-Frames}}}}{30}
-\contentsline {figure}{\numberline {11}{\ignorespaces \textit {\textit {Hochladeformular \& Quiz}}}}{36}
+\contentsline {figure}{\numberline {1}{\ignorespaces Finger, https://img.livestrongcdn.com/, 2017, Artikel 541001}}{10}
+\contentsline {figure}{\numberline {2}{\ignorespaces Schema von einem k\IeC {\"u}nstlichen Neuron}}{13}
+\contentsline {figure}{\numberline {3}{\ignorespaces Sigmoid-Funktion}}{14}
+\contentsline {figure}{\numberline {4}{\ignorespaces Schema von kleinem \textit {KNN}}}{15}
+\contentsline {figure}{\numberline {5a}{\ignorespaces Beispiel f\IeC {\"u}r das \textit {Local-Receptive-Field} 1. \textit {Neuron}}}{19}
+\contentsline {figure}{\numberline {5b}{\ignorespaces Beispiel f\IeC {\"u}r das \textit {Local-Receptive-Field} 2. \textit {Neuron}}}{20}
+\contentsline {figure}{\numberline {6}{\ignorespaces \textit {Feature-Maps}}}{20}
+\contentsline {figure}{\numberline {7}{\ignorespaces \textit {\textit {max-Pooling-Layer}}}}{21}
+\contentsline {figure}{\numberline {8}{\ignorespaces \textit {Rectified-Linear}-Funktion}}{22}
+\contentsline {figure}{\numberline {9}{\ignorespaces \textit {\textit {Hilfsprogramm}}}}{25}
+\contentsline {figure}{\numberline {10}{\ignorespaces \textit {\textit {Video-Frames}}}}{26}
+\contentsline {figure}{\numberline {11}{\ignorespaces \textit {\textit {Trainingsverlauf Basis-\textit {CNN}}}}}{27}
+\contentsline {figure}{\numberline {12}{\ignorespaces Trainingsverlauf Basis-\textit {CNN} mit \textit {Data-Augmentation}}}{28}
+\contentsline {figure}{\numberline {13}{\ignorespaces Trainingsverlauf Basis-\textit {CNN} mit Gr\IeC {\"u}n-Filter}}{29}
+\contentsline {figure}{\numberline {14}{\ignorespaces \textit {\textit {Hochladeformular \& Quiz}}}}{35}

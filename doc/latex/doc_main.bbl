@@ -117,10 +117,18 @@ Roman~Claus et~al.
 \newblock 1991.
 \newblock Klett, ISBN 3-12-042200-2, S. 252 ff.
 
-\bibitem{siegelmann}
-Eduardo D.~Sontag Hava T.~Siegelmann.
-\newblock On the computational power of neural nets.
-\newblock http://binds.cs.umass.edu/papers/1992\_Siegelmann\_COLT.pdf, 1992.
+\bibitem{hornik}
+Halbert~White Kurt~Hornik, Maxwell~Stinchcombe.
+\newblock Multilayer feedforward networks are universal approximators.
+\newblock
+  http://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick\_et\_al.pdf, 1989.
+
+\bibitem{zerocenter}
+MatLab.
+\newblock imageinputlayer, normalization.
+\newblock
+  https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.imageinputlayer.html,
+  2018.
 
 \bibitem{wsl}
 Dr. Stefan~Blaser Dr. Andrin~Gross.
@@ -148,5 +156,13 @@ MathWorks.
 \newblock Matlab: Deep learning toolbox.
 \newblock https://www.mathworks.com/products/deep-learning.html.
 \newblock Abgerufen am 05.08.2018.
+
+\bibitem{alexnet}
+Alex Krizhevsky.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock
+  https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-
+  networks.pdf.
+\newblock Abgerufen am 30.09.2018.
 
 \end{thebibliography}

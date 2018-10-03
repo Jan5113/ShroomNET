@@ -37,31 +37,35 @@ Warning--entry type for "welch_prob" isn't style-file defined
 --line 141 of file bibliography.bib
 Warning--entry type for "nielsen" isn't style-file defined
 --line 163 of file bibliography.bib
-I was expecting a `,' or a `}'---line 177 of file bibliography.bib
+Warning--entry type for "zerocenter" isn't style-file defined
+--line 170 of file bibliography.bib
+I was expecting a `,' or a `}'---line 175 of file bibliography.bib
  :  
- :  note = {Weizmann Institute of Science},
+ :  note = {Abgerufen am 05.09.2018},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--entry type for "siegelmann" isn't style-file defined
---line 181 of file bibliography.bib
-I was expecting a `,' or a `}'---line 186 of file bibliography.bib
+Warning--entry type for "hornik" isn't style-file defined
+--line 179 of file bibliography.bib
+I was expecting a `,' or a `}'---line 184 of file bibliography.bib
  :  
- :  note = {Rutgers University},
+ :  note = {Technische Universität Wien},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "wsl" isn't style-file defined
---line 190 of file bibliography.bib
-I was expecting a `,' or a `}'---line 195 of file bibliography.bib
+--line 188 of file bibliography.bib
+I was expecting a `,' or a `}'---line 193 of file bibliography.bib
  :  
  :  note = {Eidg. Forschungsanstalt für Wald, Schnee und Landschaft},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "crawler" isn't style-file defined
---line 198 of file bibliography.bib
+--line 196 of file bibliography.bib
 Warning--entry type for "bachmeier" isn't style-file defined
---line 212 of file bibliography.bib
+--line 210 of file bibliography.bib
 Warning--entry type for "matlab" isn't style-file defined
---line 219 of file bibliography.bib
+--line 217 of file bibliography.bib
+Warning--entry type for "alexnet" isn't style-file defined
+--line 224 of file bibliography.bib
 Warning--empty publisher in hasimon
 Warning--empty publisher in klett
 Warning--empty journal in szp

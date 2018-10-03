@@ -1,58 +1,56 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Einf\IeC {\"u}hrung}{7}
-\contentsline {subsection}{\numberline {1.1}Zielsetzung}{8}
-\contentsline {subsubsection}{\numberline {1.1.1}Datenbeschaffung \& Datenaufbereitung}{8}
-\contentsline {subsubsection}{\numberline {1.1.2}Entwicklung \& Optimierung}{8}
-\contentsline {subsubsection}{\numberline {1.1.3}Theorie}{9}
-\contentsline {section}{\numberline {2}Grundlagen \textit {KNNs} \& \textit {DNN}s}{10}
-\contentsline {subsection}{\numberline {2.1}\textit {KI}, \textit {KNN}, \textit {DL}, usw.}{10}
-\contentsline {subsection}{\numberline {2.2}Einleitung}{12}
-\contentsline {subsection}{\numberline {2.3}Maschinelles Lernen}{13}
-\contentsline {subsubsection}{\numberline {2.3.1}Training}{13}
-\contentsline {subsubsection}{\numberline {2.3.2}Verzerrung-Varianz-Dilemma}{13}
-\contentsline {paragraph}{\IeC {\"U}beranpassung}{13}
-\contentsline {paragraph}{Unteranpassung}{14}
-\contentsline {paragraph}{Validierung}{14}
-\contentsline {subsection}{\numberline {2.4}KNNs}{15}
-\contentsline {subsubsection}{\numberline {2.4.1}Die Natur als Vorbild}{15}
-\contentsline {subsubsection}{\numberline {2.4.2}Neuronen \& Verbindungen}{16}
-\contentsline {subsubsection}{\numberline {2.4.3}Layers}{18}
-\contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{20}
-\contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{20}
-\contentsline {paragraph}{Gradient Descent}{21}
-\contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{21}
-\contentsline {subparagraph}{$\bullet $ Mini-Batch}{21}
-\contentsline {subparagraph}{$\bullet $ Lernepochen}{22}
-\contentsline {subsection}{\numberline {2.5}DNNs}{22}
-\contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{23}
-\contentsline {subsubsection}{\numberline {2.6.1}Convolution Layer}{23}
-\contentsline {subsubsection}{\numberline {2.6.2}Shared Weigths \& Feature Maps}{24}
-\contentsline {subsubsection}{\numberline {2.6.3}Pooling}{25}
-\contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{25}
-\contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{25}
-\contentsline {subsubsection}{\numberline {2.7.1}ReLU-Layer}{26}
-\contentsline {paragraph}{Vorteile:}{26}
-\contentsline {subsubsection}{\numberline {2.7.2}Dropout-Layer}{26}
-\contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{27}
-\contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{27}
-\contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{27}
-\contentsline {section}{\numberline {3}Methode}{28}
-\contentsline {subsection}{\numberline {3.1}Datenbeschaffung}{28}
-\contentsline {subsubsection}{\numberline {3.1.1}Datenbank SwissFungi}{28}
-\contentsline {subsubsection}{\numberline {3.1.2}Webseite ShroomNET}{28}
-\contentsline {subsubsection}{\numberline {3.1.3}Internet Crawler}{29}
-\contentsline {subsubsection}{\numberline {3.1.4}Videos}{29}
-\contentsline {subsection}{\numberline {3.2}Datenaufbereitung}{29}
-\contentsline {subsection}{\numberline {3.3}Entwicklungsprozess}{31}
-\contentsline {subsubsection}{\numberline {3.3.1}Basis-SNN}{31}
-\contentsline {subsubsection}{\numberline {3.3.2}Basis-CNN}{31}
-\contentsline {subsubsection}{\numberline {3.3.3}Data-Augmentation}{31}
-\contentsline {subsubsection}{\numberline {3.3.4}Farbfilter}{31}
-\contentsline {subsubsection}{\numberline {3.3.5}Justierung des CNNs}{31}
-\contentsline {subsubsection}{\numberline {3.3.6}Einspeisung von Zusatzinformationen}{31}
-\contentsline {subsubsection}{\numberline {3.3.7}Transfer-Learning}{31}
-\contentsline {subsubsection}{\numberline {3.3.8}CNN-Ensemble}{31}
-\contentsline {section}{Literatur}{32}
-\contentsline {section}{\numberline {4}Anhang}{35}
-\contentsline {subsection}{\numberline {4.1}Tabelle Pilzarten}{35}
-\contentsline {subsection}{\numberline {4.2}Hochladeformular \& Quiz}{36}
+\contentsline {section}{\numberline {1}Einf\IeC {\"u}hrung}{6}
+\contentsline {subsection}{\numberline {1.1}Zielsetzung}{7}
+\contentsline {subsubsection}{\numberline {1.1.1}Datenbeschaffung \& Datenaufbereitung}{7}
+\contentsline {subsubsection}{\numberline {1.1.2}Entwicklung \& Optimierung}{7}
+\contentsline {subsubsection}{\numberline {1.1.3}Theorie}{7}
+\contentsline {section}{\numberline {2}Grundlagen \textit {KNNs} \& \textit {DNN}s}{8}
+\contentsline {subsection}{\numberline {2.1}\textit {KI}, \textit {KNN}, \textit {DL}, usw.}{8}
+\contentsline {subsection}{\numberline {2.2}Einleitung}{10}
+\contentsline {subsection}{\numberline {2.3}Maschinelles Lernen}{11}
+\contentsline {subsubsection}{\numberline {2.3.1}Training}{11}
+\contentsline {subsubsection}{\numberline {2.3.2}Verzerrung-Varianz-Dilemma}{11}
+\contentsline {paragraph}{\IeC {\"U}beranpassung}{11}
+\contentsline {paragraph}{Unteranpassung}{12}
+\contentsline {paragraph}{Validierung}{12}
+\contentsline {subsection}{\numberline {2.4}KNNs}{12}
+\contentsline {subsubsection}{\numberline {2.4.1}Die Natur als Vorbild}{12}
+\contentsline {subsubsection}{\numberline {2.4.2}Neuronen \& Verbindungen}{13}
+\contentsline {subsubsection}{\numberline {2.4.3}Layers}{15}
+\contentsline {subsubsection}{\numberline {2.4.4}Leistung von KNNs messen}{16}
+\contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{17}
+\contentsline {paragraph}{Gradient Descent}{17}
+\contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{17}
+\contentsline {subparagraph}{$\bullet $ Mini-Batch}{18}
+\contentsline {subparagraph}{$\bullet $ Lernepochen}{18}
+\contentsline {subsection}{\numberline {2.5}DNNs}{18}
+\contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{19}
+\contentsline {subsubsection}{\numberline {2.6.1}Convolution Layer}{19}
+\contentsline {subsubsection}{\numberline {2.6.2}Shared Weigths \& Feature Maps}{19}
+\contentsline {subsubsection}{\numberline {2.6.3}Pooling}{20}
+\contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{20}
+\contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{21}
+\contentsline {subsubsection}{\numberline {2.7.1}Bild-Normalisierung}{21}
+\contentsline {subsubsection}{\numberline {2.7.2}ReLU-Layer \& Batch-Normalisation-Layer}{21}
+\contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{22}
+\contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{22}
+\contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{23}
+\contentsline {section}{\numberline {3}Methode}{24}
+\contentsline {subsection}{\numberline {3.1}Datenbeschaffung}{24}
+\contentsline {subsubsection}{\numberline {3.1.1}Datenbank SwissFungi}{24}
+\contentsline {subsubsection}{\numberline {3.1.2}Webseite ShroomNET}{24}
+\contentsline {subsubsection}{\numberline {3.1.3}Internet Crawler}{25}
+\contentsline {subsubsection}{\numberline {3.1.4}Videos}{25}
+\contentsline {subsection}{\numberline {3.2}Datenaufbereitung}{25}
+\contentsline {subsection}{\numberline {3.3}Entwicklungsprozess}{26}
+\contentsline {subsubsection}{\numberline {3.3.1}Bezugswert}{26}
+\contentsline {subsubsection}{\numberline {3.3.2}Basis-SNN}{27}
+\contentsline {subsubsection}{\numberline {3.3.3}Basis-CNN}{27}
+\contentsline {subsubsection}{\numberline {3.3.4}Data-Augmentation}{28}
+\contentsline {subsubsection}{\numberline {3.3.5}Farbfilter}{28}
+\contentsline {subsubsection}{\numberline {3.3.6}Justierung des CNNs}{29}
+\contentsline {subsubsection}{\numberline {3.3.7}Einspeisung von Zusatzinformationen}{29}
+\contentsline {subsubsection}{\numberline {3.3.8}Transfer-Learning}{29}
+\contentsline {subsubsection}{\numberline {3.3.9}CNN-Ensemble}{29}
+\contentsline {section}{Literatur}{30}
+\contentsline {section}{\numberline {4}Anhang}{33}

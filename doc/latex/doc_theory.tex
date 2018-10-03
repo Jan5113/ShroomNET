@@ -155,7 +155,7 @@ Da ein einzelnes \textit{Neuron} alleine nicht viel leisten kann, werden sie mit
 	\label{img:layers}
 \end{figure}
 
-Die \textit{Neuronen} im Netz werden in Schichten strukturiert, in sog. \textit{Layers}\footnote{Da die Literatur der \textit{KNN}s praktisch ausschließlich in der englischen Sprache niedergeschrieben wird, wird auf weitere deutsche Übersetzungen der Fachausdrücke verzichtet.}. Die Neuronen eines \textit{Layers} werden mit allen Ausgangssignalen der \textit{Neuronen} im vorherigen \textit{Layer} verbunden (ein sog. \textit{Fully Connected Layer}), wobei jede Verbindung separat gewichtet wird. Anzumerken ist, dass die vielen Ausgänge eines \textit{Neurons} alle dem selben Ausgangswert $a$ (siehe Kapitel \ref{cha:theo:neurons}) entsprechen. 
+Die \textit{Neuronen} im Netz werden in Schichten strukturiert, in sog. \textit{Layers}\footnote{Da die Literatur der \textit{KNN}s praktisch ausschließlich in der englischen Sprache niedergeschrieben wird, wird auf weitere deutsche Übersetzungen der Fachausdrücke verzichtet.}. Die Neuronen eines \textit{Layers} werden mit allen Ausgangssignalen der \textit{Neuronen} im vorherigen \textit{Layer} verbunden (ein sog. \textit{Fully-Connected-Layer}), wobei jede Verbindung separat gewichtet wird. Anzumerken ist, dass die vielen Ausgänge eines \textit{Neurons} alle dem selben Ausgangswert $a$ (siehe Kapitel \ref{cha:theo:neurons}) entsprechen. 
 
 Generell gibt es drei Typen von \textit{Layern}:
 
@@ -224,24 +224,24 @@ Je grösser die Mini-Batches sind, umso genauer repräsentiert $\vec{v}$ die Par
 Je mehr Epochen das Training durcharbeitet, umso genauer können die \textit{Parametern} eingestellt werden, jedoch läuft man bei zu vielen Epochen Gefahr der \textit{Überanpassung}, welches man mithilfe von Validierungsdaten zu verhindern versucht (siehe Kapitel \ref{cha:theo:ml:b-v}: Validierung).
 
 
-\subsection[DNNs]{Deep Neural Networks}\label{cha:theo:dl}
-Theoretisch bräuchte man für die Nachbildung jeglicher berechenbaren Funktion $f(x)$ nicht mehr als einen einzigen \textit{Hidden Layer}. Man nennt diese Eigenschaft von Algorithmen \textit{Turing-Complete}. In anderen Worten bedeutet dies, dass zu jedem berechenbaren Problem $f(x)$ ein exakt passendes, entsprechend breites \textit{SNN}$(x) = f(x)$ existiert\cite{siegelmann}. Daraus folgt jedoch auch, dass zusätzliche \textit{Hidden-Layers} nicht zur Verbesserung Leistung eines neuronalen Netzes beitragen können\footnotemark.\\
+\subsection[DNNs]{Deep Neural Networks}\label{cha:theo:dl}!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Theoretisch liesse sich jegliche berechenbare Funktion $f(x)$ mit nicht mehr als einem einzigen endlichen \textit{Hidden Layer} beliebig genau approximieren. Man nennt diese Eigenschaft von Algorithmen \textit{Turing-Complete}. In anderen Worten bedeutet dies, dass zu jedem berechenbaren Problem $f(x)$ ein exakt passendes, entsprechend breites \textit{SNN}$(x) = f(x)$ existiert\cite{hornik}. Daraus folgt jedoch auch, dass zusätzliche \textit{Hidden-Layers} nicht zur Verbesserung Leistung eines neuronalen Netzes beitragen können\footnotemark.\\
 
-\footnotetext{Im Gegenteil entstehen durch weitere \textit{Fully Connected-Layers} zusätzliche Probleme beim Training mittels \textit{Gradient-Descent}, da sog. \textit{Unstable Gradients} den Trainingsprozess destabilisieren.}
+\footnotetext{Im Gegenteil entstehen durch weitere \textit{Fully-Connected-Layers} zusätzliche Probleme beim Training mittels \textit{Gradient-Descent}, da sog. \textit{Unstable Gradients} den Trainingsprozess destabilisieren.}
 
 Wendet man aber nun ein breites \textit{SNN} auf komplexere Probleme wie z.B. der Bilderkennung an, so wird man jedoch feststellen, dass es praktisch unmöglich ist, die Funktion $f(x)$ mittels \textit{Gradient-Descent} zu finden. Das Problem besteht darin, dass die Parameterlandschaft aufgrund der vielen \textit{Parameter} enorm gross ist und viele lokale Minima aufweist, welche das Training frühzeitig beenden.
 
-Um brauchbare Ergebnisse mittels \textit{Neuronalen Netzen} zu erzielen, wurden in der Vergangenheit die wesentlichen Informationen manuell aus den Eingangsdaten gefiltert, um die Anzahl der Neuronen und Verbindungen und somit die Grösse der Parameterlandschaft zu reduzieren. Die grundlegende Idee hinter \textit{DNN}s ist es nun, diesen ersten Schritt der Vorverarbeitung mittels zusätzlichen, spezialisierten \textit{Layers} zu erlernen. Somit werden die rohen Informationen der Eingangsdaten von den ersten \textit{Layers} zuerst gefiltert, bevor diese durch einen \textit{Fully Connected Layer} verarbeitet werden.\\
+Um brauchbare Ergebnisse mittels \textit{Neuronalen Netzen} zu erzielen, wurden in der Vergangenheit die wesentlichen Informationen manuell aus den Eingangsdaten gefiltert, um die Anzahl der Neuronen und Verbindungen und somit die Grösse der Parameterlandschaft zu reduzieren. Die grundlegende Idee hinter \textit{DNN}s ist es nun, diesen ersten Schritt der Vorverarbeitung mittels zusätzlichen, spezialisierten \textit{Layers} zu erlernen. Somit werden die rohen Informationen der Eingangsdaten von den ersten \textit{Layers} zuerst gefiltert, bevor diese durch einen \textit{Fully-Connected-Layer} verarbeitet werden.\\
 
 In der Praxis gibt es einige verbreitete \textit{DNN}-Typen: \textit{RNN}s (\textit{Recurrent Neural Networks}), \textit{LSTM RNNs} (\textit{Long short-Term Memory RNN}), \textit{Deep Belief Networks}, etc., jedoch ist das \textit{Convolutional Neural Network} (\textit{CNN}) der geeignetste Typ für Bilderkennungsprobleme. Da es in der Arbeit Pilze anhand von Bildern zu kategorisieren gilt, wird im nächsten Kapitel der Fokus nur auf \textit{CNN}s gelegt.
 
 \subsection{Convolutional Neural Networks}\label{cha:theo:cnn}
-Will man ein \textit{KNN} für die Erkennung von Bildern verwenden, so sind \textit{SNNs} mit einem \textit{Fully Connected Layer} aus mehreren Gründen ungeeignet, u.a. werden räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert, wodurch das erkennen von Mustern und Formen nicht verunmöglicht wird, aber deutlich erschwert wird. \textit{CNN}s verschaffen mit \textit{Convolution-Layers} Abhilfe, wobei mit sog. \textit{Feature-Maps} Muster erkannt und gefiltert werden können. Zusätzliche \textit{Pooling-Layers} konzentrieren zudem die von den \textit{Convolution-Layers} erhaltenen Informationen weiter.
+Will man ein \textit{KNN} für die Erkennung von Bildern verwenden, so sind \textit{SNNs} mit einem \textit{Fully-Connected-Layer} aus mehreren Gründen ungeeignet, u.a. werden räumlichen Zusammenhänge der Eingangs-Pixel komplett ignoriert, wodurch das erkennen von Mustern und Formen nicht verunmöglicht wird, aber deutlich erschwert wird. \textit{CNN}s verschaffen mit \textit{Convolution-Layers} Abhilfe, wobei mit sog. \textit{Feature-Maps} Muster erkannt und gefiltert werden können. Zusätzliche \textit{Pooling-Layers} konzentrieren zudem die von den \textit{Convolution-Layers} erhaltenen Informationen weiter.
 
-Durch Hinzufügen dieser Schichten (daher ''Deep Neural Network'') erhofft man sich eine Konzentration der für die Bilderkennung relevanten Informationen (sog. \textit{Bias} der \textit{Layers}), welche von einem letzten, kleineren \textit{Fully Connected Layer} verarbeitet werden können.
+Durch Hinzufügen dieser Schichten (daher ''Deep Neural Network'') erhofft man sich eine Konzentration der für die Bilderkennung relevanten Informationen (sog. \textit{Bias} der \textit{Layers}), welche von einem letzten, kleineren \textit{Fully-Connected-Layer} verarbeitet werden können.
 
 \subsubsection{Convolution Layer}
-Um räumliche Zusammenhänge erkennen zu können, werden einem Neuron eines \textit{Convolution-Layers} die Eingangssignale auf einen lokalisierten Bereich des vorhergehenden Layers eingeengt. Diesen Bereich nennt man \textit{Local Receptive Field}. Hat man z.B. den \textit{Input-Layer} und einen darauf folgenden \textit{Convolution-Layer}, auf die eine \textit{Local-Receptive-Field}-Grösse von $5\times 5$ \textit{Neuronen} angewandt wird, so ist ein \textit{Neuron} des \textit{Convolution-Layers} nur mit einem $5\times 5$ \textit{Neuronen} grossen Bereich des \textit{Input-Layers} verbunden. Für das erste \textit{Neuron} des \textit{Convolution-Layers} wird es folgendermassen aussehen:
+Um räumliche Zusammenhänge erkennen zu können, werden einem Neuron eines \textit{Convolution-Layers} die Eingangssignale auf einen lokalisierten Bereich des vorhergehenden Layers eingeengt. Diesen Bereich nennt man \textit{Local Receptive Field}. Hat man z.B. den \textit{Input-Layer} und einen darauf folgenden \textit{Convolution-Layer}, auf die eine \textit{Local-Receptive-Field}-Grösse von $5\times 5$ \textit{Neuronen} angewandt wird, so ist ein \textit{Neuron} des \textit{Convolution-Layers} nur mit einem $5\times 5$ \textit{Neuronen} grossen Bereich des \textit{Input-Layers} verbunden. Für das erste \textit{Neuron} des \textit{Convolution-Layers} wird es wie in Abbildung \ref{img:rec_field1} gezeigt aussehen.
 
 \begin{figure}[h]
 	\ContinuedFloat*
@@ -251,7 +251,7 @@ Um räumliche Zusammenhänge erkennen zu können, werden einem Neuron eines \tex
 	\label{img:rec_field1}
 \end{figure}
 
-Für das nächste \textit{Neuron} des \textit{Convolution-Layers} verschiebt sich die gesamte Maske einen Schritt in die jeweilige Richtung. Wie die Grösse des \textit{Local-Receptive-Fields} ist auch die Schrittgrösse ein \textit{Meta-Parameter} und kann angepasst werden, in diesem Beispiel wird eine Schrittgrösse von einem \textit{Neuron}(/Pixel) verwendet:
+Für das nächste \textit{Neuron} des \textit{Convolution-Layers} verschiebt sich die gesamte Maske einen Schritt in die jeweilige Richtung. Wie die Grösse des \textit{Local-Receptive-Fields} ist auch die Schrittgrösse ein \textit{Meta-Parameter} und kann angepasst werden, in diesem Beispiel wird eine Schrittgrösse von einem \textit{Neuron}(/Pixel) verwendet (siehe Abbildung \ref{img:rec_field2})
 
 \begin{figure}[h]
 	\ContinuedFloat
@@ -286,12 +286,15 @@ Um die vom \textit{Convolution-Layer} erhaltenen \textit{Feature-Maps} weiter zu
 
 \subsubsection{Aufbau eines CNNs}
 
-Beim Aufbau eines \textit{CNN}s werden einem viele Freiheiten gelassen, jedoch hat sich folgende Grundstruktur für viele Bildklassifizierungsprobleme bewährt: Nach dem \textit{Input-Layer} werden ein \textit{Convolution-Layer} und ein \textit{Pooling Layer} hintereinandergeschaltet, z.T. werden noch weitere \textit{Layers} (z.B. \textit{ReLU-Layer}, siehe Kapitel \ref{cha:theo:relu}) hinzugefügt. Zusammen bilden diese eine Einheit, welche einige Male wiederholt wird. Die Grösse der Layers nimmt mit der Tiefe ab, wodurch sich der charakteristische trichterförmige Aufbau von \textit{CNN}s bildet. Auf die letzte Einheit folgt ein \textit{fully connected Layer}, wodurch die erkannten Muster miteinander kombiniert und ausgewertet werden. Schliesslich werden mithilfe eines sog. \textit{Softmax-Layers} die Ausgangssignale auf Prozentwerte normalisiert, um anschliessend die Klassifizierung durchzuführen.
+Beim Aufbau eines \textit{CNN}s werden einem viele Freiheiten gelassen, jedoch hat sich folgende Grundstruktur für viele Bildklassifizierungsprobleme bewährt: Nach dem \textit{Input-Layer} werden ein \textit{Convolution-Layer} und ein \textit{Pooling Layer} hintereinandergeschaltet, z.T. werden noch weitere \textit{Layers} (z.B. \textit{ReLU-Layer}, siehe Kapitel \ref{cha:theo:relu}) hinzugefügt. Zusammen bilden diese eine Einheit, welche einige Male wiederholt wird. Die Grösse der Layers nimmt mit der Tiefe ab, wodurch sich der charakteristische trichterförmige Aufbau von \textit{CNN}s bildet. Auf die letzte Einheit folgt ein \textit{Fully-Connected-Layer}, wodurch die erkannten Muster miteinander kombiniert und ausgewertet werden. Schliesslich werden mithilfe eines sog. \textit{Softmax-Layers} die Ausgangssignale auf Prozentwerte normalisiert, um anschliessend die Klassifizierung durchzuführen.
 
 %Die Erklärung, mehrere solcher \textit{Convolution}-Einheiten hintereinander zu schalten, ist dass somit komplexere Muster und Formen erkannt werden können. Wie vorher beschrieben, kann man mit den \textit{Feature Maps} der ersten Einheit einfache Muster wie Kanten und Ecken erkennen. In der zweiten Einheit können diese einfachen Muster zu komplexeren Formen zusammengefügt werden, etc.
 
 \subsection{Zusätzliche Meta-Parameter und Modifikation}\label{cha:theo:mod}
 Die in den vorherigen Kapiteln beschriebenen \textit{KNN}s und \textit{DNN}s als auch deren Training sind keineswegs starr und lassen sich in vielen Aspekten modifizieren und justieren. Auch diese \textit{Meta-Parameter} sind für spätere Kapitel relevant, weswegen sie in diesem Abschnitt kurz beschrieben werden. 
+
+\subsubsection{Bild-Normalisierung}
+Da Pixelwerte in der Regel zwischen 0 und 255 liegen, würden bei direkter Einspeisung der Bilder sehr grosse, wenn auch wenig aussagekräftige Werte in das \textit{KNN} eingespeist werden. Aus diesem Grund ist ein erster, einfacher Schritt, um redundante Informationen zu minimieren, das anfertigen eines Durchschnittsbildes von allen Trainingsdaten, welches vor der Einspeisung von den Eingangsdaten subtrahiert werden. Dadurch nehmen ähnliche bleibende Regionen (wie z.B. der Hintergrund im Randbereich) einen neutralen Wert an, während grosse Abweichungen vom Durchschnitt stärker gewichtet werden\cite{zerocenter}.
 
 \subsubsection{ReLU-Layer \& Batch-Normalisation-Layer}\label{cha:theo:relu}
 Die \textit{Sigmoid}-Kurve aus Kapitel \ref{cha:theo:neurons} ist nicht die einzige Funktion, die zur Standardisierung des gewichteten Ausgangssignals $z$ eines Neurons (siehe Formel \ref{eq:def_z}) verwendet wird. Neben der \textit{Sigmoid}-Funktion haben sich auch die sog. \textit{Rectified-Linear}-Funktion bewährt. Ein \textit{Neuron}, welches diese Funktion verwendet, nennt man \textit{Rectified-Linear-Unit} (kurz \textit{ReLU}); ein \textit{ReLU}-Layer ist somit eine Schicht zusammengesetzt aus diesen \textit{ReLU}-\textit{Neuronen}.
@@ -318,7 +321,9 @@ Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectif
 	\label{plt:rect_lin}
 \end{figure}
 
-\paragraph{Vorteile:} Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung für die Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion in diesem Bereich nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung hingegen konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Dies führt dazu, dass je nach Eingangsdaten werden ein Teil der Neuronen nicht trainiert, welches wiederum die Parameterlandschaft kleiner macht. Zudem sind \textit{ReLU-Layers} nicht sehr rechenintensiv weil für die Berechnung keine aufwendigen Berechnungen angestellt werden müssen.
+Aufgrund der Linearität kann auch für sehr grosse positive $z$-Werte eine signifikante Steigung für die Justierung der \textit{Parameter} berechnet werden, wo hingegen die \textit{Sigmoid}-Funktion in diesem Bereich nur eine verschwindend kleine Steigung liefert. Für negative Werte ist die Steigung hingegen konstant 0, wodurch die \textit{Parameter} jenes Neurons nicht mehr durch das Training justiert werden können und gewissermassen ''einfrieren''. Dies führt dazu, dass je nach Eingangsdaten ein Teil der Neuronen nicht trainiert wird, welches wiederum die Parameterlandschaft kleiner macht und dadurch der Überanpassung entgegenwirkt. Zudem sind \textit{ReLU-Layers} aufgrund der einfachen Operationen nicht sehr rechenintensiv.
+
+Da das Resultat nach oben nicht begrenzt ist, können die Ergebnisbereiche zwischen einzelnen \textit{ReLU-Neuronen} stark variieren. Um zu grosse Werte zu vermeiden, werden die Ergebnisse eines \textit{ReLU-Layers} mit einem sog. \textit{Batch-Normalisation-Layer} auf gemässigte Werte herunterskaliert.
 
 %\subsubsection{Fehlerberechnung}
 %Anstelle der \textit{Quadratic Cost}-Funktion aus Kapitel \ref{cha:theo:cost} zur Berechnung des Fehlers \textit{Err}, kann auch die \textit{Cross-Entropy-Cost}-Funktion verwendet werden:
@@ -329,16 +334,16 @@ Als Graph sieht die in der Formel \ref{eq:relu_func} beschriebene \textit{Rectif
 %
 %Diese \textit{Cost}-Funktion kann grosse Fehlerwerte für \textit{Sigmoid-Neuronen} besser handhaben, welche bei der \textit{Quadratic Cost}-Funktion z.T. zu einer Verlangsamung des Trainingsprozesses führen können.
 
-\subsubsection{Dropout-Layer}
-Da die vielen Verbindungen von \textit{fully connected Layers} anfällig für eine Überanpassung sind, versucht man dies mit sog. \textit{Dropout-Layers} zu minimieren. Diese \textit{Layers} werden ähnlich wie \textit{fully connected Layers} in einem \textit{KNN} eingesetzt, jedoch unterscheiden sie sich wesentlich im Trainingsprozess:
+%\subsubsection{Dropout-Layer}
+%Da die vielen Verbindungen von \textit{Fully-Connected-Layers} anfällig für eine Überanpassung sind, versucht man dies mit sog. \textit{Dropout-Layers} zu minimieren. Diese \textit{Layers} werden ähnlich wie \textit{Fully-Connected-Layers} in einem \textit{KNN} eingesetzt, jedoch unterscheiden sie sich wesentlich im Trainingsprozess:
 
-Ein gewisser Prozentsatz der \textit{Neuronen} eines \textit{Dropout-Layers} wird für das Training temporär deaktiviert, d.h. sie werden bei der Berechnung des Gradienten weder berücksichtigt noch justiert. Diese Methode macht das \textit{KNN} robuster, reduziert Überanpassung und beschleunigt zudem das Training.
+%Ein gewisser Prozentsatz der \textit{Neuronen} eines \textit{Dropout-Layers} wird für das Training temporär deaktiviert, d.h. sie werden bei der Berechnung des Gradienten weder berücksichtigt noch justiert. Wie auch bei den \textit{ReLU-Layern} kann dadurch die Parameterlandschaft reduziert werden, welches wiederum das \textit{KNN} resistenter gegenüber Überanpassung macht und zudem das Training beschleunigt.
 
-\subsubsection{Data Augmentation}
+\subsubsection{Data Augmentation} \label{cha:theo:mod:da}
 
 Ein wichtiger Aspekt für die Entwicklung eines zuverlässigen maschinellen Lernalgorithmus ist der Umfang der Trainingsdaten. Wenn jedoch zu wenige vorhanden sind, ist das Training sehr unzuverlässig und man riskiert eine Überanpassung an die wenigen Trainingsexemplare.
 
-Mithilfe von \textit{Data augmentation} lässt sich die Anzahl der Trainingsexemplare künstlich vergrössern. Dazu werden die Trainingsbilder vervielfacht und um einige Pixel verschoben, gespiegelt, ein wenig rotiert oder verzerrt. Man generiert dadurch viele weitere, voneinander verschiedene Trainingsexemplare, welche für das Training eines \textit{KNN}s verwendet werden können.
+Mithilfe von \textit{Data Augmentation} lässt sich die Anzahl der Trainingsexemplare künstlich vergrössern. Dazu werden die Trainingsbilder vervielfacht und um einige Pixel verschoben, gespiegelt, ein wenig rotiert oder verzerrt. Man generiert dadurch viele weitere, voneinander verschiedene Trainingsexemplare, welche für das Training eines \textit{KNN}s verwendet werden können.
 
 \subsubsection{Transfer Learning}\label{cha:theo:mod:tl}
 
