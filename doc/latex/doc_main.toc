@@ -52,5 +52,11 @@
 \contentsline {subsubsection}{\numberline {3.3.7}Einspeisung von Zusatzinformationen}{29}
 \contentsline {subsubsection}{\numberline {3.3.8}Transfer-Learning}{29}
 \contentsline {subsubsection}{\numberline {3.3.9}CNN-Ensemble}{29}
-\contentsline {section}{Literatur}{30}
-\contentsline {section}{\numberline {4}Anhang}{33}
+\contentsline {section}{\numberline {4}Darstellung der Ergebnisse}{30}
+\contentsline {section}{\numberline {5}Diskussion der Ergebnisse}{31}
+\contentsline {subsection}{\numberline {5.1}Qualit\IeC {\"a}t der Trainingsdaten}{31}
+\contentsline {subsection}{\numberline {5.2}Verbesserungs- und Erweiterungsvorschl\IeC {\"a}ge}{31}
+\contentsline {section}{\numberline {6}Zusammenfassung}{32}
+\contentsline {section}{\numberline {7}Danksagung}{33}
+\contentsline {section}{Literatur}{34}
+\contentsline {section}{\numberline {8}Anhang}{37}

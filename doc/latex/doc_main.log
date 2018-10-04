@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.29)  4 OCT 2018 00:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.1)  4 OCT 2018 09:43
 entering extended mode
 **./doc_main.tex
 (doc_main.tex
@@ -1557,25 +1557,38 @@ Package pdftex.def Info: ../images/dataFilter.png  used on input line 126.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28 <../images/dataaug.png>]) [29 <../images/dataFilter.png>]
-(doc_bibliography.tex (doc_main.bbl [30
+[28 <../images/dataaug.png>]) [29 <../images/dataFilter.png>] (doc_results.tex)
+[30
 
 
-]) (doc_main.lof)
+] (doc_discussion.tex) [31
+
+
+] (doc_conclusion.tex) [32
+
+
+]
+(doc_acknowledgements.tex) [33
+
+
+] (doc_bibliography.tex (doc_main.bbl [34
+
+
+])
+(doc_main.lof)
 \tf@lof=\write5
 \openout5 = `doc_main.lof'.
 
- (doc_main.lot [31])
+ (doc_main.lot [35])
 \tf@lot=\write6
 \openout6 = `doc_main.lot'.
 
-)
-[32] (doc_appendix.tex
+) [36] (doc_appendix.tex
 Overfull \hbox (7.80482pt too wide) in paragraph at lines 149--166
 [][] 
  []
 
-<../images/web_form.png, id=151, 2032.59375pt x 2402.9775pt>
+<../images/web_form.png, id=163, 2032.59375pt x 2402.9775pt>
 File: ../images/web_form.png Graphic file (type png)
 <use ../images/web_form.png>
 Package pdftex.def Info: ../images/web_form.png  used on input line 175.
@@ -1583,15 +1596,15 @@ Package pdftex.def Info: ../images/web_form.png  used on input line 175.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [33
+) [37
 
 
-] [34] [35 <../images/web_form.png>] (doc_main.aux) ) 
+] [38] [39 <../images/web_form.png>] (doc_main.aux) ) 
 Here is how much of TeX's memory you used:
- 27240 strings out of 493305
- 677745 string characters out of 3130672
- 877768 words of memory out of 3000000
- 30236 multiletter control sequences out of 15000+200000
+ 27260 strings out of 493305
+ 678036 string characters out of 3130673
+ 879430 words of memory out of 3000000
+ 30244 multiletter control sequences out of 15000+200000
  22203 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,13n,129p,1542b,2032s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1628,9 +1641,9 @@ cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jan
 /Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmti9.pfb>
-Output written on doc_main.pdf (35 pages, 9434452 bytes).
+Output written on doc_main.pdf (39 pages, 9439569 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
+ 291 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
