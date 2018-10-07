@@ -126,9 +126,15 @@ Halbert~White Kurt~Hornik, Maxwell~Stinchcombe.
 \bibitem{zerocenter}
 MatLab.
 \newblock imageinputlayer, normalization.
-\newblock
-  https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.imageinputlayer.html,
-  2018.
+\newblock https://www.mathworks.com/help/deeplearning
+  /ref/nnet.cnn.layer.imageinputlayer.html.
+\newblock Abgerufen am 05.09.2018.
+
+\bibitem{matlab}
+MathWorks.
+\newblock Matlab: Deep learning toolbox.
+\newblock https://www.mathworks.com/products/deep-learning.html.
+\newblock Abgerufen am 05.08.2018.
 
 \bibitem{wsl}
 Dr. Stefan~Blaser Dr. Andrin~Gross.
@@ -138,6 +144,7 @@ Dr. Stefan~Blaser Dr. Andrin~Gross.
 \bibitem{szp}
 Jan Obermeier.
 \newblock Pilzbestimmung in codezeilen gefasst.
+\newblock Ausgabe 3/2018.
 
 \bibitem{crawler}
 hardikvasa.
@@ -151,18 +158,30 @@ Michael Bachmeier.
 \newblock https://www.youtube.com/channel/UCezNep13jlv8Wrsaxv\_saeA.
 \newblock Abgerufen am 20.07.2018.
 
-\bibitem{matlab}
-MathWorks.
-\newblock Matlab: Deep learning toolbox.
-\newblock https://www.mathworks.com/products/deep-learning.html.
-\newblock Abgerufen am 05.08.2018.
+\bibitem{wpid}
+Markus Flück.
+\newblock {\em Welcher Pilz ist das?}
+\newblock 2016.
+\newblock Kosmos, ISBN 978-3-440-14983-6.
 
 \bibitem{alexnet}
 Alex Krizhevsky.
 \newblock Imagenet classification with deep convolutional neural networks.
 \newblock
   https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-
-  networks.pdf.
+  networks.pdf, 2012.
+\newblock Abgerufen am 30.09.2018.
+
+\bibitem{googlenet}
+Christian~Szegedy et~al.
+\newblock Going deeper with convolutions.
+\newblock https://arxiv.org/pdf/1409.4842.pdf, 2014.
+\newblock Abgerufen am 30.09.2018.
+
+\bibitem{ilsvrc}
+Prof. Li Fei-Fei et~al.
+\newblock Imagenet.
+\newblock http://image-net.org/index.
 \newblock Abgerufen am 30.09.2018.
 
 \end{thebibliography}

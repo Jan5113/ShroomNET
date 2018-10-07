@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.1)  4 OCT 2018 09:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.29)  7 OCT 2018 12:31
 entering extended mode
 **./doc_main.tex
 (doc_main.tex
@@ -1191,6 +1191,18 @@ ty"
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 \c@subfigure=\count142
 \c@subtable=\count143
+)
+("C:\Users\Jan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\rotating.st
+y"
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+ ("C:\Users\Jan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count144
+\rotFPtop=\skip66
+\rotFPbot=\skip67
+\rot@float@box=\box41
+\rot@mess@toks=\toks44
 )) (doc_main.aux)
 \openout1 = `doc_main.aux'.
 
@@ -1244,17 +1256,17 @@ LaTeX Font Info:    ... okay on input line 3.
 ("C:\Users\Jan\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
 "
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count144
+\scratchcounter=\count145
 \scratchdimen=\dimen259
-\scratchbox=\box41
-\nofMPsegments=\count145
-\nofMParguments=\count146
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count147
+\scratchbox=\box42
+\nofMPsegments=\count146
+\nofMParguments=\count147
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count148
 \MPscratchDim=\dimen260
-\MPnumerator=\count148
-\makeMPintoPDFobject=\count149
-\everyMPtoPDFconversion=\toks45
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
+\everyMPtoPDFconversion=\toks46
 )
 ("C:\Users\Jan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-ba
 se.sty"
@@ -1317,6 +1329,7 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (doc_title.tex
 <../images/logo.png, id=4, 2742.245pt x 526.96875pt>
@@ -1351,6 +1364,7 @@ Package pdftex.def Info: ../images/logo.png  used on input line 6.
 \setcounter{ContinuedFloat}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
+\setcounter{r@tfl@t}{0}
 }
 
 {C:/Users/Jan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../images/log
@@ -1432,7 +1446,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 File: ../images/single_neuron.png Graphic file (type png)
 <use ../images/single_neuron.png>
 Package pdftex.def Info: ../images/single_neuron.png  used on input line 89.
-(pdftex.def)             Requested size: 426.79135pt x 128.04028pt.
+(pdftex.def)             Requested size: 341.43437pt x 102.43224pt.
 
 Overfull \hbox (1.3404pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10 gangs-si-gna-le ver-wen-det. Je-der Ver-bin-dung wird ein Gewic
@@ -1450,62 +1464,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 File: ../images/layers.png Graphic file (type png)
 <use ../images/layers.png>
 Package pdftex.def Info: ../images/layers.png  used on input line 153.
-(pdftex.def)             Requested size: 426.79135pt x 279.17805pt.
- [15 <../images/layers.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
-
- []
-
-[16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 227--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-
- []
-
-[18]
+(pdftex.def)             Requested size: 341.43437pt x 223.34244pt.
+ [15 <../images/layers.png (PNG copy)>] [16] [17] [18]
 <../images/receptive_field_1.png, id=95, 819.06pt x 323.7696pt>
 File: ../images/receptive_field_1.png Graphic file (type png)
 <use ../images/receptive_field_1.png>
 Package pdftex.def Info: ../images/receptive_field_1.png  used on input line 24
 9.
-(pdftex.def)             Requested size: 426.79135pt x 168.71193pt.
+(pdftex.def)             Requested size: 341.43437pt x 134.96954pt.
 <../images/receptive_field_2.png, id=96, 819.06pt x 323.7696pt>
 File: ../images/receptive_field_2.png Graphic file (type png)
 <use ../images/receptive_field_2.png>
 Package pdftex.def Info: ../images/receptive_field_2.png  used on input line 25
 9.
-(pdftex.def)             Requested size: 426.79135pt x 168.71193pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../images/feature_maps.png, id=97, 819.06pt x 323.7696pt>
+(pdftex.def)             Requested size: 341.43437pt x 134.96954pt.
+ [19 <../images/receptive_field_1.png (PNG copy)> <../images/receptive_field_2.
+png (PNG copy)>]
+<../images/feature_maps.png, id=101, 819.06pt x 323.7696pt>
 File: ../images/feature_maps.png Graphic file (type png)
 <use ../images/feature_maps.png>
 Package pdftex.def Info: ../images/feature_maps.png  used on input line 269.
-(pdftex.def)             Requested size: 426.79135pt x 168.71193pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19 <../images/receptive_field_1.png (PNG copy)>]
+(pdftex.def)             Requested size: 341.43437pt x 134.96954pt.
 <../images/max_pooling.png, id=102, 819.06pt x 213.4374pt>
 File: ../images/max_pooling.png Graphic file (type png)
 <use ../images/max_pooling.png>
 Package pdftex.def Info: ../images/max_pooling.png  used on input line 281.
-(pdftex.def)             Requested size: 426.79135pt x 111.2193pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(pdftex.def)             Requested size: 341.43437pt x 88.97543pt.
 
 Overfull \hbox (18.29929pt too wide) in paragraph at lines 289--290
 \OT1/cmr/m/n/10 struk-tur f[]ur vie-le Bild-klas-si-fi-zie-rungs-pro-ble-me bew
@@ -1513,137 +1497,276 @@ Overfull \hbox (18.29929pt too wide) in paragraph at lines 289--290
 cmr/m/it/10 Convolution-
  []
 
-[20 <../images/receptive_field_2.png (PNG copy)> <../images/feature_maps.png (P
-NG copy)>] [21 <../images/max_pooling.png (PNG copy)>] [22]) [23]
-(doc_method.tex [24
+[20 <../images/feature_maps.png (PNG copy)> <../images/max_pooling.png (PNG cop
+y)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21]) [22] (doc_method.tex [23
 
 
 ]
-<../images/cropping.png, id=118, 1214.28656pt x 603.0028pt>
+<../images/imgs_raw.png, id=115, 579.8463pt x 356.2911pt>
+File: ../images/imgs_raw.png Graphic file (type png)
+<use ../images/imgs_raw.png>
+Package pdftex.def Info: ../images/imgs_raw.png  used on input line 30.
+(pdftex.def)             Requested size: 426.79135pt x 262.24321pt.
+ [24 <../images/imgs_raw.png (PNG copy)>]
+<../images/imgs_cropped_3.png, id=119, 576.9555pt x 579.00314pt>
+File: ../images/imgs_cropped_3.png Graphic file (type png)
+<use ../images/imgs_cropped_3.png>
+Package pdftex.def Info: ../images/imgs_cropped_3.png  used on input line 45.
+(pdftex.def)             Requested size: 426.79135pt x 428.31425pt.
+<../images/cropping.png, id=120, 1214.28656pt x 603.0028pt>
 File: ../images/cropping.png Graphic file (type png)
 <use ../images/cropping.png>
-Package pdftex.def Info: ../images/cropping.png  used on input line 30.
-(pdftex.def)             Requested size: 426.79135pt x 211.93744pt.
- [25 <../images/cropping.png>]
-<../images/video_frames.png, id=123, 1289.5377pt x 325.9377pt>
+Package pdftex.def Info: ../images/cropping.png  used on input line 52.
+(pdftex.def)             Requested size: 341.43437pt x 169.54811pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25 <../images/imgs_cropped_3.png (PNG copy)>]
+<../images/video_frames.png, id=125, 1289.5377pt x 325.9377pt>
 File: ../images/video_frames.png Graphic file (type png)
 <use ../images/video_frames.png>
-Package pdftex.def Info: ../images/video_frames.png  used on input line 39.
-(pdftex.def)             Requested size: 426.79135pt x 107.8731pt.
- [26 <../images/video_frames.png>]
-Overfull \hbox (0.42467pt too wide) in paragraph at lines 95--96
+Package pdftex.def Info: ../images/video_frames.png  used on input line 63.
+(pdftex.def)             Requested size: 341.43437pt x 86.29846pt.
+<../images/average_image.png, id=126, 819.06pt x 231.9867pt>
+File: ../images/average_image.png Graphic file (type png)
+<use ../images/average_image.png>
+Package pdftex.def Info: ../images/average_image.png  used on input line 75.
+(pdftex.def)             Requested size: 341.43437pt x 96.70807pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26 <../images/cropping.png> <../images/video_frames.png>]
+<../images/green_filter.png, id=131, 819.06pt x 223.7961pt>
+File: ../images/green_filter.png Graphic file (type png)
+<use ../images/green_filter.png>
+Package pdftex.def Info: ../images/green_filter.png  used on input line 86.
+(pdftex.def)             Requested size: 341.43437pt x 93.29366pt.
+<../images/augmented_data_1.png, id=132, 824.1189pt x 235.8411pt>
+File: ../images/augmented_data_1.png Graphic file (type png)
+<use ../images/augmented_data_1.png>
+Package pdftex.def Info: ../images/augmented_data_1.png  used on input line 98.
+
+(pdftex.def)             Requested size: 341.43437pt x 97.71028pt.
+ [27 <../images/average_image.png (PNG copy)> <../images/green_filter.png (PNG 
+copy)> <../images/augmented_data_1.png (PNG copy)>]
+<../images/einf_extraction.png, id=136, 819.06pt x 424.2249pt>
+File: ../images/einf_extraction.png Graphic file (type png)
+<use ../images/einf_extraction.png>
+Package pdftex.def Info: ../images/einf_extraction.png  used on input line 132.
+
+(pdftex.def)             Requested size: 341.43437pt x 176.84624pt.
+ [28 <../images/einf_extraction.png (PNG copy)>]
+Overfull \hbox (11.53874pt too wide) in paragraph at lines 163--164
+\OT1/cmr/m/n/10 den die zu-ge-schnit-te-nen Bild-da-ten nur mit-tels Bild-nor-m
+a-li-sie-rung vor-ver-ar-bei-tet; \OT1/cmr/m/it/10 Data-Augmentation\OT1/cmr/m/
+n/10 ,
+ []
+
+
+Overfull \hbox (0.42467pt too wide) in paragraph at lines 187--188
 \OT1/cmr/m/it/10 CNN\OT1/cmr/m/n/10 s bei 200$\U/matha/m/n/10 $\OT1/cmr/m/n/10
  200px be-las-sen, da die Fil-te-rung von den re-le-van-ten In-for-ma-tio-nen d
 en \OT1/cmr/m/it/10 Convolution-
  []
 
-<../images/baseline_cnn.png, id=128, 1108.14pt x 412.54124pt>
+[29]
+<../images/baseline_cnn.png, id=143, 1108.14pt x 412.54124pt>
 File: ../images/baseline_cnn.png Graphic file (type png)
 <use ../images/baseline_cnn.png>
-Package pdftex.def Info: ../images/baseline_cnn.png  used on input line 99.
+Package pdftex.def Info: ../images/baseline_cnn.png  used on input line 191.
 (pdftex.def)             Requested size: 426.79135pt x 158.88867pt.
-[27 <../images/baseline_cnn.png>]
-<../images/dataaug.png, id=132, 1108.14pt x 412.54124pt>
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 201.
+
+<../images/dataaug.png, id=144, 1108.14pt x 412.54124pt>
 File: ../images/dataaug.png Graphic file (type png)
 <use ../images/dataaug.png>
-Package pdftex.def Info: ../images/dataaug.png  used on input line 114.
+Package pdftex.def Info: ../images/dataaug.png  used on input line 203.
 (pdftex.def)             Requested size: 426.79135pt x 158.88867pt.
-<../images/dataFilter.png, id=133, 1108.14pt x 412.54124pt>
-File: ../images/dataFilter.png Graphic file (type png)
-<use ../images/dataFilter.png>
-Package pdftex.def Info: ../images/dataFilter.png  used on input line 126.
-(pdftex.def)             Requested size: 426.79135pt x 158.88867pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[28 <../images/dataaug.png>]) [29 <../images/dataFilter.png>] (doc_results.tex)
-[30
-
-
-] (doc_discussion.tex) [31
-
-
-] (doc_conclusion.tex) [32
-
-
-]
-(doc_acknowledgements.tex) [33
-
-
-] (doc_bibliography.tex (doc_main.bbl [34
-
-
-])
-(doc_main.lof)
-\tf@lof=\write5
-\openout5 = `doc_main.lof'.
-
- (doc_main.lot [35])
-\tf@lot=\write6
-\openout6 = `doc_main.lot'.
-
-) [36] (doc_appendix.tex
-Overfull \hbox (7.80482pt too wide) in paragraph at lines 149--166
+[30 <../images/baseline_cnn.png> <../images/dataaug.png>]
+Overfull \hbox (7.80482pt too wide) in paragraph at lines 236--256
 [][] 
  []
 
-<../images/web_form.png, id=163, 2032.59375pt x 2402.9775pt>
+[31]
+Overfull \hbox (7.80482pt too wide) in paragraph at lines 338--358
+[][] 
+ []
+
+[32]
+<../images/transfer_google_2.png, id=155, 1108.14pt x 412.54124pt>
+File: ../images/transfer_google_2.png Graphic file (type png)
+<use ../images/transfer_google_2.png>
+Package pdftex.def Info: ../images/transfer_google_2.png  used on input line 36
+9.
+(pdftex.def)             Requested size: 426.79135pt x 158.88867pt.
+ [33 <../images/transfer_google_2.png>]
+Overfull \hbox (7.80482pt too wide) in paragraph at lines 405--427
+[][] 
+ []
+
+) [34] (doc_results.tex
+<../images/feature_maps_cnn.png, id=162, 1012.0209pt x 624.6537pt>
+File: ../images/feature_maps_cnn.png Graphic file (type png)
+<use ../images/feature_maps_cnn.png>
+Package pdftex.def Info: ../images/feature_maps_cnn.png  used on input line 27.
+
+(pdftex.def)             Requested size: 341.43437pt x 210.74004pt.
+<../images/conf_mat_cnn.png, id=163, 1292.4285pt x 673.5564pt>
+File: ../images/conf_mat_cnn.png Graphic file (type png)
+<use ../images/conf_mat_cnn.png>
+Package pdftex.def Info: ../images/conf_mat_cnn.png  used on input line 33.
+(pdftex.def)             Requested size: 688.5567pt x 358.85371pt.
+ [35
+
+
+ <../images/feature_maps_cnn.png>] [36 <../images/conf_mat_cnn.png>]
+<../images/feature_maps_google_3.png, id=172, 1125.7257pt x 611.1633pt>
+File: ../images/feature_maps_google_3.png Graphic file (type png)
+<use ../images/feature_maps_google_3.png>
+Package pdftex.def Info: ../images/feature_maps_google_3.png  used on input lin
+e 62.
+(pdftex.def)             Requested size: 426.79135pt x 231.70357pt.
+<../images/conf_mat_transfer.png, id=173, 1295.3193pt x 675.4836pt>
+File: ../images/conf_mat_transfer.png Graphic file (type png)
+<use ../images/conf_mat_transfer.png>
+Package pdftex.def Info: ../images/conf_mat_transfer.png  used on input line 69
+.
+(pdftex.def)             Requested size: 688.5567pt x 359.06622pt.
+ [37 <../images/feature_maps_google_3.png>] [38 <../images/conf_mat_transfer.pn
+g>]
+<../images/conf_mat_extra_none.png, id=183, 1294.3557pt x 674.52pt>
+File: ../images/conf_mat_extra_none.png Graphic file (type png)
+<use ../images/conf_mat_extra_none.png>
+Package pdftex.def Info: ../images/conf_mat_extra_none.png  used on input line 
+93.
+(pdftex.def)             Requested size: 688.5567pt x 358.8319pt.
+<../images/conf_mat_extra_half.png, id=184, 1291.4649pt x 673.5564pt>
+File: ../images/conf_mat_extra_half.png Graphic file (type png)
+<use ../images/conf_mat_extra_half.png>
+Package pdftex.def Info: ../images/conf_mat_extra_half.png  used on input line 
+101.
+(pdftex.def)             Requested size: 688.5567pt x 359.11066pt.
+<../images/conf_mat_extra_all.png, id=185, 1295.3193pt x 674.52pt>
+File: ../images/conf_mat_extra_all.png Graphic file (type png)
+<use ../images/conf_mat_extra_all.png>
+Package pdftex.def Info: ../images/conf_mat_extra_all.png  used on input line 1
+09.
+(pdftex.def)             Requested size: 688.5567pt x 358.554pt.
+) [39] [40 <../images/conf_mat_extra_none.png>] [41 <../images/conf_mat_extra_h
+alf.png>] [42 <../images/conf_mat_extra_all.png>]
+(doc_discussion.tex) [43
+
+
+] (doc_conclusion.tex) [44
+
+
+] (doc_acknowledgements.tex)
+[45
+
+
+] (doc_bibliography.tex (doc_main.bbl [46
+
+
+]) (doc_main.lof [47])
+\tf@lof=\write5
+\openout5 = `doc_main.lof'.
+
+
+(doc_main.lot)
+\tf@lot=\write6
+\openout6 = `doc_main.lot'.
+
+) [48] (doc_appendix.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../images/web_form.png, id=220, 2032.59375pt x 2402.9775pt>
 File: ../images/web_form.png Graphic file (type png)
 <use ../images/web_form.png>
-Package pdftex.def Info: ../images/web_form.png  used on input line 175.
+Package pdftex.def Info: ../images/web_form.png  used on input line 68.
 (pdftex.def)             Requested size: 426.79135pt x 504.56685pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [37
+
+Overfull \hbox (7.80482pt too wide) in paragraph at lines 191--210
+[][] 
+ []
+
+[49
 
 
-] [38] [39 <../images/web_form.png>] (doc_main.aux) ) 
+]
+<../images/code_3.png, id=225, 1936.23375pt x 2935.96875pt>
+File: ../images/code_3.png Graphic file (type png)
+<use ../images/code_3.png>
+Package pdftex.def Info: ../images/code_3.png  used on input line 218.
+(pdftex.def)             Requested size: 426.79135pt x 647.12471pt.
+<../images/code_4.png, id=226, 1936.23375pt x 1201.48875pt>
+File: ../images/code_4.png Graphic file (type png)
+<use ../images/code_4.png>
+Package pdftex.def Info: ../images/code_4.png  used on input line 220.
+(pdftex.def)             Requested size: 426.79135pt x 264.82333pt.
+)
+Overfull \hbox (15.0pt too wide) in paragraph at lines 220--17
+[][]
+ []
+
+[50 <../images/code_3.png>] [51 <../images/code_4.png>] [52] [53 <../images/web
+_form.png>] [54] [55] (doc_main.aux) ) 
 Here is how much of TeX's memory you used:
- 27260 strings out of 493305
- 678036 string characters out of 3130673
- 879430 words of memory out of 3000000
- 30244 multiletter control sequences out of 15000+200000
+ 27473 strings out of 493305
+ 682649 string characters out of 3130672
+ 901431 words of memory out of 3000000
+ 30436 multiletter control sequences out of 15000+200000
  22203 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,13n,129p,1542b,2032s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Jan\AppData\Loc
-al\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha5.pk> <C:\Users\Jan\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk> <C:\Use
-rs\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk
-> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\
-matha7.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathab
-x\dpi600\mathx10.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\pub
-lic\mathabx\dpi600\matha10.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\public\mathabx\dpi600\matha12.pk><C:/Users/Jan/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Jan/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jan/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Use
-rs/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti1
-0.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi5.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Jan/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Jan/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ja
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r6.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsl8.pfb><C:/Users/Jan/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jan/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jan
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:
-/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
-i8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmti9.pfb>
-Output written on doc_main.pdf (39 pages, 9439569 bytes).
+ 77i,17n,129p,1542b,2032s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Jan\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\public\mathabx\dpi600\matha5.pk> <C:\Users\Jan\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk> <C:\Users\Jan\AppData\
+Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk> <C:\Users\Jan
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha7.pk> <C:\
+Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\mathx1
+0.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi
+600\matha10.pk> <C:\Users\Jan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\m
+athabx\dpi600\matha12.pk><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jan/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Jan/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users
+/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi6.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Jan/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jan/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jan/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/User
+s/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr9.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsl8.pfb><C:/Users/Jan/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jan/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jan/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/Jan/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/User
+s/Jan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pf
+b>
+Output written on doc_main.pdf (55 pages, 97958052 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
+ 366 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

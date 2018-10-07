@@ -21,42 +21,49 @@
 \contentsline {subsubsection}{\numberline {2.4.5}Training von KNNs}{17}
 \contentsline {paragraph}{Gradient Descent}{17}
 \contentsline {subparagraph}{$\bullet $ Lernrate $\eta $}{17}
-\contentsline {subparagraph}{$\bullet $ Mini-Batch}{18}
+\contentsline {subparagraph}{$\bullet $ Mini-Batch}{17}
 \contentsline {subparagraph}{$\bullet $ Lernepochen}{18}
 \contentsline {subsection}{\numberline {2.5}DNNs}{18}
-\contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{19}
+\contentsline {subsection}{\numberline {2.6}Convolutional Neural Networks}{18}
 \contentsline {subsubsection}{\numberline {2.6.1}Convolution Layer}{19}
-\contentsline {subsubsection}{\numberline {2.6.2}Shared Weigths \& Feature Maps}{19}
+\contentsline {subsubsection}{\numberline {2.6.2}Shared Weigths \& Feature Maps}{20}
 \contentsline {subsubsection}{\numberline {2.6.3}Pooling}{20}
-\contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{20}
+\contentsline {subsubsection}{\numberline {2.6.4}Aufbau eines CNNs}{21}
 \contentsline {subsection}{\numberline {2.7}Zus\IeC {\"a}tzliche Meta-Parameter und Modifikation}{21}
 \contentsline {subsubsection}{\numberline {2.7.1}Bild-Normalisierung}{21}
-\contentsline {subsubsection}{\numberline {2.7.2}ReLU-Layer \& Batch-Normalisation-Layer}{21}
+\contentsline {subsubsection}{\numberline {2.7.2}ReLU-Layer \& Batch-Normalization-Layer}{21}
 \contentsline {subsubsection}{\numberline {2.7.3}Data Augmentation}{22}
 \contentsline {subsubsection}{\numberline {2.7.4}Transfer Learning}{22}
-\contentsline {subsubsection}{\numberline {2.7.5}Ensemble}{23}
-\contentsline {section}{\numberline {3}Methode}{24}
-\contentsline {subsection}{\numberline {3.1}Datenbeschaffung}{24}
-\contentsline {subsubsection}{\numberline {3.1.1}Datenbank SwissFungi}{24}
-\contentsline {subsubsection}{\numberline {3.1.2}Webseite ShroomNET}{24}
-\contentsline {subsubsection}{\numberline {3.1.3}Internet Crawler}{25}
-\contentsline {subsubsection}{\numberline {3.1.4}Videos}{25}
+\contentsline {section}{\numberline {3}Methode}{23}
+\contentsline {subsection}{\numberline {3.1}Datenbeschaffung}{23}
+\contentsline {subsubsection}{\numberline {3.1.1}Datenbank SwissFungi}{23}
+\contentsline {subsubsection}{\numberline {3.1.2}Webseite ShroomNET}{23}
+\contentsline {subsubsection}{\numberline {3.1.3}Internet Crawler}{24}
+\contentsline {subsubsection}{\numberline {3.1.4}Videos}{24}
 \contentsline {subsection}{\numberline {3.2}Datenaufbereitung}{25}
-\contentsline {subsection}{\numberline {3.3}Entwicklungsprozess}{26}
-\contentsline {subsubsection}{\numberline {3.3.1}Bezugswert}{26}
-\contentsline {subsubsection}{\numberline {3.3.2}Basis-SNN}{27}
-\contentsline {subsubsection}{\numberline {3.3.3}Basis-CNN}{27}
-\contentsline {subsubsection}{\numberline {3.3.4}Data-Augmentation}{28}
-\contentsline {subsubsection}{\numberline {3.3.5}Farbfilter}{28}
-\contentsline {subsubsection}{\numberline {3.3.6}Justierung des CNNs}{29}
-\contentsline {subsubsection}{\numberline {3.3.7}Einspeisung von Zusatzinformationen}{29}
-\contentsline {subsubsection}{\numberline {3.3.8}Transfer-Learning}{29}
-\contentsline {subsubsection}{\numberline {3.3.9}CNN-Ensemble}{29}
-\contentsline {section}{\numberline {4}Darstellung der Ergebnisse}{30}
-\contentsline {section}{\numberline {5}Diskussion der Ergebnisse}{31}
-\contentsline {subsection}{\numberline {5.1}Qualit\IeC {\"a}t der Trainingsdaten}{31}
-\contentsline {subsection}{\numberline {5.2}Verbesserungs- und Erweiterungsvorschl\IeC {\"a}ge}{31}
-\contentsline {section}{\numberline {6}Zusammenfassung}{32}
-\contentsline {section}{\numberline {7}Danksagung}{33}
-\contentsline {section}{Literatur}{34}
-\contentsline {section}{\numberline {8}Anhang}{37}
+\contentsline {subsubsection}{\numberline {3.2.1}Bildbearbeitung}{25}
+\contentsline {subsubsection}{\numberline {3.2.2}Aufteilung in Trainings- und Validierungsdaten}{26}
+\contentsline {subsubsection}{\numberline {3.2.3}Bildnormalisierung}{26}
+\contentsline {subsubsection}{\numberline {3.2.4}Farbfilter}{27}
+\contentsline {subsubsection}{\numberline {3.2.5}Data Augmentation}{27}
+\contentsline {subsubsection}{\numberline {3.2.6}Zusatzinformationen sammeln \& aufbereiten}{28}
+\contentsline {subsection}{\numberline {3.3}Entwicklungsprozess}{29}
+\contentsline {subsubsection}{\numberline {3.3.1}Bezugswert}{29}
+\contentsline {subsubsection}{\numberline {3.3.2}Basis-SNN}{29}
+\contentsline {subsubsection}{\numberline {3.3.3}Basis-CNN}{30}
+\contentsline {subsubsection}{\numberline {3.3.4}Data-Augmentation}{30}
+\contentsline {subsubsection}{\numberline {3.3.5}Farbfilter}{31}
+\contentsline {subsubsection}{\numberline {3.3.6}Justierung des CNNs}{31}
+\contentsline {subsubsection}{\numberline {3.3.7}Transfer-Learning}{32}
+\contentsline {subsubsection}{\numberline {3.3.8}Einspeisung von Zusatzinformationen}{33}
+\contentsline {section}{\numberline {4}Darstellung der Ergebnisse}{35}
+\contentsline {subsection}{\numberline {4.1}CNN ohne \textit {Transfer-Learning}}{35}
+\contentsline {subsection}{\numberline {4.2}CNN mit \textit {Transfer-Learning}}{37}
+\contentsline {subsection}{\numberline {4.3}CNN mit \textit {Transfer-Learning} und Zusatzinformationen}{39}
+\contentsline {section}{\numberline {5}Diskussion der Ergebnisse}{43}
+\contentsline {subsection}{\numberline {5.1}Qualit\IeC {\"a}t der Trainingsdaten}{43}
+\contentsline {subsection}{\numberline {5.2}Verbesserungs- und Erweiterungsvorschl\IeC {\"a}ge}{43}
+\contentsline {section}{\numberline {6}Zusammenfassung}{44}
+\contentsline {section}{\numberline {7}Danksagung}{45}
+\contentsline {section}{Literatur}{46}
+\contentsline {section}{\numberline {8}Anhang}{49}

@@ -1,0 +1,61 @@
+\BOOKMARK [1][-]{section.1}{Einf\374hrung}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Zielsetzung}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Datenbeschaffung \046 Datenaufbereitung}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Entwicklung \046 Optimierung}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{Theorie}{subsection.1.1}% 5
+\BOOKMARK [1][-]{section.2}{Grundlagen KNNs \046 DNNs}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{KI, KNN, DL, usw.}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Einleitung}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{Maschinelles Lernen}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Training}{subsection.2.3}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Verzerrung-Varianz-Dilemma}{subsection.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.4}{KNNs}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Die Natur als Vorbild}{subsection.2.4}% 13
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Neuronen \046 Verbindungen}{subsection.2.4}% 14
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Layers}{subsection.2.4}% 15
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Leistung von KNNs messen}{subsection.2.4}% 16
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Training von KNNs}{subsection.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.5}{DNNs}{section.2}% 18
+\BOOKMARK [2][-]{subsection.2.6}{Convolutional Neural Networks}{section.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Convolution Layer}{subsection.2.6}% 20
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Shared Weigths \046 Feature Maps}{subsection.2.6}% 21
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Pooling}{subsection.2.6}% 22
+\BOOKMARK [3][-]{subsubsection.2.6.4}{Aufbau eines CNNs}{subsection.2.6}% 23
+\BOOKMARK [2][-]{subsection.2.7}{Zus\344tzliche Meta-Parameter und Modifikation}{section.2}% 24
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Bild-Normalisierung}{subsection.2.7}% 25
+\BOOKMARK [3][-]{subsubsection.2.7.2}{ReLU-Layer \046 Batch-Normalization-Layer}{subsection.2.7}% 26
+\BOOKMARK [3][-]{subsubsection.2.7.3}{Data Augmentation}{subsection.2.7}% 27
+\BOOKMARK [3][-]{subsubsection.2.7.4}{Transfer Learning}{subsection.2.7}% 28
+\BOOKMARK [1][-]{section.3}{Methode}{}% 29
+\BOOKMARK [2][-]{subsection.3.1}{Datenbeschaffung}{section.3}% 30
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Datenbank SwissFungi}{subsection.3.1}% 31
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Webseite ShroomNET}{subsection.3.1}% 32
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Internet Crawler}{subsection.3.1}% 33
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Videos}{subsection.3.1}% 34
+\BOOKMARK [2][-]{subsection.3.2}{Datenaufbereitung}{section.3}% 35
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Bildbearbeitung}{subsection.3.2}% 36
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Aufteilung in Trainings- und Validierungsdaten}{subsection.3.2}% 37
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Bildnormalisierung}{subsection.3.2}% 38
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Farbfilter}{subsection.3.2}% 39
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Data Augmentation}{subsection.3.2}% 40
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Zusatzinformationen sammeln \046 aufbereiten}{subsection.3.2}% 41
+\BOOKMARK [2][-]{subsection.3.3}{Entwicklungsprozess}{section.3}% 42
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Bezugswert}{subsection.3.3}% 43
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Basis-SNN}{subsection.3.3}% 44
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Basis-CNN}{subsection.3.3}% 45
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Data-Augmentation}{subsection.3.3}% 46
+\BOOKMARK [3][-]{subsubsection.3.3.5}{Farbfilter}{subsection.3.3}% 47
+\BOOKMARK [3][-]{subsubsection.3.3.6}{Justierung des CNNs}{subsection.3.3}% 48
+\BOOKMARK [3][-]{subsubsection.3.3.7}{Transfer-Learning}{subsection.3.3}% 49
+\BOOKMARK [3][-]{subsubsection.3.3.8}{Einspeisung von Zusatzinformationen}{subsection.3.3}% 50
+\BOOKMARK [1][-]{section.4}{Darstellung der Ergebnisse}{}% 51
+\BOOKMARK [2][-]{subsection.4.1}{CNN ohne Transfer-Learning}{section.4}% 52
+\BOOKMARK [2][-]{subsection.4.2}{CNN mit Transfer-Learning}{section.4}% 53
+\BOOKMARK [2][-]{subsection.4.3}{CNN mit Transfer-Learning und Zusatzinformationen}{section.4}% 54
+\BOOKMARK [1][-]{section.5}{Diskussion der Ergebnisse}{}% 55
+\BOOKMARK [2][-]{subsection.5.1}{Qualit\344t der Trainingsdaten}{section.5}% 56
+\BOOKMARK [2][-]{subsection.5.2}{Verbesserungs- und Erweiterungsvorschl\344ge}{section.5}% 57
+\BOOKMARK [1][-]{section.6}{Zusammenfassung}{}% 58
+\BOOKMARK [1][-]{section.7}{Danksagung}{}% 59
+\BOOKMARK [1][-]{section.7}{Literatur}{}% 60
+\BOOKMARK [1][-]{section.8}{Anhang}{}% 61

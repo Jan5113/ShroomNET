@@ -1,0 +1,196 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./extra_google_doc_images/} }
+
+\begin{document}
+
+\begin{par}
+\begin{flushleft}
+Transfer-learning with extra information
+\end{flushleft}
+\end{par}
+
+\vspace{1em}
+
+\matlabheadingtwo{Initialise training data}
+
+\begin{par}
+\begin{flushleft}
+get training data
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+[imgsTrain, imgsTest, ~, ~, ~] = snippets.getShroomData;
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+get and resize average image for normalisation
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+normImg = imresize(snippets.getAugAvg, [224,224]); 
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+get extra information
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+eInf = snippets.readExtraInfo;
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+set up data for training with size, normalization, data augmentation and extra information (with probabilities)
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+trainingData   = customAugmentedImageDatastore([224 224 3],imgsTrain,...
+    normImg, snippets.augmentor, eInf, 0.5, 0.4, 0.1);
+validationData = customAugmentedImageDatastore([224 224 3],imgsTest,...
+    normImg, snippets.augmentor, eInf, 0.5, 0.4, 0.1);
+\end{matlabcode}
+
+\vspace{1em}
+
+\matlabheadingtwo{Set up net for transfer learning}
+
+\begin{par}
+\begin{flushleft}
+get pretrained net (GoogLeNet)
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+tNet = googlenet;
+transferLayers = layerGraph(tNet);
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+specify extra information mutiplier
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+eInfMultiplier = 10;
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+specify new input layer and cover layer
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+input = [imageInputLayer([224 224 3], 'Normalization', 'none', 'Name', 'data')
+         coverLayer(snippets.numExtraInfoTrain, 0, 'cover')];
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+specify new output layer and set learning rates for new fully-connected Layer
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+fc = [depthConcatenationLayer(1 + eInfMultiplier, 'Name', 'dc1')
+    fullyConnectedLayer(21,'WeightLearnRateFactor',20,...
+    'BiasLearnRateFactor',20, 'Name', 'loss3-classifier')
+    ];
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+specify new classification layer
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+class = classificationLayer('Name', 'output');
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+specify and add information extraction layer
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+extract = extractionLayer(snippets.numExtraInfoTrain, 'extr');
+transferLayers = addLayers(transferLayers, extract);
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+replace previously specified layers in pretrained net
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+transferLayers = replaceLayer(transferLayers, 'data', input);
+transferLayers = replaceLayer(transferLayers, 'loss3-classifier', fc);
+transferLayers = replaceLayer(transferLayers, 'output', class);
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+connect extraction layer to input and to last fully-connected layer (10x)
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+transferLayers = connectLayers(transferLayers, 'data/out', 'extr/in');
+for i = 2:eInfMultiplier + 1
+    transferLayers = connectLayers(transferLayers,...
+        'extr/out', strcat('dc1/in', num2str(i)));
+end
+\end{matlabcode}
+
+\vspace{1em}
+
+\matlabheadingtwo{Set training options}
+
+\begin{matlabcode}
+options = trainingOptions('sgdm', ...
+    'MiniBatchSize', 48, ...
+    'InitialLearnRate', 1e-4, ...
+    'Shuffle', 'every-epoch', ...
+    'ValidationData', validationData, ...
+    'ValidationFrequency',50, ...
+    'ValidationPatience', 10,...
+    'Plots', 'training-progress');
+\end{matlabcode}
+
+\vspace{1em}
+
+\matlabheadingtwo{Train network}
+
+\begin{matlabcode}
+[transferNet, trainingInfo] = trainNetwork(trainingData,transferLayers,options);
+\end{matlabcode}
+
+\end{document}
